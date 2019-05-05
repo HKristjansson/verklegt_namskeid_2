@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2 class="red">Content for My App</h2>
-    <p>Stuff etc etc.</p>
+    {% for user in users %}
+        <h4>{{ user.email }}</h4>
+        <p>{{ user.id }}</p>
+    {% endfor %}
 {% endblock content %}
