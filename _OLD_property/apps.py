@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class PropertiesConfig(AppConfig):
-    name = 'property'
+    name = '_OLD_property'
