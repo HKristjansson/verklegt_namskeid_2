@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+    {% block content %}
+        <h3 class = "red">Apartments in 600 Akureyri:</h3>
+
+        <div class="input-group">
+            <input type="search" class="form-control" id="search-box" placeholder="Enter your search here..." />
+            <div class="input-group-btn">
+                <button type="button" id="search-btn" class="btn btn-default">Search</button>
+            </div>
+        </div>
+
+
+        <div class = 'apartments'>
+        {% for apartment in apartments %}
+{#             {% if apartment.zip == 600 %}#}
+{#                <h4>{{apartment.address}}</h4>#}
+{#                <p>{{apartment.number}}</p>#}
+{#                <p>{{apartment.zip}}</p>#}
+{#            {% else %}#}
+{#                <h3>Apartments not in 600 Akureyri</h3>#}
+{#                <h4>{{apartment.address}}</h4>#}
+{#                <p>{{apartment.number}}</p>#}
+{#                <p>{{apartment.zip}}</p>#}
+{#            {% endif %}#}
+            {% include 'apartment/single_apartment.html' with apartment=apartment %}
+        {% endfor %}
+        </div>
+    {% endblock %}
+

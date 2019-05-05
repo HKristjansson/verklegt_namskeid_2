@@ -1,0 +1,9 @@
+{}
+[]
+
+SELECT * FROM "public"."seller_seller"
+INSERT INTO "public"."seller_seller" (name, image, year_of_start) VALUES ('Valgeir', 'https://ugla.unak.is/pub/unak/haskolaborgarar/mynd/va/valgeir_arnason1372076215.jpg', current_timestamp)
+
+
+SELECT * FROM "public"."apartment_apartmentcategory" LIMIT 100
+INSERT INTO "public"."apartment_apartmentcategory" (name) VALUES ('Fjölbýli')

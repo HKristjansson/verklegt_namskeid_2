@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Django default" uuid="7df30c1b-fc65-463b-8d77-76775bf2ee2b">
+    <data-source source="LOCAL" name="castle_apartments" uuid="4ef02d27-eca5-4b19-a4b5-9603419a3763">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/castle_apartments/settings.py</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://balarama.db.elephantsql.com:5432/uiodingx</jdbc-url>
+      <jdbc-url>jdbc:postgresql://balarama.db.elephantsql.com:5432/merqnchd</jdbc-url>
     </data-source>
   </component>
 </project>

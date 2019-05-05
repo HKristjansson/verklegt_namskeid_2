@@ -1,3 +1,53 @@
 .red {
-    background-color: red;
+    background-color: darkseagreen;
+}
+
+.apartments {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.apartment a {
+    color: black !important;
+    text-decoration: none;
+}
+
+.apartments .apartment {
+    border-radius: 0;
+    margin: 0;
+    background-image: none;
+    background-color: white;
+    text-align: center;
+}
+
+.apartment-img {
+    width: 200px;
+    transition: transform 1s ease-in;
+}
+
+.sellers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.seller a {
+    color: black !important;
+    text-decoration: none;
+}
+
+.sellers .seller {
+    border-radius: 0;
+    margin: 0;
+    background-image: none;
+    background-color: white;
+    text-align: center;
+}
+
+.seller-img {
+    width: 200px;
+    transition: transform 1s ease-in;
+}
+
+.block {
+    display: block;
 }
