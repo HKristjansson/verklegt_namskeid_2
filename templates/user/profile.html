@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% crispy form form.helper %}
 {% block content %}
+    <!--
+    TODO: Need to show image and personal information of logged in user.
+     -->
     <form class="form form-horizontal" method="post">
     {% csrf_token %}
-    {{ form }}
+    {{ form | crispy}}
     <input type="submit" class="btn btn-primary" value="update" />
     </form>
 {% endblock content %}

@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'seller.apps.SellerConfig',
     'index.apps.IndexConfig',
     'apartment.apps.ApartmentConfig',
-    'user.apps.UserConfig'
+    'user.apps.UserConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -119,6 +120,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
