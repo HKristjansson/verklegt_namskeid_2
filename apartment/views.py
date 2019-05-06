@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm
@@ -25,6 +26,7 @@ def get_apartment_by_id(request, id):
     })
 
 
+@login_required
 def add_apartment(request):
     if request.method == 'POST':
         form = ApartmentAddForm(data=request.POST)
@@ -40,6 +42,7 @@ def add_apartment(request):
     })
 
 
+@login_required
 def remove_apartment(request, id):
     apartment = get_object_or_404(Apartment, pk=id)
     apartment['available'] == 0
@@ -47,6 +50,7 @@ def remove_apartment(request, id):
     return redirect('apartment_index')
 
 
+@login_required
 def update_apartment(request, id):
     instance = get_object_or_404(Apartment, pk=id)
     if request.method == 'POST':
