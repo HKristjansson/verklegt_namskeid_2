@@ -2,10 +2,13 @@
     {% block content %}
         <h3 class = "red">Apartments in 600 Akureyri:</h3>
 
+        <div class="apartment-index-main">
+
         <div class="input-group">
             <input type="search" class="form-control" id="search-box" placeholder="Enter your search here..." />
             <div class="input-group-btn">
                 <button type="button" id="search-btn" class="btn btn-default">Search</button>
+                <button type="button" id="add-apartment-btn" class="btn btn-default">Add Apartment</button>
             </div>
         </div>
 
@@ -16,6 +19,7 @@
                  {% include 'apartment/single_apartment.html' with apartment=apartment %}
              {% endif %}
         {% endfor %}
+        </div>
         </div>
     {% endblock %}
 
