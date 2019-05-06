@@ -1,7 +1,3 @@
-.red {
-    background-color: darkseagreen;
-}
-
 .apartments {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

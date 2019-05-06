@@ -4,4 +4,7 @@
     <h1>{{ seller.name }}</h1>
     <p>{{ seller.description }}</p>
     <p>Seller: {{ apartment.seller.name }}</p>
+    <form method="get" action="{% url 'add_apartment' %}">
+    <button class="btn btn-primary"  type="submit">Add New Apartment</button>
+</form>
 {% endblock %}
