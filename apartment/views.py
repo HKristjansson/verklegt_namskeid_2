@@ -42,7 +42,8 @@ def add_apartment(request):
 
 def remove_apartment(request, id):
     apartment = get_object_or_404(Apartment, pk=id)
-    apartment.delete()
+    apartment['available'] == 0
+    apartment.save()
     return redirect('apartment_index')
 
 

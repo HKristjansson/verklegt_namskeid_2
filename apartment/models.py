@@ -19,9 +19,12 @@ class Apartment(models.Model):
     rooms = models.IntegerField()
     size = models.FloatField(max_length=255)
     price = models.IntegerField()
-    available = models.BooleanField()
     category = models.ForeignKey(ApartmentCategory, on_delete=models.CASCADE, blank=True)
     seller = models.ForeignKey(Seller, on_delete=models.CASCADE, blank=True)
+    owner_name = models.CharField(max_length=255)
+    owner_ssn = models.IntegerField()
+    owner_phone = models.IntegerField()
+    available = models.BooleanField()
 
     def __str__(self):
         return self.address

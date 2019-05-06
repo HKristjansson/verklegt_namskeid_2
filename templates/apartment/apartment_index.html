@@ -12,17 +12,9 @@
 
         <div class = 'apartments'>
         {% for apartment in apartments %}
-{#             {% if apartment.zip == 600 %}#}
-{#                <h4>{{apartment.address}}</h4>#}
-{#                <p>{{apartment.number}}</p>#}
-{#                <p>{{apartment.zip}}</p>#}
-{#            {% else %}#}
-{#                <h3>Apartments not in 600 Akureyri</h3>#}
-{#                <h4>{{apartment.address}}</h4>#}
-{#                <p>{{apartment.number}}</p>#}
-{#                <p>{{apartment.zip}}</p>#}
-{#            {% endif %}#}
-            {% include 'apartment/single_apartment.html' with apartment=apartment %}
+            {% if apartment.available == 1 %}
+                 {% include 'apartment/single_apartment.html' with apartment=apartment %}
+             {% endif %}
         {% endfor %}
         </div>
     {% endblock %}
