@@ -2,7 +2,7 @@ from django.db import models
 
 
 # Create your models here.
-class User(models.model):
+class User(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     phone = models.CharField(max_length=255)
@@ -10,4 +10,4 @@ class User(models.model):
     address = models.CharField(max_length=255)
     b_day = models.DateField
     search_history = models.CharField(max_length=255)
-    is_employee = models.BooleanField(bool=False)
+    is_employee = models.BooleanField(default=False)
