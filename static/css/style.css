@@ -7,10 +7,12 @@ img {
 
 .apartment-img-large {
     width: 50%;
+
 }
 
 .apartment-img-thumbnail {
     width: 200px;
+
 }
 
 .logo {
@@ -110,16 +112,19 @@ img {
     margin: auto;
     padding: 10px;
 }
+
 .apartment-details-1 {
     width: 45%;
     height: 200px;
     float: left;
 }
+
 .apartment-details-2 {
     margin-left: 45%;
     width: 45%;
     height: 200px;
 }
+
 
 .apartment-details-3 {
     margin-left: 90%;
