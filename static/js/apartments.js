@@ -18,7 +18,7 @@ $(document).ready(function() {
                 $('.apartments').html(newHtml.join(''));
                 $('#search-box').val( '');
             },
-            error: function(xhr, ststus, error) {
+            error: function(xhr, status, error) {
                 //todo: Show toastr
                 console.log(error);
             }
@@ -26,3 +26,9 @@ $(document).ready(function() {
 
     });
 });
+
+$(document).ready(function() {
+    $('#add-apartment-btn').on('click', function () {
+        window.location.assign('add_apartment')
+        });
+    });

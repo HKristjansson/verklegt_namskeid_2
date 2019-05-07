@@ -1,21 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h3>Apartments in 600 Akureyri:</h3>
 
-    <div class='card-footer' >
-        <div class="input-group mb-2 mx-auto px-lg-5">
-            <input type="search" class="form-control" id="search-box" placeholder="Enter your search here..."/>
-            <div class="input-group-btn">
-                <button type="button" id="search-btn" class="btn btn-secondary">Search</button>
-            </div>
-        </div>
-        <div>
+            <div class="apartments-index">
             {% for apartment in apartments %}
                 {% if apartment.available == 1 %}
-                    {% include 'apartment/single_apartment.html' with apartment=apartment %}
-                {% endif %}
+                    <div>
+                        {% include 'apartment/single_apartment.html' with apartment=apartment %}
+                    </div>
+                 {% endif %}
             {% endfor %}
         </div>
-    </div>
+            <div class="apartment-search">
+                {% include 'part/search_no_base.html' %}
+            </div>
 {% endblock %}
 

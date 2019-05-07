@@ -25,7 +25,11 @@ class ApartmentUpdateForm(ModelForm):
 
 
 class ApartmentAddForm(ModelForm):
-    image = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    image1 = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    image2 = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    image3 = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    image4 = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    image5 = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     class Meta:
         model = Apartment
@@ -44,4 +48,20 @@ class ApartmentAddForm(ModelForm):
             'owner_ssn': widgets.NumberInput(attrs={'class': 'form-control'}),
             'owner_phone': widgets.NumberInput(attrs={'class': 'form-control'}),
             'available': widgets.CheckboxInput(attrs={'class': 'checkbox'}),
+                    }
+
+
+class ApartmentAddPhotoForm(ModelForm):
+    image1 = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    image2 = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    image3 = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    image4 = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    image5 = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+
+    class Meta:
+        model = Apartment
+        exclude = ['id', 'address', 'number', 'zip', 'description', 'rooms', 'size', 'price', 'category', 'seller',
+                   'owner_name', 'owner_ssn', 'owner_phone', 'available']
+        widgets = {
+
                     }
