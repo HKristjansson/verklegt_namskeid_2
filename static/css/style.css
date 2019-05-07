@@ -1,19 +1,8 @@
 .btn-secondary {
   color: #fff !important; }
 
-
 img {
   width: 50%; }
-
-.apartment-img-large {
-    width: 50%;
-
-}
-
-.apartment-img-thumbnail {
-    width: 200px;
-
-}
 
 .logo {
   width: 80px; }
@@ -106,27 +95,53 @@ img {
   #showcase-inner h1 {
     font-size: 40px; } }
 
+
+.apartments-index {
+    width: 70%;
+    border-radius: 15px;
+    float: left;
+    object-fit: contain;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 260px);
+}
+
 .apartment-details-container {
     width: 100%;
-    height: 200px;
     margin: auto;
     padding: 10px;
 }
 
-.apartment-details-1 {
-    width: 45%;
-    height: 200px;
+.apartment-search {
+    margin-left: 70%;
+    width: 400px;
+}
+
+p.apartment-details-2 {
     float: left;
 }
 
-.apartment-details-2 {
-    margin-left: 45%;
-    width: 45%;
-    height: 200px;
+.apartment-details-1 {
+    width: 40%;
+    float: left;
+
 }
 
+.apartment-details-2 {
+    margin-left: 40%;
+    width: 10%;
+    padding-left: 20px;
+    padding-right: 20px
+
+}
 
 .apartment-details-3 {
-    margin-left: 90%;
-    width: 100px;
+    margin-left: 80%;
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+.apartment-img-large {
+    width: 90%;
+    padding: 20px;
 }
