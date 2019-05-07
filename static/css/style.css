@@ -95,6 +95,10 @@ img {
   #showcase-inner h1 {
     font-size: 40px; } }
 
+.form-horizontal {
+    height:80%;
+}
+
 
 .apartments-index {
     width: 70%;
@@ -113,8 +117,9 @@ img {
 }
 
 .apartment-search {
-    margin-left: 70%;
-    width: 400px;
+    margin-left: 80%;
+    padding-bottom: 100px;
+
 }
 
 p.apartment-details-2 {

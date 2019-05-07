@@ -20,3 +20,21 @@ class Profile(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.image.path)
+
+from django.db import models
+from django.contrib.auth.models import User
+from PIL import Image
+
+
+class Profile(models.Model):
+    fname = models.CharField(max_length=255)
+    lname = models.CharField(max_length=255)
+    username = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    address = models.CharField(max_length=255)
+    number = models.CharField(max_length=255)
+    zip = models.IntegerField()
+    tel = models.IntegerField()
+
+    def __str__(self):
+        return self.name
