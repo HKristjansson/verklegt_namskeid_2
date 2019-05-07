@@ -31,8 +31,9 @@ def register(request):
         form = RegistrationForm(data=request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Your account has been created! You are now able to log in')
-            return redirect('login')
+            username = form.cleaned_data.get('username')
+            messages.success(request, '{} Your account has been created! You are now able to log in'.format(username))
+            return redirect('profile')
     return render(request, 'user/register.html', {
         'form': RegistrationForm()
     })
@@ -51,6 +52,7 @@ def profile(request):
         'form': ProfileForm(instance=profile)
     })
 
+# TODO: Fix the profile
 # def profile(request):
 #     profile = Profile.objects.filter(user=request.user).first()
 #     if request.method == 'POST':
