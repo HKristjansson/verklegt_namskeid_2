@@ -1,11 +1,11 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from user.forms.profile_form import ProfileForm
-from user.forms.registration_form import RegistrationForm, UserUpdateForm, ProfileUpdateForm
+from user.forms.registration_form import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from user.models import Profile
 from django.contrib import messages, auth
-
 
 users = [
     {
@@ -19,8 +19,6 @@ users = [
 ]
 
 
-# Create your views here.
-# maybe to show all users or something
 def index(request):
     context = {'users': users}
     return render(request, 'user/index.html', context)
@@ -28,38 +26,24 @@ def index(request):
 
 def register(request):
     if request.method == 'POST':
-        form = RegistrationForm(data=request.POST)
+        form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, '{} Your account has been created! You are now able to log in'.format(username))
-            return redirect('profile')
-    return render(request, 'user/register.html', {
-        'form': RegistrationForm()
-    })
+            messages.success(request, '{}, Your account has been created! You are now able to log in'.format(username))
+            return redirect('login')
+    else:
+        form = UserRegisterForm()
+    return render(request, 'user/register.html', {'form': form})
 
 
-# def profile(request):
-#     profile = Profile.objects.filter(user=request.user).first()
-#     if request.method == 'POST':
-#         form = ProfileForm(instance=profile, data=request.POST)
-#         if form.is_valid():
-#             profile = form.save(commit=False)
-#             profile.user = request.user
-#             profile.save()
-#             return redirect('profile')
-#     return render(request, 'user/profile.html', {
-#         'form': ProfileForm(instance=profile)
-#     })
-
-# TODO: Fix the profile
+@login_required
 def profile(request):
-    # profile = Profile.objects.filter(user=request.user).first()
     if request.method == 'POST':
-        u_form = UserUpdateForm(instance=profile, data=request.POST)
+        u_form = UserUpdateForm(request.POST, instance=request.user)
         p_form = ProfileUpdateForm(request.POST,
                                    request.FILES,
-                                   instance=profile)
+                                   instance=request.user.profile)
         if u_form.is_valid() and p_form.is_valid():
             u_form.save()
             p_form.save()

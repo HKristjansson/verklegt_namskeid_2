@@ -5,10 +5,6 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index/index.html')
-
-
-def homepage(request):
     return render(request, 'part/search.html')
 
 
