@@ -39,44 +39,44 @@ def register(request):
     })
 
 
-def profile(request):
-    profile = Profile.objects.filter(user=request.user).first()
-    if request.method == 'POST':
-        form = ProfileForm(instance=profile, data=request.POST)
-        if form.is_valid():
-            profile = form.save(commit=False)
-            profile.user = request.user
-            profile.save()
-            return redirect('profile')
-    return render(request, 'user/profile.html', {
-        'form': ProfileForm(instance=profile)
-    })
-
-# TODO: Fix the profile
 # def profile(request):
 #     profile = Profile.objects.filter(user=request.user).first()
 #     if request.method == 'POST':
-#         u_form = UserUpdateForm(instance=profile, data=request.POST)
-#         p_form = ProfileUpdateForm(request.POST,
-#                                    request.FILES,
-#                                    instance=profile)
-#         if u_form.is_valid() and p_form.is_valid():
-#             u_form.save()
-#             p_form.save()
-#             messages.success(request, f'Your account has been updated!')
+#         form = ProfileForm(instance=profile, data=request.POST)
+#         if form.is_valid():
+#             profile = form.save(commit=False)
+#             profile.user = request.user
+#             profile.save()
 #             return redirect('profile')
-#
-#     else:
-#         u_form = UserUpdateForm(instance=request.user)
-#         p_form = ProfileUpdateForm(instance=request.user.profile)
-#
-#     context = {
-#         'u_form': u_form,
-#         'p_form': p_form
-#     }
-#
-#     return render(request, 'user/profile.html', context)
-#
+#     return render(request, 'user/profile.html', {
+#         'form': ProfileForm(instance=profile)
+#     })
+
+# TODO: Fix the profile
+def profile(request):
+    # profile = Profile.objects.filter(user=request.user).first()
+    if request.method == 'POST':
+        u_form = UserUpdateForm(instance=profile, data=request.POST)
+        p_form = ProfileUpdateForm(request.POST,
+                                   request.FILES,
+                                   instance=profile)
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            messages.success(request, f'Your account has been updated!')
+            return redirect('profile')
+
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+
+    context = {
+        'u_form': u_form,
+        'p_form': p_form
+    }
+
+    return render(request, 'user/profile.html', context)
+
 
 def login(request):
     if request.method == 'POST':
