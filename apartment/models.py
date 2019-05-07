@@ -34,3 +34,6 @@ class ApartmentImage(models.Model):
     image = models.CharField(max_length=999)
     apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.image
+
