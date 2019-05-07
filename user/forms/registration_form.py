@@ -10,9 +10,9 @@ class RegistrationForm(UserCreationForm):
     class Meta:
         model = User
         fields = (
-            'username',
             'first_name',
             'last_name',
+            'username',
             'email',
             'password1',
             'password2',
@@ -20,9 +20,9 @@ class RegistrationForm(UserCreationForm):
 
     def save(self, commit=True):
         user = super(RegistrationForm, self).save(commit=False)
-        user.first_name = user.cleaned_data['first_name']
-        user.last_name = user.cleaned_data['last_name']
-        user.email = user.cleaned_data['email']
+        # user.first_name = RegistrationForm.cleaned_data['first_name']
+        # user.last_name = RegistrationForm.cleaned_data['last_name']
+        # user.email = RegistrationForm.cleaned_data['email']
 
         if commit:
             user.save()
