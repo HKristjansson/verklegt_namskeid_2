@@ -96,6 +96,16 @@ img {
   #showcase-inner h1 {
     font-size: 40px; } }
 
+.apartments-index {
+    width: 100%;
+    border-radius: 15px;
+    float: left;
+    object-fit: contain;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 260px);
+}
+
 .apartment-details-container {
     width: 100%;
     margin: auto;
@@ -130,8 +140,3 @@ p.apartment-details-2 {
     width: 90%;
     padding: 20px;
 
-}
-
-.apartment-img-thumbnail {
-    width: 200px;
-}
