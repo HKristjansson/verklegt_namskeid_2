@@ -6,16 +6,27 @@
             <img src = "{{ apartment_image.image }}" class = "apartment-img-large" />
         {% endfor %}
     </div>
-        <div class="apartment-details-2">
-        <h1>{{ apartment.address }}</h1>
+
+    <div class="apartment-details-2">
+        <h1><strong>{{ apartment.address}} {{ apartment.number }}</strong></h1>
+        <h2><strong>Description:</strong></h2>
         <p>{{ apartment.description }}</p>
-        <p>{{ apartment.price }}.kr</p>
-     <p>Seller: {{ apartment.seller.name }}</p>
     </div>
-        <div class="apartment-details-3">
+
+    <div class="apartment-details-3">
+        <h2><strong>Details:</strong></h2>
+        <p><strong>Price: </strong>{{ apartment.price }}.kr</p>
+        <p><strong>ZIP: </strong>{{apartment.zip }}</p>
+        <p><strong>Town: </strong></p>
+        <p><strong>Rooms: </strong>{{apartment.rooms }}</p>
+        <p><strong>Size: </strong>{{apartment.size }}</p>
+        <p><strong>Category: </strong>{{apartment.category }}</p>
+        <p><strong>Broker: </strong>{{apartment.seller }}</p>
+        <p><strong>Seller: </strong>{{ apartment.seller.name }}</p>
         <a href="{% url 'remove_apartment' apartment.id %}" class="block btn btn-primary">Remove apartment</a>
         <a href="{% url 'update_apartment' apartment.id %}" class="block btn btn-primary">Update apartment</a>
     </div>
+
 </section>
 
 {% endblock %}
