@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd04c5de-bd1a-4ccc-a081-a435607d9a8e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CastleApartments/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CastleApartments/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CastleApartments/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CastleApartments/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/profile_pics/default.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/part/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/forms/registration_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms/registration_form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="dd04c5de-bd1a-4ccc-a081-a435607d9a8e" name="Default Changelist" comment="created custom profile, that works" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +70,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
+            <state relative-caret-position="-113">
               <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
@@ -331,7 +316,7 @@
       <workItem from="1557180904126" duration="227000" />
       <workItem from="1557181157550" duration="1288000" />
       <workItem from="1557182540375" duration="523000" />
-      <workItem from="1557183327385" duration="20622000" />
+      <workItem from="1557183327385" duration="20881000" />
     </task>
     <task id="LOCAL-00001" summary="register and login">
       <created>1557117870606</created>
@@ -403,11 +388,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557231787234</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="created custom profile, that works">
+      <created>1557271517424</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1557271517424</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100135000" />
+    <option name="totallyTimeSpent" value="100394000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -420,7 +412,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="625" y="23" width="815" height="827" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.31694695" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -428,7 +419,7 @@
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32789117" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32789117" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49736843" visible="true" weight="0.3292517" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4980595" weight="0.3292517" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -436,8 +427,8 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32789117" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32789117" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026316" side_tool="true" weight="0.3292517" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49865952" weight="0.31292516" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5019405" side_tool="true" weight="0.3292517" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49865952" visible="true" weight="0.31292516" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32531825" />
       <window_info anchor="bottom" id="manage.py@CastleApartments" order="14" weight="0.3536068" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -461,7 +452,8 @@
     <MESSAGE value="added some styling homepage" />
     <MESSAGE value="fixed a bug in register user" />
     <MESSAGE value="created custom profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="created custom profile" />
+    <MESSAGE value="created custom profile, that works" />
+    <option name="LAST_COMMIT_MESSAGE" value="created custom profile, that works" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties" />
@@ -850,7 +842,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
+        <state relative-caret-position="-113">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
