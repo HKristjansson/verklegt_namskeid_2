@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd04c5de-bd1a-4ccc-a081-a435607d9a8e" name="Default Changelist" comment="">
+    <list default="true" id="dd04c5de-bd1a-4ccc-a081-a435607d9a8e" name="Default Changelist" comment="Merge branch 'master' of https://github.com/ermir18/verklegt_namskeid_2&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/workspace.xml">
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/profile_pics/default.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CastleApartments.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CastleApartments.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment/forms/apartment_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/forms/apartment_form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/apartments.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/apartments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/apartment/apartment_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apartment/apartment_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/apartment/apartment_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apartment/apartment_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/apartment/single_apartment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apartment/single_apartment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/forms/profile_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms/profile_form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/forms/registration_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms/registration_form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +87,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -98,6 +117,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -206,7 +226,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django server.verklegt_namskeid_2">
     <configuration name="CastleApartments" type="Python.DjangoServer" factoryName="Django server">
       <module name="CastleApartments" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -218,6 +238,29 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="verklegt_namskeid_2" type="Python.DjangoServer" factoryName="Django server">
+      <module name="verklegt_namskeid_2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
@@ -258,6 +301,7 @@
       <workItem from="1557226713020" duration="1186000" />
       <workItem from="1557240252580" duration="751000" />
       <workItem from="1557257135514" duration="608000" />
+      <workItem from="1557257958363" duration="245000" />
     </task>
     <task id="LOCAL-00001" summary="register and login">
       <created>1557117870606</created>
@@ -329,11 +373,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557257729970</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Merge branch 'master' of https://github.com/ermir18/verklegt_namskeid_2&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/workspace.xml">
+      <created>1557258025489</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1557258025490</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93654000" />
+    <option name="totallyTimeSpent" value="93899000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -347,7 +398,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26596606" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2700081" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32789117" />
@@ -384,7 +435,8 @@
     <MESSAGE value="big update, everywhere" />
     <MESSAGE value="added search page in homepage, but not yet functionality" />
     <MESSAGE value="added some styling homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some styling homepage" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/ermir18/verklegt_namskeid_2&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/ermir18/verklegt_namskeid_2&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/templates/apartment/apartment_details.html">
@@ -504,13 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/user/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -738,6 +783,13 @@
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/user/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
