@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm
+from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentAddPhotoForm
 from apartment.models import Apartment, ApartmentImage
 
 
@@ -32,8 +32,11 @@ def add_apartment(request):
         form = ApartmentAddForm(data=request.POST)
         if form.is_valid():
             apartment = form.save()
-            apartment_image = ApartmentImage(image=request.POST['image'], apartment=apartment)
-            apartment_image.save()
+            for x in range(1, 6):
+                x = str(x)
+                image = ApartmentImage(image=request.POST['image' + x], apartment=apartment)
+                if image.image != '':
+                    image.save()
             return redirect('apartment_index')
     else:
         form = ApartmentAddForm()
@@ -45,8 +48,7 @@ def add_apartment(request):
 @login_required
 def remove_apartment(request, id):
     apartment = get_object_or_404(Apartment, pk=id)
-    apartment['available'] == 0
-    apartment.save()
+    apartment.delete()
     return redirect('apartment_index')
 
 
@@ -64,3 +66,21 @@ def update_apartment(request, id):
         'form': form,
         'id': id
     })
+
+
+def apartment_add_photo(request, id):
+    instance = get_object_or_404(Apartment, pk=id)
+    if request.method == 'POST':
+        for x in range(1, 6):
+            x = str(x)
+            image = ApartmentImage(image=request.POST['image' + x], apartment=instance)
+            if image.image != '':
+                image.save()
+        return redirect('apartment_details', id=id)
+    else:
+        form = ApartmentAddPhotoForm(instance=instance)
+    return render(request, 'apartment/apartment_add_photo.html', {
+        'form': form,
+        'id': id
+    })
+

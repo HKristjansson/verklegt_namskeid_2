@@ -9,10 +9,12 @@
                 <button type="button" id="search-btn" class="btn btn-secondary">Search</button>
             </div>
         </div>
-        <div>
+        <div class="apartments-index">
             {% for apartment in apartments %}
                 {% if apartment.available == 1 %}
-                    {% include 'apartment/single_apartment.html' with apartment=apartment %}
+                    <div>
+                        {% include 'apartment/single_apartment.html' with apartment=apartment %}
+                    </div>
                 {% endif %}
             {% endfor %}
         </div>
