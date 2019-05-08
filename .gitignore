@@ -12,6 +12,14 @@ db.sqlite3
 media
 venv/
 .idea/**
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/encodings.xml
+.idea/dataSources.xml
+.idea/CastleApartments.iml
+.idea/castle_apartments.iml
+.idea/dataSources.local.xml
 .idea/workspace.xml
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
