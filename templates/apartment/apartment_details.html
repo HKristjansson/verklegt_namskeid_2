@@ -23,8 +23,10 @@
         <p><strong>Size: </strong>{{apartment.size }}</p>
         <p><strong>Category: </strong>{{apartment.category }}</p>
         <p><strong>Realtor: </strong>{{apartment.seller }}</p>
-        <a href="{% url 'remove_apartment' apartment.id %}" class="block btn btn-primary">Remove apartment</a>
-        <a href="{% url 'update_apartment' apartment.id %}" class="block btn btn-primary">Update apartment</a>
+        {% if request.user.is_superuser %}
+            <a href="{% url 'remove_apartment' apartment.id %}" class="block btn btn-primary">Remove apartment</a>
+            <a href="{% url 'update_apartment' apartment.id %}" class="block btn btn-primary">Update apartment</a>
+        {% endif %}
     </div>
 
     <div class="apartment-search">
