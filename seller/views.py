@@ -6,9 +6,10 @@ from seller.models import Seller
 
 
 def index(request):
-    context = {'sellers': Seller.objects.all().order_by('name')}
-    return render(request, 'seller/seller_index.html', context)
+    context = {'sellers': Seller.objects.all().order_by('name')
 
+               }
+    return render(request, 'seller/seller_index.html', context)
 
 def get_seller_by_id(request, id):
     return render(request, 'seller/seller_details.html', {
