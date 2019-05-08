@@ -75,7 +75,7 @@ def update_apartment(request, id):
             form.save()
             return redirect('apartment_details', id=id)
     else:
-        form = ApartmentUpdateForm(instance=instance)
+        form =  ApartmentUpdateForm(instance=instance)
     return render(request, 'apartment/update_apartment.html', {
         'form': form,
         'id': id
