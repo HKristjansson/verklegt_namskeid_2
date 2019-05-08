@@ -1,32 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="apartment-details-container">
-    <div class="apartment-details-1">
-        {% for apartment_image in apartment.apartmentimage_set.all %}
-            <img src = "{{ apartment_image.image }}" class = "apartment-img-large" />
-        {% endfor %}
-    </div>
 
-    <div class="apartment-details-2">
-        <h1><strong>{{ apartment.address}} {{ apartment.number }}</strong></h1>
-        <br>
-        <h2><strong>Description:</strong></h2>
-        <p>{{ apartment.description }}</p>
-    </div>
+    <h1>{{ apartment.address }}</h1>
+    <p>{{ apartment.description }}</p>
+    <p>{{ apartment.price }}.kr</p>
+    <p>Seller: {{ apartment.seller.name }}</p>
+    {% for apartment_image in apartment.apartmentimage_set.all %}
+        <img src = "{{ apartment_image.image }}" class = "apartment-img" />
+    {% endfor %}
 
-    <div class="apartment-details-3">
-        <h2><strong>Details:</strong></h2>
-        <p><strong>Price: </strong>{{ apartment.price }}.kr</p>
-        <p><strong>ZIP: </strong>{{apartment.zip }}</p>
-        <p><strong>Town: </strong></p>
-        <p><strong>Rooms: </strong>{{apartment.rooms }}</p>
-        <p><strong>Size: </strong>{{apartment.size }}</p>
-        <p><strong>Category: </strong>{{apartment.category }}</p>
-        <p><strong>Realtor: </strong>{{apartment.seller }}</p>
-        <a href="{% url 'remove_apartment' apartment.id %}" class="block btn btn-primary">Remove apartment</a>
-        <a href="{% url 'update_apartment' apartment.id %}" class="block btn btn-primary">Update apartment</a>
-    </div>
-
-</section>
+    <a href="{% url 'remove_apartment' apartment.id %}" class="block btn btn-primary">Remove apartment</a>
+    <a href="{% url 'update_apartment' apartment.id %}" class="block btn btn-primary">Update apartment</a>
 
 {% endblock %}

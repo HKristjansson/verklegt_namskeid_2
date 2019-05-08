@@ -2,7 +2,7 @@
   color: #fff !important; }
 
 img {
-  width: 50%; }
+  width: 100%; }
 
 .logo {
   width: 80px; }
@@ -95,10 +95,6 @@ img {
   #showcase-inner h1 {
     font-size: 40px; } }
 
-.form-horizontal {
-    height:80%;
-}
-
 
 .apartments-index {
     width: 70%;
@@ -117,9 +113,8 @@ img {
 }
 
 .apartment-search {
-    margin-left: 80%;
-    padding-bottom: 100px;
-
+    margin-left: 70%;
+    width: 400px;
 }
 
 p.apartment-details-2 {

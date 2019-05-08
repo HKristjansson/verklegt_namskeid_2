@@ -21,7 +21,7 @@ users = [
 
 def index(request):
     context = {'users': users}
-    return render(request, 'user/index.html', context)
+    return render(request, 'user/user-index.html', context)
 
 
 def register(request):
