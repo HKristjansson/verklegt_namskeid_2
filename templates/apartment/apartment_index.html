@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
+            <div class="apartment-index-main">
+
+        <div class="input-group">
+            <input type="search" class="form-control" id="search-box" placeholder="Enter your search here..." />
+            <div class="input-group-btn">
+                <button type="button" id="search-btn" class="btn btn-default">Search</button>
+                <button type="button" id="add-apartment-btn" class="btn btn-default">Add Apartment</button>
+            </div>
+        </div>
+
             <h2>Latest apartments:</h2>
             <div class="apartments-index">
             {% for apartment in apartments %}
