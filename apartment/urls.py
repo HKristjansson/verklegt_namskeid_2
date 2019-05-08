@@ -7,5 +7,6 @@ urlpatterns = [
     path('<int:id>', views.get_apartment_by_id, name="apartment_details"),
     path('add_apartment', views.add_apartment, name="add_apartment"),
     path('remove_apartment/<int:id>', views.remove_apartment, name="remove_apartment"),
-    path('update_apartment/<int:id>', views.update_apartment, name="update_apartment")
+    path('update_apartment/<int:id>', views.update_apartment, name="update_apartment"),
+    path('search_apartment/', views.search_apartment, name="search_apartment"),
 ]
