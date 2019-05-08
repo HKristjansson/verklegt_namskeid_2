@@ -94,3 +94,54 @@ img {
     font-size: 30px; }
   #showcase-inner h1 {
     font-size: 40px; } }
+
+
+.apartments-index {
+    width: 70%;
+    border-radius: 15px;
+    float: left;
+    object-fit: contain;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 260px);
+}
+
+.apartment-details-container {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
+.apartment-search {
+    margin-left: 70%;
+    width: 400px;
+}
+
+p.apartment-details-2 {
+    float: left;
+}
+
+.apartment-details-1 {
+    width: 40%;
+    float: left;
+
+}
+
+.apartment-details-2 {
+    margin-left: 40%;
+    width: 10%;
+    padding-left: 20px;
+    padding-right: 20px
+
+}
+
+.apartment-details-3 {
+    margin-left: 80%;
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+.apartment-img-large {
+    width: 90%;
+    padding: 20px;
+}
