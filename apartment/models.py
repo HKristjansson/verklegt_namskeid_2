@@ -15,7 +15,7 @@ class Apartment(models.Model):
     address = models.CharField(max_length=255)
     number = models.CharField(max_length=255)
     zip = models.IntegerField()
-    description = models.CharField(max_length=255)
+    description = models.CharField(max_length=1524)
     rooms = models.IntegerField()
     size = models.FloatField(max_length=255)
     price = models.IntegerField()
