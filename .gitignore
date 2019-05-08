@@ -11,16 +11,7 @@ local_settings.py
 db.sqlite3
 media
 venv/
-.idea/**
-.idea/vcs.xml
-.idea/modules.xml
-.idea/misc.xml
-.idea/encodings.xml
-.idea/dataSources.xml
-.idea/CastleApartments.iml
-.idea/castle_apartments.iml
-.idea/dataSources.local.xml
-.idea/workspace.xml
+
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
 # in your Git repository. Update and uncomment the following line accordingly.
@@ -184,6 +175,17 @@ Temporary Items
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+
+.idea/**
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/encodings.xml
+.idea/dataSources.xml
+.idea/CastleApartments.iml
+.idea/castle_apartments.iml
+.idea/dataSources.local.xml
+.idea/workspace.xml
 
 # Generated files
 .idea/**/contentModel.xml
