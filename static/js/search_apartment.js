@@ -1,12 +1,13 @@
 $(document).ready(function() {
     $('#search-form').on('submit', function(e) {
         e.preventDefault();
-        var searchText = $('.search-form').val();
+        var searchText = $('[name=search_filter]').val();
+        console.log('search text '+searchText);
         $.ajax({
             url: '/apartments/search_apartment/?search_filter=' + searchText,
                 type: 'GET',
+                data: $('#search-form').serialize(),
                 success: function(resp) {
-                console.log("GOT INTO SEARCH APARTMENTS!!!!")
                 var newHtml = resp.data.map(d => {
                     return `<div class="well apartment">
                         <a href="/apartments/${d.id}">

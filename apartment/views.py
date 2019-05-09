@@ -77,11 +77,13 @@ def search_apartment(request):
 
         queryset = Apartment.objects.filter(reduce(operator.and_, q_list))
         apartments = [{
+            'id': x.id,
             'address': x.address,
             'zip': x.zip,
             'description': x.description,
             'price': x.price,
-            'category': str(x.category)
+            'category': str(x.category),
+            'firstImage': x.apartmentimage_set.first().image
         } for x in queryset
         ]
         #print('search apartments - 1- ',{'data': apartments})
