@@ -15,6 +15,7 @@ def index(request):
             'firstImage': x.apartmentimage_set.first().image
         } for x in Apartment.objects.filter(address__icontains=search_filter)
         ]
+        print({'data': apartments})
         return JsonResponse({'data': apartments})
     context = {'apartments': Apartment.objects.all().order_by('address')}
     return render(request, 'apartment/apartment_index.html', context)
