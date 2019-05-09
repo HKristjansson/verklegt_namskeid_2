@@ -8,23 +8,6 @@ from apartment.models import Apartment, ApartmentImage
 import operator
 
 
-def index(request):
-    if 'search_filter' in request.GET:
-        search_filter = request.GET['search_filter']
-        apartments = [{
-            'id': x.id,
-            'address': x.address,
-            'description': x.description,
-            'firstImage': x.apartmentimage_set.first().image
-        } for x in Apartment.objects.filter(address__icontains=search_filter)
-        ]
-        print({'data': apartments})
-        return JsonResponse({'data': apartments})
-    context = {'apartments': Apartment.objects.all().order_by('address')}
-    print(context)
-    return render(request, 'apartment/apartment_index.html', context)
-
-
 def get_apartment_by_id(request, id):
     return render(request, 'apartment/apartment_details.html', {
         'apartment': get_object_or_404(Apartment, pk=id)
@@ -70,6 +53,20 @@ def update_apartment(request, id):
         'id': id
     })
 
+def index(request):
+    if 'search_filter' in request.GET:
+        search_filter = request.GET['search_filter']
+        apartments = [{
+            'id': x.id,
+            'address': x.address,
+            'description': x.description,
+            'firstImage': x.apartmentimage_set.first().image
+        } for x in Apartment.objects.filter(address__icontains=search_filter)
+        ]
+        return JsonResponse({'data': apartments})
+    context = {'apartments': Apartment.objects.all().order_by('address')}
+    return render(request, 'apartment/apartment_index.html', context)
+
 
 def search_apartment(request):
     if 'search_filter' in request.GET:
@@ -86,6 +83,7 @@ def search_apartment(request):
             'category': x.category
         } for x in queryset
         ]
+        print(JsonResponse({'data': apartments}))
         return JsonResponse({'data': apartments})
     context = {'apartments': Apartment.objects.all().order_by('price')}
     return render(request, 'part/search_no_base.html', context)
