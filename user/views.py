@@ -7,21 +7,11 @@ from user.forms.registration_form import UserRegisterForm, UserUpdateForm, Profi
 from user.models import Profile
 from django.contrib import messages, auth
 
-users = [
-    {
-        'email': 'some email',
-        'id': '1'
-    },
-    {
-        'email': 'some email2',
-        'id': '2'
-    }
-]
 
 
 def index(request):
-    context = {'users': users}
-    return render(request, 'user/user-index.html', context)
+    # context = {'users': users}
+    return render(request, 'user/user-index.html')
 
 
 def register(request):
@@ -31,7 +21,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, '{}, Your account has been created! You are now able to log in'.format(username))
-            return redirect('login')
+            return redirect('index')
     else:
         form = UserRegisterForm()
     return render(request, 'user/register.html', {'form': form})
