@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="container">
-        <div class="row">
+    <div class="container ">
+        <div class="row margin-bottom">
             <div class="col-sm">
                 <div class="apartment-index-main">
                     <div class="input-group">
@@ -12,7 +12,6 @@
                             <button type="button" id="add-apartment-btn" class="btn btn-default">Add Apartment</button>
                         </div>
                     </div>
-
                     <h2>Latest apartments:</h2>
                     <div class="apartments-index">
                         {% for apartment in apartments %}
