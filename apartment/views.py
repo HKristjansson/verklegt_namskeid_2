@@ -69,8 +69,9 @@ def index(request):
 
 
 def search_apartment(request):
-    if 'search_filter' in request.GET:
+    if 'search_filter' in request.GET:  # set a hidden field (search_filter) so you know that you need to perform a search
         search_params = request.GET.dict()
+        search_params.pop("search_filter")
         q_list = [Q(("{}__icontains".format(param), search_params[param])) for param in search_params if
                   search_params[param] is not None]
 
@@ -80,10 +81,13 @@ def search_apartment(request):
             'zip': x.zip,
             'description': x.description,
             'price': x.price,
-            'category': x.category
+            'category': str(x.category)
         } for x in queryset
         ]
-        print(JsonResponse({'data': apartments}))
+        # print('search apartments - 1- ',{'data': apartments})
         return JsonResponse({'data': apartments})
     context = {'apartments': Apartment.objects.all().order_by('price')}
+    print('search apartments', context)
     return render(request, 'part/search_no_base.html', context)
+
+
