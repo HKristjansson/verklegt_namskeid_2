@@ -6,7 +6,7 @@ from apartment.models import Apartment
 class ApartmentUpdateForm(ModelForm):
     class Meta:
         model = Apartment
-        exclude = ['id']
+        exclude = ['id', 'created', 'updated']
         widgets = {
             'address': widgets.TextInput(attrs={'class': 'form-control'}),
             'number': widgets.NumberInput(attrs={'class': 'form-control'}),
@@ -29,7 +29,7 @@ class ApartmentAddForm(ModelForm):
 
     class Meta:
         model = Apartment
-        exclude = ['id']
+        exclude = ['id','created', 'updated']
         widgets = {
             'address': widgets.TextInput(attrs={'class': 'form-control'}),
             'number': widgets.NumberInput(attrs={'class': 'form-control'}),
@@ -43,22 +43,5 @@ class ApartmentAddForm(ModelForm):
             'owner_name': widgets.TextInput(attrs={'class': 'form-control'}),
             'owner_ssn': widgets.NumberInput(attrs={'class': 'form-control'}),
             'owner_phone': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'available': widgets.CheckboxInput(attrs={'class': 'checkbox'}),
-        }
-
-
-class ApartmentSearchForm(ModelForm):
-    # image = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-
-    class Meta:
-        model = Apartment
-        exclude = ['id', 'number', 'description', 'seller', 'owner_name', 'owner_phone', 'owner_ssn']
-        widgets = {
-            'address': widgets.TextInput(attrs={'class': 'form-control'}),
-            'zip': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'rooms': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'size': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'price': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'category': widgets.Select(attrs={'class': 'form-control'}),
             'available': widgets.CheckboxInput(attrs={'class': 'checkbox'}),
         }

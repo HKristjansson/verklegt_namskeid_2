@@ -1,5 +1,22 @@
 {% extends 'base.html' %}
-    {% block content %}
-        <h3 class="red">This is the home page</h3>
-    {% endblock %}
+{% block content %}
+    {<div class="container ">
+        <div class="row margin-bottom">
+            <div class="col-sm">
+                <div class="apartment-index-main">
+                    <h2>Latest apartments:</h2>
+                    <div class="apartments-index">
+                        {% for apartment in apartments %}
+                            {% if apartment.available == 1 %}
+                                <div>
+                                    {% include 'apartment/single_apartment.html' with apartment=apartment %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
 

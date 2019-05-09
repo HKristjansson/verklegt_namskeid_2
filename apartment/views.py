@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentSearchForm
+from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm
 from apartment.models import Apartment, ApartmentImage
 import operator
 
@@ -86,10 +86,8 @@ def search_apartment(request):
             'firstImage': x.apartmentimage_set.first().image
         } for x in queryset
         ]
-        #print('search apartments - 1- ',{'data': apartments})
         return JsonResponse({'data': apartments})
     context = {'apartments': Apartment.objects.all().order_by('price')}
-    #print('search apartments', context)
     return render(request, 'part/search_no_base.html', context)
 
 
