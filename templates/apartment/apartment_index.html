@@ -7,9 +7,9 @@
                     <div class="input-group">
                         <input type="search" class="form-control" id="search-box"
                                placeholder="Enter your search here..."/>
-                        <div class="input-group-btn">
-                            <button type="button" id="search-btn" class="btn btn-default">Search</button>
-                            <button type="button" id="add-apartment-btn" class="btn btn-default">Add Apartment</button>
+                        <div class="btn-toolbar col-sm-4">
+                            <button type="button" id="search-btn" class="btn btn-info">Search</button>
+                            <button type="button" id="add-apartment-btn" class="btn btn-info">Add Apartment</button>
                         </div>
                     </div>
                     <h2>Latest apartments:</h2>
@@ -22,7 +22,7 @@
                             {% endif %}
                         {% endfor %}
                     </div>
-                    <div class="col">
+                    <div class="aside">
                         {% include 'part/search_no_base.html' %}
                     </div>
                 </div>
