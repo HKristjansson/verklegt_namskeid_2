@@ -84,10 +84,10 @@ def search_apartment(request):
             'category': str(x.category)
         } for x in queryset
         ]
-        # print('search apartments - 1- ',{'data': apartments})
+        #print('search apartments - 1- ',{'data': apartments})
         return JsonResponse({'data': apartments})
     context = {'apartments': Apartment.objects.all().order_by('price')}
-    print('search apartments', context)
+    #print('search apartments', context)
     return render(request, 'part/search_no_base.html', context)
 
 
