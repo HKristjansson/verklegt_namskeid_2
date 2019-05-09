@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{%  block content %}
+    <form class="form form-horizontal" action="{% url 'update_seller' id %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+    <input type="submit" value="Update" class="btn btn-primary pull-right" style="clear:both; margin: 10px 0" />
+    </form>
+{% endblock %}make
