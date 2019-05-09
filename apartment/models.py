@@ -25,7 +25,7 @@ class Apartment(models.Model):
     owner_name = models.CharField(max_length=255)
     owner_ssn = models.IntegerField()
     owner_phone = models.IntegerField()
-    available = models.BooleanField()
+    sold = models.BooleanField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

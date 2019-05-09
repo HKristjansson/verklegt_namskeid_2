@@ -17,6 +17,7 @@ $(document).ready(function() {
                     </a>
                     </div>`
                 });
+                console.log('javascript check')
                 $('.apartments-index').html(newHtml.join(''));
                 $('.search-form').val( '');
             },
