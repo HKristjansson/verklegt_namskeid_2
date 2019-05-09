@@ -31,23 +31,20 @@
 
 <body>
 <!-- Header -->
-<table>
-<tr>
+
 
 {% include 'part/header.html' %}
 <!-- NavBar -->
 {% include 'part/navbar.html' %}
-</tr>
+
 <!-- Main -->
-<tr>
+
 {% block content %}
 {% endblock content %}
-</tr>
-<tr>
+
 <!-- Footer -->
 {% include 'part/footer.html' %}
-</tr>
-</table>
+
 
 
 <script src="/static/js/jquery.js"></script>
