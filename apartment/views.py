@@ -20,7 +20,6 @@ def index(request):
         ]
         return JsonResponse({'data': apartments})
     context = {'apartments': Apartment.objects.all().order_by('address')}
-    print(context)
     return render(request, 'apartment/apartment_index.html', context)
 
 
