@@ -1,6 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from seller.models import Seller
-
+from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
+from django.shortcuts import render, get_object_or_404, redirect
+from seller.forms.seller_form import SellerAddForm
 
 # Create your views here.
 
@@ -16,21 +19,22 @@ def get_seller_by_id(request, id):
         'seller': get_object_or_404(Seller, pk=id)
     })
 
-
-def create_seller(request):
+@login_required
+def add_seller(request):
     if request.method == 'POST':
-        form = SellerCreateForm(data=request.POST)
+        form = SellerAddForm(data=request.POST)
         if form.is_valid():
             seller = form.save()
-            seller_image = SellerImage(image=request.POST['image'], seller=seller)
-            seller_image.save()
+            #seller_image = SellerImage(image=request.POST['image'], seller=seller)
+            #seller_image.save()
             return redirect('seller_index')
     else:
-        form = SellerCreateForm()
+        form = SellerAddForm()
     return render(request, 'seller/add_seller.html', {
         'form': form
     })
 
+@login_required
 def delete_seller(request, id):
     seller = get_object_or_404(seller,pk=id)
     seller.delete()
