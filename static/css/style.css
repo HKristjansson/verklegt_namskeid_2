@@ -175,3 +175,8 @@ p.apartment-details-2 {
     width: 100%;
     height: 10px;
 }
+
+.apartments-search {
+    width: 90%;
+    padding: 20px;
+}
