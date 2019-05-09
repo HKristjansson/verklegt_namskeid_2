@@ -9,7 +9,7 @@
 __pycache__/
 local_settings.py
 db.sqlite3
-media
+
 venv/
 
 
@@ -20,6 +20,7 @@ venv/
 ### Django.Python Stack ###
 # Byte-compiled / optimized / DLL files
 *.py[cod]
+
 *$py.class
 
 # C extensions
