@@ -1,23 +1,11 @@
+from functools import reduce
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentSearchForm
 from apartment.models import Apartment, ApartmentImage
-
-
-def index(request):
-    if 'search_filter' in request.GET:
-        search_filter = request.GET['search_filter']
-        apartments = [{
-            'id': x.id,
-            'address': x.address,
-            'description': x.description,
-            'firstImage': x.apartmentimage_set.first().image
-        } for x in Apartment.objects.filter(address__icontains=search_filter)
-        ]
-        return JsonResponse({'data': apartments})
-    context = {'apartments': Apartment.objects.all().order_by('address')}
-    return render(request, 'apartment/apartment_index.html', context)
+import operator
 
 
 def get_apartment_by_id(request, id):
@@ -42,22 +30,6 @@ def add_apartment(request):
     })
 
 
-def search_apartment(request):
-    if request.method == 'POST':
-        form = ApartmentSearchForm(data=request.POST)
-        if form.is_valid():
-            apartment = form.save()
-            # apartment_image = ApartmentImage(image=request.POST['image'], apartment=apartment)
-            # apartment_image.save()
-            return redirect('apartment_details')
-    else:
-        form = ApartmentAddForm()
-    return render(request, 'part/search.html', {
-        'form': form
-    })
-
-
-
 @login_required
 def remove_apartment(request, id):
     apartment = get_object_or_404(Apartment, pk=id)
@@ -75,8 +47,43 @@ def update_apartment(request, id):
             form.save()
             return redirect('apartment_details', id=id)
     else:
-        form =  ApartmentUpdateForm(instance=instance)
+        form = ApartmentUpdateForm(instance=instance)
     return render(request, 'apartment/update_apartment.html', {
         'form': form,
         'id': id
     })
+
+def index(request):
+    if 'search_filter' in request.GET:
+        search_filter = request.GET['search_filter']
+        apartments = [{
+            'id': x.id,
+            'address': x.address,
+            'description': x.description,
+            'firstImage': x.apartmentimage_set.first().image
+        } for x in Apartment.objects.filter(address__icontains=search_filter)
+        ]
+        return JsonResponse({'data': apartments})
+    context = {'apartments': Apartment.objects.all().order_by('address')}
+    return render(request, 'apartment/apartment_index.html', context)
+
+
+def search_apartment(request):
+    if 'search_filter' in request.GET:
+        search_params = request.GET.dict()
+        q_list = [Q(("{}__icontains".format(param), search_params[param])) for param in search_params if
+                  search_params[param] is not None]
+
+        queryset = Apartment.objects.filter(reduce(operator.and_, q_list))
+        apartments = [{
+            'address': x.address,
+            'zip': x.zip,
+            'description': x.description,
+            'price': x.price,
+            'category': x.category
+        } for x in queryset
+        ]
+        print(JsonResponse({'data': apartments}))
+        return JsonResponse({'data': apartments})
+    context = {'apartments': Apartment.objects.all().order_by('price')}
+    return render(request, 'part/search_no_base.html', context)
