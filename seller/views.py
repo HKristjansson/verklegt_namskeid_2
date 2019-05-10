@@ -51,9 +51,9 @@ def update_seller(request, id):
         'id': id
     })
 
-
 @login_required
-def delete_seller(request, id):
-    seller = get_object_or_404(seller,pk=id)
+def remove_seller(request, id):
+    seller = get_object_or_404(Seller,pk=id)
     seller.delete()
+    seller['available'] == 0
     return redirect('seller_index')

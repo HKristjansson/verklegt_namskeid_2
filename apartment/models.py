@@ -3,14 +3,11 @@ from seller.models import Seller
 
 
 # Create your models here.
-
-
 class ApartmentCategory(models.Model):
     name = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name
-
 
 class Apartment(models.Model):
     address = models.CharField(max_length=255)
