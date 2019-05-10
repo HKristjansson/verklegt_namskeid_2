@@ -7,7 +7,7 @@ class Seller(models.Model):
     name = models.CharField(max_length=255)
     image = models.CharField(max_length=2999, blank=True)
     year_of_start = models.DateTimeField()
-    disabled = models.BinaryField()
+    disabled = models.BooleanField()
 
     def __str__(self):
         return self.name

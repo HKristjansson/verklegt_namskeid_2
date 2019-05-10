@@ -2,17 +2,25 @@ from django.db import models
 from seller.models import Seller
 
 
-# Create your models here.
+class ZIP(models.Model):
+    zip = models.IntegerField(default=0)
+    city = models.CharField(max_length=999)
+
+    def __str__(self):
+        return str(self.zip) + ' ' + self.city
+
+
 class ApartmentCategory(models.Model):
     name = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name
 
+
 class Apartment(models.Model):
     address = models.CharField(max_length=255)
     number = models.CharField(max_length=255)
-    zip = models.IntegerField()
+    zip = models.ForeignKey(ZIP, on_delete=models.CASCADE, blank=True)
     description = models.CharField(max_length=1524)
     rooms = models.IntegerField()
     size = models.FloatField(max_length=255)
@@ -36,3 +44,4 @@ class ApartmentImage(models.Model):
 
     def __str__(self):
         return self.apartment
+

@@ -33,7 +33,7 @@ class ApartmentAddForm(ModelForm):
         widgets = {
             'address': widgets.TextInput(attrs={'class': 'form-control'}),
             'number': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'zip': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'zip': widgets.Select(attrs={'class': 'form-control'}),
             'description': widgets.TextInput(attrs={'class': 'form-control'}),
             'rooms': widgets.NumberInput(attrs={'class': 'form-control'}),
             'size': widgets.NumberInput(attrs={'class': 'form-control'}),
