@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-
     <h1>{{ seller.name }}</h1>
     <p>{{ seller.description }}</p>
-    <p>Seller: {{ seller.image }}</p>
-    <form method="get" action="{% url 'add_apartment' %}">
-    <button class="btn btn-primary"  type="submit">Add New Apartment</button>
-
-</form>
+    <p>Seller: {{ seller.year_of_start }}</p>
+    <img src="{{ seller.image }}" class="seller-img">
+    <!-- todo: add more info about seller. -->
+    {% if seller.is_login %}
+        <form method="get" action="{% url 'add_apartment' %}">
+            <button class="btn btn-primary" type="submit">Add New Apartment</button>
+        </form>
+    {% endif %}
 {% endblock %}

@@ -146,7 +146,7 @@ img {
 .apartments-index {
     width: 70%;
     border-radius: 15px;
-    float: left;
+    /* float: left; */
     object-fit: contain;
     text-align: center;
     display: grid;
@@ -227,4 +227,14 @@ p.apartment-details-2 {
 .apartments-search {
     width: 90%;
     padding: 20px;
+}
+
+.img-const {
+    height: 13em;
+    width: 100%;
+}
+
+.seller-img {
+    height: 10%;
+    width: 10%;
 }

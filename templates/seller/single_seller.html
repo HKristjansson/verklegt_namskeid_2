@@ -1,8 +1,8 @@
 <div class="well seller">
     <a href="/sellers/{{ seller.id }}">
-        <img class="seller-img" src="{{ seller.sellerimage_set.first.image }}" />
+        <img class="seller-img" src="{{ seller.sellerimage_set.first.image }}" alt="image of a realtor"/>
         <h4>{{ seller.name }}</h4>
-        <p>{{ seller.image }}</p>
+        <p>{{ seller.year_of_start }}</p>
     </a>
 </div>
 

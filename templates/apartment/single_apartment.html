@@ -1,22 +1,21 @@
 <!-- Card Regular -->
-<div class="card card-cascade mx-2 my-2">
+    <div class="card mb-3 card-cascade mx-2 my-2 border rounded">
 
-  <!-- Card image -->
-  <div class="view view-cascade overlay">
-    <img class="card-img-top" src="{{ apartment.apartmentimage_set.first.image }}" alt="Card image cap">
-    <a href="/apartments/{{ apartment.id }}">
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
+        <!-- Card image -->
+        <div class="view view-cascade overlay">
+            <img class="card-img-top img-const" src="{{ apartment.apartmentimage_set.first.image }}" alt="Card image cap">
+            <a href="/apartments/{{ apartment.id }}">
+                <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
 
-  <!-- Card content -->
-  <div class="card-body card-body-cascade">
+        <!-- Card content -->
+        <div class="card-body card-body-cascade">
 
-    <!-- Title -->
-    <h4 class="card-title"><strong>{{ apartment.address }}</strong></h4>
-    <!-- Subtitle -->
-    <h6 class="font-weight-bold indigo-text py-2">{{ apartment.description }}</h6>
-    <!-- Text -->
-  </div>
-
-</div>
+            <!-- Title -->
+            <h4 class="card-title"><strong>{{ apartment.address }}</strong></h4>
+            <!-- Subtitle -->
+            <h6 class="font-weight-bold indigo-text py-2">{{ apartment.description }}</h6>
+            <!-- Text -->
+        </div>
+    </div>

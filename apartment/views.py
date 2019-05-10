@@ -5,6 +5,7 @@ from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm
 from apartment.models import Apartment, ApartmentImage
+from user.models import User
 import operator
 
 
