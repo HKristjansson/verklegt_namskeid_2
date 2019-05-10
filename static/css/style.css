@@ -215,7 +215,7 @@ p.apartment-details-2 {
 }
 
 .margin-bottom {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
 }
 .row {
     display: flex;
