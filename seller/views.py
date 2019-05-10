@@ -55,5 +55,6 @@ def update_seller(request, id):
 def remove_seller(request, id):
     seller = get_object_or_404(Seller,pk=id)
     seller.delete()
-    seller['available'] == 0
+    seller['disabled'] == 1
+    #seller['available'] == 0
     return redirect('seller_index')
