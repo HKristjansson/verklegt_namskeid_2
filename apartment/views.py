@@ -86,6 +86,7 @@ def search_apartment(request):
         ]
         return JsonResponse({'data': apartments})
     context = {'apartments': Apartment.objects.all().order_by('price')}
+    print(context)
     return render(request, 'part/search_no_base.html', context)
 
 
