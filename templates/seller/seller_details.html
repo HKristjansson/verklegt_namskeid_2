@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>{{ seller.name }}</h1>
-    <p>{{ seller.description }}</p>
-    <p>Seller: {{ seller.year_of_start }}</p>
+
+    <p>Started: {{ seller.year_of_start }}</p>
     <img src="{{ seller.image }}" class="seller-img">
+    <p></p>
+
+    <h4>{{ seller.description }}</h4>
+
     <!-- todo: add more info about seller. -->
     {% if seller.is_login %}
         <form method="get" action="{% url 'add_apartment' %}">

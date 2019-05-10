@@ -162,6 +162,7 @@ class SellerSeller(models.Model):
     image = models.CharField(max_length=2999)
     year_of_start = models.DateTimeField()
     disabled = models.BooleanField()
+    description = models.CharField(max_length=1024)
 
     class Meta:
         managed = False
