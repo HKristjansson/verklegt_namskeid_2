@@ -2,6 +2,7 @@ from django.forms import ModelForm, widgets, forms
 from django import forms
 from apartment.models import Apartment
 
+
 class ApartmentBuyForm(forms.ModelForm):
     class Meta:
         model = Apartment
@@ -41,6 +42,7 @@ class ApartmentBuyForm(forms.ModelForm):
             # 'buyer_id': widgets.NumberInput(attrs={'class': 'form-control'})
         }
 
+
 class ApartmentUpdateForm(ModelForm):
     class Meta:
         model = Apartment
@@ -48,7 +50,7 @@ class ApartmentUpdateForm(ModelForm):
         widgets = {
             'address': widgets.TextInput(attrs={'class': 'form-control'}),
             'number': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'zip': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'zip': widgets.Select(attrs={'class': 'form-control'}),
             'description': widgets.TextInput(attrs={'class': 'form-control'}),
             'rooms': widgets.NumberInput(attrs={'class': 'form-control'}),
             'size': widgets.NumberInput(attrs={'class': 'form-control'}),
@@ -62,8 +64,10 @@ class ApartmentUpdateForm(ModelForm):
             'buyer_id': widgets.NumberInput(attrs={'class': 'form-control'})
         }
 
+
 class ApartmentAddForm(ModelForm):
     image = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
+
     class Meta:
         model = Apartment
         exclude = ['id', 'created', 'updated', 'sold', 'buyer_id']

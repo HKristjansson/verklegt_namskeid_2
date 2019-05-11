@@ -8,10 +8,17 @@ from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory
 from user.models import User
 import operator
 
+
 def get_apartment_by_id(request, id):
+    apartments = Apartment.objects.all()
+    building_types = ApartmentCategory.objects.all()
+    zip_code = ZIP.objects.all()
+    context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
     return render(request, 'apartment/apartment_details.html', {
         'apartment': get_object_or_404(Apartment, pk=id)
-    })
+    }, context
+                  )
+
 
 @login_required
 def add_apartment(request):
@@ -28,6 +35,7 @@ def add_apartment(request):
         'form': form
     })
 
+
 @login_required
 def remove_apartment(request, id):
     apartment = get_object_or_404(Apartment, pk=id)
@@ -35,12 +43,14 @@ def remove_apartment(request, id):
     apartment.save()
     return redirect('apartment_index')
 
+
 @login_required
 def buy_apartment_step_one(request, id):
     instance = get_object_or_404(Apartment, pk=id)
     if request.method == 'POST':
         form = ApartmentBuyForm(data=request.POST, instance=instance)
         if form.is_valid():
+            instance.sold = True
             form.save()
             return redirect('apartment_details', id=id)
     else:
@@ -49,6 +59,7 @@ def buy_apartment_step_one(request, id):
         'form': form,
         'id': id
     })
+
 
 @login_required
 def update_apartment(request, id):
@@ -90,7 +101,6 @@ def search_apartment(request):
         search_params.pop("search_filter")
         q_list = [Q(("{}__icontains".format(param), search_params[param])) for param in search_params if
                   search_params[param] is not None]
-
         queryset = Apartment.objects.filter(reduce(operator.and_, q_list))
         apartments = [{
             'id': x.id,
@@ -103,8 +113,10 @@ def search_apartment(request):
         } for x in queryset
         ]
         return JsonResponse({'data': apartments})
-    context = {'apartments': Apartment.objects.all().order_by('price')}
-    print(context)
-    return render(request, 'part/search.html', context)
+    apartments = Apartment.objects.all()
+    building_types = ApartmentCategory.objects.all()
+    zip_code = ZIP.objects.all()
+    context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
+    return render(request, 'apartment/apartment_index.html', context)
 
 

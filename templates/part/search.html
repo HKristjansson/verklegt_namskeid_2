@@ -30,7 +30,8 @@
                     <section>
                         <label for="class">Property Type:</label>
                         <div class="wide">
-                            <select class="cs-select cs-skin-border input-half">
+                            <select class="cs-select cs-skin-border input-half"
+                                    name="category__id">
                                 <option value="">Any</option>
                                 {% for key in building_types %}
                                     <option value="{{ key }}"
@@ -115,7 +116,8 @@
                     <section>
                         <label for="class">Area (Zip):</label>
                        <div class="wide">
-                            <select class="cs-select cs-skin-border input-half">
+                            <select class="cs-select cs-skin-border input-half"
+                                    name="zip__zip">
                                 <option value="">Any</option>
                                 {% for key in zip %}
                                     <option value="{{ key }}"
