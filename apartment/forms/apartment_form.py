@@ -42,6 +42,6 @@ class ApartmentAddForm(ModelForm):
             'seller': widgets.Select(attrs={'class': 'form-control'}),
             'owner_name': widgets.TextInput(attrs={'class': 'form-control'}),
             'owner_ssn': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'owner_phone': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'available': widgets.CheckboxInput(attrs={'class': 'checkbox'}),
+            'owner_phone': widgets.NumberInput(attrs={'class': 'form-control'})
+
         }
