@@ -1,6 +1,42 @@
 {% extends "base.html" %}
-{%  block content %}
-    <form class="form form-horizontal" action="{% url 'buy_apartment_step_one' id %}" method="post">
+{% block content %}
+    <div class="container-fluid">
+    <div class="col-md-8">
+        <section class="apartment-details-container">
+            <div class="apartment-details-1">
+                {% for apartment_image in apartment.apartmentimage_set.all %}
+                    <img src="{{ apartment_image.image }}" class="apartment-img-large"/>
+                {% endfor %}
+            </div>
+
+            <div class="apartment-details-1">
+
+                <h1><strong>{{ apartment.address }} {{ apartment.number }}</strong></h1>
+                <br>
+                <h2><strong>Description:</strong></h2>
+                <p>{{ apartment.description }}</p>
+            </div>
+
+            <div class="apartment-details-2">
+                <h2><strong>Details:</strong></h2>
+                <p><strong>Price: </strong>{{ apartment.price }}.kr</p>
+                <p><strong>ZIP: </strong>{{ apartment.zip }}</p>
+                <p><strong>Town: </strong></p>
+                <p><strong>Rooms: </strong>{{ apartment.rooms }}</p>
+                <p><strong>Size: </strong>{{ apartment.size }}</p>
+                <p><strong>Category: </strong>{{ apartment.category }}</p>
+                <p><strong>Realtor: </strong>{{ apartment.seller }}</p>
+
+
+
+
+            </div>
+
+
+
+        </section>
+    </div>
+
         {% csrf_token %}
         {{ form }}
     <input type="submit" value="Update" class="btn btn-primary pull-right" style="clear:both; margin: 10px 0" />
