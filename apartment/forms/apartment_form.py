@@ -1,14 +1,15 @@
-from django.forms import ModelForm, widgets
+from django.forms import ModelForm, widgets, forms
 from django import forms
 from apartment.models import Apartment
 
-
-class ApartmentBuyApartmentStepOne(ModelForm):
+class ApartmentBuyApartmentStepOne(forms.ModelForm):
     class Meta:
         model = Apartment
         exclude = ['id', 'created', 'updated']
+        readonly_fields = ['address', 'number', 'zip', 'description', 'rooms', 'size', 'price', 'category',
+                           'seller', 'owner_name', 'owner_ssn', 'owner_phone']
         widgets = {
-            'address': widgets.TextInput(attrs={'class': 'form-control'}),
+            #'address': widgets.TextInput(attrs={'class': 'form-control'}),
             'number': widgets.NumberInput(attrs={'class': 'form-control'}),
             'zip': widgets.NumberInput(attrs={'class': 'form-control'}),
             'description': widgets.TextInput(attrs={'class': 'form-control'}),
@@ -23,7 +24,6 @@ class ApartmentBuyApartmentStepOne(ModelForm):
             'sold': widgets.CheckboxInput(attrs={'class': 'checkbox'}),
             'buyer_id': widgets.NumberInput(attrs={'class': 'form-control'})
         }
-
 
 class ApartmentUpdateForm(ModelForm):
     class Meta:
@@ -46,10 +46,8 @@ class ApartmentUpdateForm(ModelForm):
             'buyer_id': widgets.NumberInput(attrs={'class': 'form-control'})
         }
 
-
 class ApartmentAddForm(ModelForm):
     image = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-
     class Meta:
         model = Apartment
         exclude = ['id', 'created', 'updated', 'sold', 'buyer_id']
