@@ -3,7 +3,7 @@ from seller.models import Seller
 
 
 class ZIP(models.Model):
-    zip = models.IntegerField(default=0)
+    zip = models.IntegerField(default=0, primary_key=True)
     city = models.CharField(max_length=999)
 
     def __str__(self):
