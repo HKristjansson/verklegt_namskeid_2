@@ -1,9 +1,10 @@
 from django.db import models
 from seller.models import Seller
+from user.models import Profile
 
 
 class ZIP(models.Model):
-    zip = models.IntegerField(default=0)
+    zip = models.IntegerField(default=0, primary_key=True)
     city = models.CharField(max_length=999)
 
     def __str__(self):
@@ -30,13 +31,13 @@ class Apartment(models.Model):
     owner_name = models.CharField(max_length=255)
     owner_ssn = models.IntegerField()
     owner_phone = models.IntegerField()
-    sold = models.BooleanField()
+    sold = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    buyer_id = models.ForeignKey(Profile, on_delete=models.CASCADE, blank=True)
 
     def __str__(self):
         return self.address
-
 
 class ApartmentImage(models.Model):
     image = models.CharField(max_length=999)

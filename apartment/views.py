@@ -3,17 +3,15 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm
-from apartment.models import Apartment, ApartmentImage
+from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentBuyApartmentStepOne
+from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory
 from user.models import User
 import operator
-
 
 def get_apartment_by_id(request, id):
     return render(request, 'apartment/apartment_details.html', {
         'apartment': get_object_or_404(Apartment, pk=id)
     })
-
 
 @login_required
 def add_apartment(request):
@@ -33,9 +31,24 @@ def add_apartment(request):
 @login_required
 def remove_apartment(request, id):
     apartment = get_object_or_404(Apartment, pk=id)
-    apartment['available'] == 0
+    apartment.sold = True
     apartment.save()
     return redirect('apartment_index')
+
+@login_required
+def buy_apartment_step_one(request, id):
+    instance = get_object_or_404(Apartment, pk=id)
+    if request.method == 'POST':
+        form = ApartmentBuyApartmentStepOne(data=request.POST, instance=instance)
+        if form.is_valid():
+            form.save()
+            return redirect('apartment_details', id=id)
+    else:
+        form = ApartmentBuyApartmentStepOne(instance=instance)
+    return render(request, 'apartment/buy_apartment_step_one.html', {
+        'form': form,
+        'id': id
+    })
 
 @login_required
 def update_apartment(request, id):
@@ -52,6 +65,7 @@ def update_apartment(request, id):
         'id': id
     })
 
+
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
@@ -63,7 +77,10 @@ def index(request):
         } for x in Apartment.objects.filter(address__icontains=search_filter)
         ]
         return JsonResponse({'data': apartments})
-    context = {'apartments': Apartment.objects.all().order_by('address')}
+    apartments = Apartment.objects.all()
+    building_types = ApartmentCategory.objects.all()
+    zip_code = ZIP.objects.all()
+    context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
     return render(request, 'apartment/apartment_index.html', context)
 
 
@@ -78,7 +95,7 @@ def search_apartment(request):
         apartments = [{
             'id': x.id,
             'address': x.address,
-            'zip': x.zip,
+            'zip': str(x.zip),
             'description': x.description,
             'price': x.price,
             'category': str(x.category),
@@ -88,6 +105,6 @@ def search_apartment(request):
         return JsonResponse({'data': apartments})
     context = {'apartments': Apartment.objects.all().order_by('price')}
     print(context)
-    return render(request, 'part/search_no_base.html', context)
+    return render(request, 'part/search.html', context)
 
 

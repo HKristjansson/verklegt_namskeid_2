@@ -6,14 +6,10 @@ from django.shortcuts import render, get_object_or_404, redirect
 from seller.forms.seller_form import SellerAddForm, SellerUpdateForm
 
 # Create your views here.
-#def index(request):
-#    context = {'sellers': Seller.objects.all().order_by('name')
-#               }
-#    return render(request, 'seller/seller_index.html', context)
-
 def index(request):
     context = {'sellers': Seller.objects.all().order_by('name')
                }
+
     return render(request, 'seller/seller_index.html', context)
 
 def get_seller_by_id(request, id):
@@ -54,7 +50,10 @@ def update_seller(request, id):
 @login_required
 def remove_seller(request, id):
     seller = get_object_or_404(Seller,pk=id)
-    seller.delete()
-    seller['disabled'] == 1
-    #seller['available'] == 0
+    seller.disabled = True
+
+
+    seller.save()
     return redirect('seller_index')
+
+

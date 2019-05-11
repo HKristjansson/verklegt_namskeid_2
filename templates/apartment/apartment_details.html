@@ -10,6 +10,7 @@
             </div>
 
             <div class="apartment-details-1">
+
                 <h1><strong>{{ apartment.address }} {{ apartment.number }}</strong></h1>
                 <br>
                 <h2><strong>Description:</strong></h2>
@@ -31,6 +32,10 @@
                     <a href="{% url 'update_apartment' apartment.id %}" class="block btn btn-primary">Update
                         apartment</a>
                 {% endif %}
+                {% if request.user.is_active %}
+                    <a href="{% url 'buy_apartment_step_one' apartment.id %}" class="block btn btn-primary">Buy
+                        apartment</a>
+                {% endif %}
             </div>
 
 
@@ -38,7 +43,7 @@
         </section>
     </div>
     <div class="col-md-4">
-                {% include 'part/search_no_base.html' %}
+                {% include 'part/search.html' %}
             </div>
     </div>
 

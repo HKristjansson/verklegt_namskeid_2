@@ -46,6 +46,17 @@
                 >
                     <a class="nav-link" href="{% url 'seller_index' %}">Realtors</a>
                 </li>
+            <li
+                {% if request.user.is_authenticated %}
+                    {% if 'add_aparment' in request.path %}
+                        class="nav-item active mr-3"
+                        {% else %}
+                            class="nav-item mr-3"
+                        {% endif %}
+                >
+                    <a class="nav-link" href="{% url 'add_apartment' %}">Add apartment</a>
+            {% endif %}
+            </li>
             </ul>
 
             <ul class="navbar-nav ml-auto">
