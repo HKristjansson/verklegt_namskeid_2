@@ -6,7 +6,7 @@ from apartment.models import Apartment
 class ApartmentBuyForm(forms.ModelForm):
     class Meta:
         model = Apartment
-        exclude = ['id', 'created', 'updated']
+        exclude = ['id', 'created', 'updated', 'sold']
         readonly_fields = ['address', 'number', 'zip', 'description', 'rooms', 'size', 'price', 'category',
                            'seller', 'owner_name', 'owner_ssn', 'owner_phone']
 
