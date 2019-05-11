@@ -114,18 +114,13 @@
                 <div>
                     <section>
                         <label for="class">Area (Zip):</label>
-                        <div class="wide">
-                            <select class="cs-select cs-select-half cs-skin-border input-half"
-                                    name="zip">
+                       <div class="wide">
+                            <select class="cs-select cs-skin-border input-half">
                                 <option value="" disabled selected>Any</option>
-                                <option value="100">100 Reykjavik</option>
-                                <option value="101">101 Reykjavik</option>
-                                <option value="102">102 Reykjavik</option>
-                                <option value="103">103 Reykjavik</option>
-                                <option value="600">600 Akureyri</option>
-                                <option value="601">601 Akureyri</option>
-                                <option value="602">602 Akureyri</option>
-                                <option value="603">603 Akureyri</option>
+                                {% for key in zip %}
+                                    <option value="{{ key }}"
+                                    >{{ key }}</option>
+                                {% endfor %}
                             </select>
                         </div>
                     </section>

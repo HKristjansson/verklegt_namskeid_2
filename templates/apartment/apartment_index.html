@@ -5,9 +5,8 @@
             <div class="col-md-8">
                 <div class="apartment-index-main">
                     {% if request.user.is_authenticated %}
-                        <div class="btn-toolbar col-sm-4">
-                            <button type="button" id="add-apartment-btn" class="btn btn-info">Add Apartment</button>
-                        </div>
+                    <a href="{% url 'add_apartment' %}" class="block btn btn-primary">Add
+                        apartment</a>
                     {% endif %}
                     <h2>Latest apartments:</h2>
                     <div class="apartments-index">

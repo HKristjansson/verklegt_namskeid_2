@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 from django.shortcuts import render
-from apartment.models import Apartment, ApartmentCategory
+from apartment.models import Apartment, ApartmentCategory, ZIP
 
 # Create your views here.
 
@@ -8,7 +8,8 @@ from apartment.models import Apartment, ApartmentCategory
 def index(request):
     apartments = Apartment.objects.all().order_by('-created')
     building_types = ApartmentCategory.objects.all()
-    context = {'apartments': apartments, 'building_types': building_types}
+    zip_code = ZIP.objects.all()
+    context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
     return render(request, 'index/index.html', context)
 
 
