@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm
+from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentBuyApartmentStepOne
 from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory
 from user.models import User
 import operator

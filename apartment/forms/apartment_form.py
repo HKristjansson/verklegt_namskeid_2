@@ -21,7 +21,7 @@ class ApartmentBuyApartmentStepOne(ModelForm):
             'owner_ssn': widgets.NumberInput(attrs={'class': 'form-control'}),
             'owner_phone': widgets.NumberInput(attrs={'class': 'form-control'}),
             'sold': widgets.CheckboxInput(attrs={'class': 'checkbox'}),
-            'buyer': widgets.NumberInput(attrs={'class': 'form-control'})
+            'buyer_id': widgets.NumberInput(attrs={'class': 'form-control'})
         }
 
 
@@ -43,7 +43,7 @@ class ApartmentUpdateForm(ModelForm):
             'owner_ssn': widgets.NumberInput(attrs={'class': 'form-control'}),
             'owner_phone': widgets.NumberInput(attrs={'class': 'form-control'}),
             'sold': widgets.CheckboxInput(attrs={'class': 'checkbox'}),
-            'buyer': widgets.NumberInput(attrs={'class': 'form-control'})
+            'buyer_id': widgets.NumberInput(attrs={'class': 'form-control'})
         }
 
 
@@ -52,7 +52,7 @@ class ApartmentAddForm(ModelForm):
 
     class Meta:
         model = Apartment
-        exclude = ['id', 'created', 'updated', 'sold', 'buyer']
+        exclude = ['id', 'created', 'updated', 'sold', 'buyer_id']
         widgets = {
             'address': widgets.TextInput(attrs={'class': 'form-control'}),
             'number': widgets.NumberInput(attrs={'class': 'form-control'}),
