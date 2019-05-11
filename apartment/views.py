@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm
-from apartment.models import Apartment, ApartmentImage
+from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory
 from user.models import User
 import operator
 
@@ -65,6 +65,7 @@ def update_apartment(request, id):
         'id': id
     })
 
+
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
@@ -76,7 +77,10 @@ def index(request):
         } for x in Apartment.objects.filter(address__icontains=search_filter)
         ]
         return JsonResponse({'data': apartments})
-    context = {'apartments': Apartment.objects.all().order_by('address')}
+    apartments = Apartment.objects.all()
+    building_types = ApartmentCategory.objects.all()
+    zip_code = ZIP.objects.all()
+    context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
     return render(request, 'apartment/apartment_index.html', context)
 
 
@@ -91,7 +95,7 @@ def search_apartment(request):
         apartments = [{
             'id': x.id,
             'address': x.address,
-            'zip': x.zip,
+            'zip': str(x.zip),
             'description': x.description,
             'price': x.price,
             'category': str(x.category),
@@ -101,6 +105,6 @@ def search_apartment(request):
         return JsonResponse({'data': apartments})
     context = {'apartments': Apartment.objects.all().order_by('price')}
     print(context)
-    return render(request, 'part/search_no_base.html', context)
+    return render(request, 'part/search.html', context)
 
 
