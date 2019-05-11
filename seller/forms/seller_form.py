@@ -24,6 +24,7 @@ class SellerAddForm(ModelForm):
             'name': widgets.TextInput(attrs={'class': 'form-control'}),
             'image': widgets.NumberInput(attrs={'class': 'form-control'}),
             'year_of_start': widgets.TextInput(attrs={'class': 'form-control'}),
-            'description':widgets.TextInput(attrs={'class': 'form-control'})
+            'description':widgets.TextInput(attrs={'class': 'form-control'}),
+
 
         }
