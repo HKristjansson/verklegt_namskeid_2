@@ -36,6 +36,21 @@ def remove_apartment(request, id):
     return redirect('apartment_index')
 
 @login_required
+def buy_apartment_step_one(request, id):
+    instance = get_object_or_404(Apartment, pk=id)
+    if request.method == 'POST':
+        form = ApartmentBuyApartmentStepOne(data=request.POST, instance=instance)
+        if form.is_valid():
+            form.save()
+            return redirect('apartment_details', id=id)
+    else:
+        form = ApartmentBuyApartmentStepOne(instance=instance)
+    return render(request, 'apartment/buy_apartment_step_one.html', {
+        'form': form,
+        'id': id
+    })
+
+@login_required
 def update_apartment(request, id):
     instance = get_object_or_404(Apartment, pk=id)
     if request.method == 'POST':

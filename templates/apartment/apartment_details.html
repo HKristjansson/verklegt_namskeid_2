@@ -32,6 +32,10 @@
                     <a href="{% url 'update_apartment' apartment.id %}" class="block btn btn-primary">Update
                         apartment</a>
                 {% endif %}
+                {% if request.user.is_active %}
+                    <a href="{% url 'buy_apartment_step_one' apartment.id %}" class="block btn btn-primary">Buy
+                        apartment</a>
+                {% endif %}
             </div>
 
 

@@ -1,5 +1,6 @@
 from django.db import models
 from seller.models import Seller
+from user.models import Profile
 
 
 class ZIP(models.Model):
@@ -33,11 +34,11 @@ class Apartment(models.Model):
     sold = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    buyer = models.CharField(max_lenght=30)
+    buyer = models.ForeignKey(Profile, on_delete=models.CASCADE, blank=True)
+
 
     def __str__(self):
         return self.address
-
 
 class ApartmentImage(models.Model):
     image = models.CharField(max_length=999)
