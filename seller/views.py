@@ -50,6 +50,10 @@ def update_seller(request, id):
 @login_required
 def remove_seller(request, id):
     seller = get_object_or_404(Seller,pk=id)
-    seller.delete()
-    seller['disabled'] == 1
+    seller.disabled = True
+
+
+    seller.save()
     return redirect('seller_index')
+
+

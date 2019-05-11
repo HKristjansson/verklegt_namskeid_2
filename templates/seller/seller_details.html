@@ -2,13 +2,17 @@
 {% block content %}
     <h1>{{ seller.name }}</h1>
 
-    <p>Started: {{ seller.year_of_start }}</p>
+    <h4>Started: {{ seller.year_of_start }}</h4>
     <img src="{{ seller.image }}" class="seller-img">
     <p></p>
-
     <h4>{{ seller.description }}</h4>
+    {% if request.user.is_superuser %}
+                    <a href="{% url 'remove_seller' seller.id %}" class="block btn btn-primary">Remove
+                        realtor</a>
+                    <a href="{% url 'update_seller' seller.id %}" class="block btn btn-primary">Update
+                        realtor</a>
+                {% endif %}
 
-    <!-- todo: add more info about seller. -->
     {% if seller.is_login %}
         <form method="get" action="{% url 'add_apartment' %}">
             <button class="btn btn-primary" type="submit">Add New Apartment</button>
