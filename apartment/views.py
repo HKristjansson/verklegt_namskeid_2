@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentBuyApartmentStepOne
+from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentBuyForm
 from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory
 from user.models import User
 import operator
@@ -39,12 +39,12 @@ def remove_apartment(request, id):
 def buy_apartment_step_one(request, id):
     instance = get_object_or_404(Apartment, pk=id)
     if request.method == 'POST':
-        form = ApartmentBuyApartmentStepOne(data=request.POST, instance=instance)
+        form = ApartmentBuyForm(data=request.POST, instance=instance)
         if form.is_valid():
             form.save()
             return redirect('apartment_details', id=id)
     else:
-        form = ApartmentBuyApartmentStepOne(instance=instance)
+        form = ApartmentBuyForm(instance=instance)
     return render(request, 'apartment/buy_apartment_step_one.html', {
         'form': form,
         'id': id

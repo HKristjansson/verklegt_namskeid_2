@@ -2,7 +2,7 @@ from django.forms import ModelForm, widgets, forms
 from django import forms
 from apartment.models import Apartment
 
-class ApartmentBuyApartmentStepOne(forms.ModelForm):
+class ApartmentBuyForm(forms.ModelForm):
     class Meta:
         model = Apartment
         exclude = ['id', 'created', 'updated']
