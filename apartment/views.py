@@ -8,12 +8,10 @@ from apartment.models import Apartment, ApartmentImage
 from user.models import User
 import operator
 
-
 def get_apartment_by_id(request, id):
     return render(request, 'apartment/apartment_details.html', {
         'apartment': get_object_or_404(Apartment, pk=id)
     })
-
 
 @login_required
 def add_apartment(request):

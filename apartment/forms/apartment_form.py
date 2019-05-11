@@ -29,7 +29,7 @@ class ApartmentAddForm(ModelForm):
 
     class Meta:
         model = Apartment
-        exclude = ['id','created', 'updated','sold']
+        exclude = ['id', 'created', 'updated', 'sold']
         widgets = {
             'address': widgets.TextInput(attrs={'class': 'form-control'}),
             'number': widgets.NumberInput(attrs={'class': 'form-control'}),
