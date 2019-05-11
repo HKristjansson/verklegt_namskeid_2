@@ -9,8 +9,8 @@ class SellerUpdateForm(ModelForm):
         widgets = {
             'name': widgets.TextInput(attrs={'class': 'form-control'}),
             'image': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'year_of_start': widgets.TextInput(attrs={'class': 'form-control'})
-            #'available': widgets.CheckboxInput(attrs={'class': 'checkbox'})
+            'year_of_start': widgets.TextInput(attrs={'class': 'form-control'}),
+            'description': widgets.TextInput(attrs={'class': 'form-control'})
         }
 
 
@@ -19,10 +19,11 @@ class SellerAddForm(ModelForm):
 
     class Meta:
         model = Seller
-        exclude = ['id']
+        exclude = ['id', 'disabled']
         widgets = {
             'name': widgets.TextInput(attrs={'class': 'form-control'}),
             'image': widgets.NumberInput(attrs={'class': 'form-control'}),
             'year_of_start': widgets.TextInput(attrs={'class': 'form-control'}),
-            'available': widgets.CheckboxInput(attrs={'class': 'checkbox'})
+            'description':widgets.TextInput(attrs={'class': 'form-control'})
+
         }

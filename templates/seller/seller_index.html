@@ -2,12 +2,27 @@
 
 {% block content %}
     <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <h3>Sellers</h3>
+        <div class="row-margin-bottom">
+            <div class="col-md12">
+
+            {% if request.user.is_authenticated %}
+                        <div class="btn-toolbar col-sm-4">
+                            <button type="button" id="add-realtor-btn" class="btn btn-info">Add Realtor</button>
+                        </div>
+                    {% endif %}
+
+
+                <h3>Registered realtors</h3>
+                <h4></h4>
                 <div class="seller">
                     {% for seller in sellers %}
-                        {% include 'seller/single_seller.html' with seller=seller %}
+                        {% if seller.disabled == False %}
+
+
+                            <div>
+                                {% include 'seller/single_seller.html' with seller=seller %}
+                            </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>
