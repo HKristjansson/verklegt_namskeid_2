@@ -4,10 +4,6 @@
         <div class="row margin-bottom">
             <div class="col-md-8">
                 <div class="apartment-index-main">
-                    {% if request.user.is_authenticated %}
-                    <a href="{% url 'add_apartment' %}" class="block btn btn-primary">Add
-                        apartment</a>
-                    {% endif %}
                     <h2>Latest apartments:</h2>
                     <div class="apartments-index">
                         {% for apartment in apartments %}
@@ -21,7 +17,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                {% include 'part/search_no_base.html' %}
+                {% include 'part/search.html' %}
             </div>
         </div>
     </div>
