@@ -33,7 +33,7 @@ class Apartment(models.Model):
     sold = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    buyer = models.CharField(max_lenght=30)
+    buyer = models.IntegerField()
 
     def __str__(self):
         return self.address
