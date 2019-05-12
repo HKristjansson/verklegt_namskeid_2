@@ -25,22 +25,11 @@ class ApartmentBuyForm(forms.ModelForm):
             'card_number_4': widgets.TextInput(attrs={'class': 'form-control'}),
             'cvc': widgets.TextInput(attrs={'class': 'form-control'})
         }
-        # else:
-        #     widgets = {
-        #         'address': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-        #         'number': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-        #         'zip': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-        #         'description': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-        #         'rooms': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-        #         'size': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-        #         'price': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-        #         'category': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-        #         'seller': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-        #     }
 
 
 class ApartmentUpdateForm(ModelForm):
-    image = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    image = forms.CharField(required=False,
+                            widget=forms.TextInput(attrs={'class': 'form-control', 'enctype': 'multipart/form-data'}))
 
     class Meta:
         model = Apartment
