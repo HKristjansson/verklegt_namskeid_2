@@ -26,16 +26,20 @@
                 <p><strong>Size: </strong>{{ apartment.size }}</p>
                 <p><strong>Category: </strong>{{ apartment.category }}</p>
                 <p><strong>Realtor: </strong>{{ apartment.seller }}</p>
+              
                 {% if request.user.is_staff or request.user.is_superuser %}
-                    <a href="{% url 'remove_apartment' apartment.id %}" class="block btn btn-primary">Remove
+                    <a href="{% url 'remove_apartment' apartment.id %}" class="btn-block btn btn-primary mb-3">Remove
                         apartment</a>
-                    <a href="{% url 'update_apartment' apartment.id %}" class="block btn btn-primary">Update
+
+                    <a href="{% url 'update_apartment' apartment.id %}" class="btn-block btn btn-primary mb-3">Update
                         apartment</a>
                 {% endif %}
                 {% if request.user.is_active %}
-                    <a href="{% url 'buy_apartment_step_one' apartment.id %}" class="block btn btn-primary">Buy
+                    <a href="{% url 'buy_apartment_step_one' apartment.id %}" class="btn-block btn btn-primary mb-3">Buy
                         apartment</a>
                 {% endif %}
+                
+                
             </div>
 
 
