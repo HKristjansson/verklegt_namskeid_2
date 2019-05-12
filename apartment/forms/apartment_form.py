@@ -26,7 +26,18 @@ class ApartmentBuyForm(forms.ModelForm):
                 'owner_phone': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True})
 
         }
-    else
+        else:
+            widgets = {
+                'address': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+                'number': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+                'zip': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+                'description': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+                'rooms': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+                'size': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+                'price': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+                'category': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+                'seller': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+            }
 
 
 class ApartmentUpdateForm(ModelForm):
