@@ -1,15 +1,14 @@
 from django.forms import ModelForm, widgets, forms
 from django import forms
 from apartment.models import Apartment
-from urllib import request
 
 
 class ApartmentBuyForm(forms.ModelForm):
     class Meta:
         model = Apartment
-        exclude = ['id', 'created', 'updated', 'sold']
+        exclude = ['id', 'created', 'updated', 'sold', 'owner_name', 'owner_ssn', 'owner_phone', 'buyer_id']
         readonly_fields = ['address', 'number', 'zip', 'description', 'rooms', 'size', 'price', 'category',
-                           'seller', 'owner_name', 'owner_ssn', 'owner_phone']
+                           'seller']
         widgets = {
             'address': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
             'number': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
@@ -20,10 +19,11 @@ class ApartmentBuyForm(forms.ModelForm):
             'price': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
             'category': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
             'seller': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-            'owner_name': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-            'owner_ssn': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-            'owner_phone': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True})
-
+            'card_number_1': widgets.TextInput(attrs={'class': 'form-control'}),
+            'card_number_2': widgets.TextInput(attrs={'class': 'form-control'}),
+            'card_number_3': widgets.TextInput(attrs={'class': 'form-control'}),
+            'card_number_4': widgets.TextInput(attrs={'class': 'form-control'}),
+            'cvc': widgets.TextInput(attrs={'class': 'form-control'})
         }
         # else:
         #     widgets = {

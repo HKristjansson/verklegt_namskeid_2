@@ -12,6 +12,7 @@
                         <form class="form form-horizontal" action="{% url "buy_apartment_step_one" id %}" method="post">
                             {% csrf_token %}
                             {{ form }}
+                            {{ credit_card }}
                             <input type="submit" value="Continue" class="btn btn-primary pull-right"
                                    style="clear:both; margin: 10px 0"/>
                         </form>
