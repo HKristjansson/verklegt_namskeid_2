@@ -8,7 +8,7 @@ class ZIP(models.Model):
     city = models.CharField(max_length=999)
 
     def __str__(self):
-        return str(self.zip) + ' ' + self.city
+        return '%s %s' % (self.zip, self.city)
 
 
 class ApartmentCategory(models.Model):
@@ -38,6 +38,7 @@ class Apartment(models.Model):
 
     def __str__(self):
         return self.address
+
 
 class ApartmentImage(models.Model):
     image = models.CharField(max_length=999)

@@ -13,10 +13,10 @@ def get_apartment_by_id(request, id):
     apartments = Apartment.objects.all()
     building_types = ApartmentCategory.objects.all()
     zip_code = ZIP.objects.all()
-    context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
-    return render(request, 'apartment/apartment_details.html', {
-        'apartment': get_object_or_404(Apartment, pk=id)
-    }, context
+    context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code,
+               'apartment': get_object_or_404(Apartment, pk=id)}
+    return render(
+        request, 'apartment/apartment_details.html', context
                   )
 
 
@@ -80,6 +80,7 @@ def update_apartment(request, id):
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
+        print(search_filter)
         apartments = [{
             'id': x.id,
             'address': x.address,
@@ -90,7 +91,8 @@ def index(request):
         return JsonResponse({'data': apartments})
     apartments = Apartment.objects.all()
     building_types = ApartmentCategory.objects.all()
-    zip_code = ZIP.objects.all()
+    zip_code = ZIP.objects.all().values("zip", "city")
+    print(zip_code.values("city"))
     context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
     return render(request, 'apartment/apartment_index.html', context)
 
