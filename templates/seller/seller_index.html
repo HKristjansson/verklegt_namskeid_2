@@ -4,23 +4,11 @@
     <div class="container">
         <div class="row-margin-bottom">
             <div class="col-md12">
-
                 <div class="seller-index-main">
-                    {% if request.user.is_authenticated %}
-                    <a href="{% url 'add_seller' %}" class="block btn btn-primary">Add
-                        realtor</a>
-                    {% endif %}
-
-
-
                 <h3>Registered realtors</h3>
-
-
                 <div class="seller">
                     {% for seller in sellers %}
                         {% if seller.disabled == False %}
-
-
                             <div>
                                 {% include 'seller/single_seller.html' with seller=seller %}
                             </div>

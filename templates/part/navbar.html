@@ -38,10 +38,8 @@
                 <div class="dropdown">
                     <a class="nav-link" href="{% url 'apartment_index' %}">Apartments</a>
                     <div class="dropdown-content">
-                        {% if request.user.is_authenticated %}
+                        {% if request.user.is_staff or request.user.is_superuser %}
                             <a href="{% url 'add_apartment' %}">Add apartment</a>
-                        {% endif %}
-                        {% if request.user.is_authenticated %}
                             <a href="{% url 'sold_apartments' %}">Sold apartments</a>
                         {% endif %}
                   </div>
@@ -53,7 +51,13 @@
                             class="nav-item mr-3"
                         {% endif %}
                 >
-                    <a class="nav-link" href="{% url 'seller_index' %}">Realtors</a>
+                    <div class="dropdown">
+                        <a class="nav-link" href="{% url 'seller_index' %}">Realtors</a>
+                    <div class="dropdown-content">
+                        {% if request.user.is_staff or request.user.is_superuser %}
+				            <a href="{% url 'add_seller' %}">Add realtor</a>
+                        {% endif %}
+                  </div>
                 </li>
               </ul>
 
