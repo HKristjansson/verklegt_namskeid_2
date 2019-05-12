@@ -1,14 +1,8 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
-from user.forms.profile_form import ProfileForm
 from user.forms.registration_form import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
-from user.models import Profile
 from django.contrib import messages, auth
 from django.http import HttpResponseForbidden
-from user.models import User
-
 
 
 def index(request):
@@ -79,3 +73,14 @@ def logout(request):
         auth.logout(request)
         messages.success(request, 'You are now logged out')
         return redirect('index')
+
+
+def payment(request):
+    if request.method == 'POST':
+        form = PaymentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = PaymentForm()
+    return render(request, 'apartment/buy_apartment_step_one.html', {'form': form})

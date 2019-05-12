@@ -5,7 +5,6 @@ from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentBuyForm
 from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory
-from user.models import User
 import operator
 
 
@@ -51,13 +50,14 @@ def buy_apartment_step_one(request, id):
         form = ApartmentBuyForm(data=request.POST, instance=instance)
         if form.is_valid():
             instance.sold = True
+            instance.buyer = request.user
             form.save()
             return redirect('apartment_details', id=id)
     else:
         form = ApartmentBuyForm(instance=instance)
     return render(request, 'apartment/buy_apartment_step_one.html', {
         'form': form,
-        'id': id
+        'id': id,
     })
 
 

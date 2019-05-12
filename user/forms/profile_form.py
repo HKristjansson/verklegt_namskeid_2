@@ -15,3 +15,4 @@ class ProfileForm(ModelForm):
             'phone': widgets.TextInput(attrs={'class': 'form-control'}),
             'image': widgets.TextInput(attrs={'class': 'form-control'})
         }
+

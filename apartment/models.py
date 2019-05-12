@@ -1,6 +1,6 @@
 from django.db import models
 from seller.models import Seller
-from user.models import Profile
+from user.models import Profile, User
 
 
 class ZIP(models.Model):
@@ -34,7 +34,7 @@ class Apartment(models.Model):
     sold = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    buyer_id = models.ForeignKey(Profile, on_delete=models.CASCADE, blank=True)
+    buyer = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
 
     def __str__(self):
         return self.address
