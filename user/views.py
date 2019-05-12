@@ -6,12 +6,14 @@ from user.forms.profile_form import ProfileForm
 from user.forms.registration_form import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from user.models import Profile
 from django.contrib import messages, auth
+from django.http import HttpResponseForbidden
+from user.models import User
 
 
 
 def index(request):
-    # context = {'users': users}
-    return render(request, 'user/user-index.html')
+    # return render(request, 'user/user-index.html')
+    return HttpResponseForbidden()
 
 
 def register(request):
@@ -48,8 +50,10 @@ def profile(request):
         'u_form': u_form,
         'p_form': p_form
     }
-
-    return render(request, 'user/profile.html', context)
+    if request.user.is_authenticated:
+        return render(request, 'user/profile.html', context)
+    else:
+        return HttpResponseForbidden()
 
 
 def login(request):
@@ -62,12 +66,12 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             messages.success(request, 'You are now logged in')
-            return redirect('dashboard')
+            return redirect('index')
         else:
             messages.error(request, 'Invalid credentials')
             return redirect('login')
     else:
-        return render(request, 'user/login.html')
+        return render(request, 'login.html')
 
 
 def logout(request):
