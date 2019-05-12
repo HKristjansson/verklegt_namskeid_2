@@ -19,8 +19,7 @@ $(document).ready(function() {
                 $('.apartments-index').html(newHtml.join(''));
                 $('.search-form').val( '');
             },
-            error: function(xhr, ststus, error) {
-                //todo: Show toastr
+            error: function(xhr, status, error) {
                 console.log(error);
             }
         })

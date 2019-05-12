@@ -13,10 +13,10 @@ def get_apartment_by_id(request, id):
     apartments = Apartment.objects.all()
     building_types = ApartmentCategory.objects.all()
     zip_code = ZIP.objects.all()
-    context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
-    return render(request, 'apartment/apartment_details.html', {
-        'apartment': get_object_or_404(Apartment, pk=id)
-    }, context
+    context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code,
+               'apartment': get_object_or_404(Apartment, pk=id)}
+    return render(
+        request, 'apartment/apartment_details.html', context
                   )
 
 
