@@ -100,10 +100,9 @@ def search_apartment(request):
     if 'search_filter' in request.GET:
         search_params = request.GET.dict()
         search_params.pop('search_filter')
+
         price_from = search_params.pop('price_from', None)
         price_to = search_params.pop('price_to', None)
-        print(price_from)
-        print(price_to)
         q_list = [
             Q(('{}__icontains'.format(k), v))
             for k, v in search_params.items()
