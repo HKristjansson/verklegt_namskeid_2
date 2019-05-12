@@ -16,7 +16,7 @@ def get_apartment_by_id(request, id):
                'apartment': get_object_or_404(Apartment, pk=id)}
     return render(
         request, 'apartment/apartment_details.html', context
-                  )
+    )
 
 
 @login_required
@@ -95,20 +95,27 @@ def index(request):
     context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
     return render(request, 'apartment/apartment_index.html', context)
 
-
+# ermir - work in progress
 def search_apartment(request):
     if 'search_filter' in request.GET:
         search_params = request.GET.dict()
         search_params.pop('search_filter')
+
         price_from = search_params.pop('price_from', None)
         price_to = search_params.pop('price_to', None)
+        print(price_from)
+        print(price_to)
         q_list = [
             Q(('{}__icontains'.format(k), v))
             for k, v in search_params.items()
             if v is not None
         ]
-        price = {'price__gte': price_from, 'price__lte': price_to}
+        if int(price_to) > 0:
+            price = {'price__gte': price_from, 'price__lte': price_to}
+        else:
+            price = {'price__gte': price_from, 'price__gt': price_to}
         q_list.append(Q(**{k: v for k, v in price.items() if v is not None}))
+        print(q_list)
         queryset = Apartment.objects.filter(reduce(operator.and_, q_list))
         apartments = [{
             'id': x.id,
@@ -126,6 +133,34 @@ def search_apartment(request):
     zip_code = ZIP.objects.all().values("zip", "city")
     context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
     return render(request, 'apartment/apartment_index.html', context)
+
+# def search_apartment(request):
+#     if 'search_filter' in request.GET:
+#         search_params = request.GET.dict()
+#         search_params.pop("search_filter")
+#         search_params.pop('price_to')
+#         search_params['price'] = search_params.pop('price_from')
+#         q_list = [Q(("{}__icontains".format(param), search_params[param])) for param in search_params
+#                   if search_params[param] is not None]
+#         print(q_list)
+#         queryset = Apartment.objects.filter(reduce(operator.and_, q_list))
+#         apartments = [{
+#             'id': x.id,
+#             'address': x.address,
+#             'zip': str(x.zip),
+#             'description': x.description,
+#             'price': x.price,
+#             'category': str(x.category),
+#             'firstImage': x.apartmentimage_set.first().image
+#         } for x in queryset
+#         ]
+#         return JsonResponse({'data': apartments})
+#     apartments = Apartment.objects.all()
+#     building_types = ApartmentCategory.objects.all()
+#     zip_code = ZIP.objects.all().values("zip", "city")
+#     context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
+#     return render(request, 'apartment/apartment_index.html', context)
+#
 
 
 def sold_apartments(request):
