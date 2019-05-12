@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.conf import settings
 
 
 class Profile(models.Model):
@@ -29,3 +30,13 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
+
+
+class CreditCard(models.Model):
+    cardholder = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    card_num_1 = models.DecimalField(max_digits=4, decimal_places=0)
+    card_num_2 = models.DecimalField(max_digits=4, decimal_places=0)
+    card_num_3 = models.DecimalField(max_digits=4, decimal_places=0)
+    card_num_4 = models.DecimalField(max_digits=4, decimal_places=0)
+    cvc = models.DecimalField(max_digits=3, decimal_places=0)
+    expire = models.DateField()

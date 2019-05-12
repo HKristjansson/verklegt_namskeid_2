@@ -3,10 +3,10 @@ from django import forms
 from apartment.models import Apartment
 
 
-class ApartmentBuyForm(forms.ModelForm):
+class ApartmentBuyForm(ModelForm):
     class Meta:
         model = Apartment
-        exclude = ['id', 'created', 'updated', 'sold', 'owner_name', 'owner_ssn', 'owner_phone', 'buyer_id']
+        exclude = ['id', 'created', 'updated', 'sold', 'owner_name', 'owner_ssn', 'owner_phone', 'buyer']
         readonly_fields = ['address', 'number', 'zip', 'description', 'rooms', 'size', 'price', 'category',
                            'seller']
         widgets = {
@@ -19,11 +19,6 @@ class ApartmentBuyForm(forms.ModelForm):
             'price': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
             'category': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
             'seller': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-            'card_number_1': widgets.TextInput(attrs={'class': 'form-control'}),
-            'card_number_2': widgets.TextInput(attrs={'class': 'form-control'}),
-            'card_number_3': widgets.TextInput(attrs={'class': 'form-control'}),
-            'card_number_4': widgets.TextInput(attrs={'class': 'form-control'}),
-            'cvc': widgets.TextInput(attrs={'class': 'form-control'})
         }
 
 

@@ -5,6 +5,8 @@ from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentBuyForm
 from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory
+from user.forms.registration_form import Payment
+from django.conf import settings
 import operator
 
 
@@ -43,21 +45,25 @@ def remove_apartment(request, id):
     return redirect('apartment_index')
 
 
-@login_required
 def buy_apartment_step_one(request, id):
     instance = get_object_or_404(Apartment, pk=id)
+
     if request.method == 'POST':
-        form = ApartmentBuyForm(data=request.POST, instance=instance)
-        if form.is_valid():
+        apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
+        credit_card_form = Payment(data=request.POST)
+        if apartment_form.is_valid() and credit_card_form.is_valid():
             instance.sold = True
-            instance.buyer = request.user
-            form.save()
+            apartment_form.save()
+            credit_card_form.save()
             return redirect('apartment_details', id=id)
     else:
-        form = ApartmentBuyForm(instance=instance)
+        apartment_form = ApartmentBuyForm(instance=instance)
+        credit_card_form = Payment(data=request.POST, instance=instance)
     return render(request, 'apartment/buy_apartment_step_one.html', {
-        'form': form,
+        'form': apartment_form,
         'id': id,
+        'cardholder': request.user,
+        'credit_card': credit_card_form
     })
 
 

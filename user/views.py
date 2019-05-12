@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from user.forms.registration_form import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from user.forms.registration_form import UserRegisterForm, UserUpdateForm, ProfileUpdateForm, Payment
 from django.contrib import messages, auth
 from django.http import HttpResponseForbidden
 
@@ -75,12 +75,12 @@ def logout(request):
         return redirect('index')
 
 
-def payment(request):
-    if request.method == 'POST':
-        form = PaymentForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('index')
-    else:
-        form = PaymentForm()
-    return render(request, 'apartment/buy_apartment_step_one.html', {'form': form})
+# def payment(request):
+#     if request.method == 'POST':
+#         form = Payment(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('index')
+#     else:
+#         form = Payment()
+#     return render(request, 'apartment/buy_apartment_step_one.html', {'form': form})
