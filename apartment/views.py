@@ -134,31 +134,3 @@ def sold_apartments(request):
     zip_code = ZIP.objects.all()
     context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
     return render(request, 'apartment/sold_apartments.html', context)
-
-
-'''
-Working sample
-def search_apartment(request):
-    if 'search_filter' in request.GET:
-        search_params = request.GET.dict()
-        search_params.pop("search_filter")
-        q_list = [Q(("{}__icontains".format(param), search_params[param])) for param in search_params if
-                  search_params[param] is not None]
-        queryset = Apartment.objects.filter(reduce(operator.and_, q_list))
-        apartments = [{
-            'id': x.id,
-            'address': x.address,
-            'zip': str(x.zip),
-            'description': x.description,
-            'price': x.price,
-            'category': str(x.category),
-            'firstImage': x.apartmentimage_set.first().image
-        } for x in queryset
-        ]
-        return JsonResponse({'data': apartments})
-    apartments = Apartment.objects.all()
-    building_types = ApartmentCategory.objects.all()
-    zip_code = ZIP.objects.all()
-    context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
-    return render(request, 'apartment/apartment_index.html', context)
-'''

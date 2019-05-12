@@ -127,7 +127,17 @@ img {
     #top-bar .social {
         text-align: center !important;
     }
+    #img-logo {
+        display: none !important;
+    }
 }
+
+@media (min-width: 769px) and (max-width: 991px) {
+    #img-logo {
+        display: none !important;
+    }
+}
+
 
 @media (max-width: 576px) {
     #showcase h1 {
