@@ -29,13 +29,22 @@
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
                 <li
-                        {% if 'apartment_index' in request.path %}
+                        {% if '/apartments/' == request.path %}
                             class="nav-item active mr-3"
                         {% else %}
                             class="nav-item mr-3"
                         {% endif %}
                 >
+                <div class="dropdown">
                     <a class="nav-link" href="{% url 'apartment_index' %}">Apartments</a>
+                    <div class="dropdown-content">
+                        {% if request.user.is_authenticated %}
+                            <a href="{% url 'add_apartment' %}">Add apartment</a>
+                        {% endif %}
+                        {% if request.user.is_authenticated %}
+                            <a href="{% url 'sold_apartments' %}">Sold apartments</a>
+                        {% endif %}
+                  </div>
                 </li>
                 <li
                         {% if 'sellers' in request.path %}
@@ -46,18 +55,7 @@
                 >
                     <a class="nav-link" href="{% url 'seller_index' %}">Realtors</a>
                 </li>
-            <li
-                {% if request.user.is_authenticated %}
-                    {% if 'add_aparment' in request.path %}
-                        class="nav-item active mr-3"
-                        {% else %}
-                            class="nav-item mr-3"
-                        {% endif %}
-                >
-                    <a class="nav-link" href="{% url 'add_apartment' %}">Add apartment</a>
-            {% endif %}
-            </li>
-            </ul>
+              </ul>
 
             <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
@@ -68,8 +66,12 @@
                                 class="nav-item mr-3"
                             {% endif %}
                     >
-                        <a class="nav-link" href="{% url 'profile' %}">
-                            Welcome {{ user.username }}</a>
+                        <div class="dropdown">
+                            <a class="nav-link" href="{% url 'profile' %}">Welcome {{ user.username }}</a>
+                          <div class="dropdown-content">
+                            <a href="{% url 'profile' %}">View profile</a>
+                          </div>
+                        </div>
                     </li>
                     <li class="nav-item mr-3">
                         <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
@@ -103,7 +105,7 @@
 
                             Login</a>
                     </li>
-                {% endif %}
+                 {% endif %}
             </ul>
         </div>
     </div>

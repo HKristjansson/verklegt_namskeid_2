@@ -120,3 +120,9 @@ def search_apartment(request):
     return render(request, 'apartment/apartment_index.html', context)
 
 
+def sold_apartments(request):
+    apartments = Apartment.objects.all()
+    building_types = ApartmentCategory.objects.all()
+    zip_code = ZIP.objects.all()
+    context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
+    return render(request, 'apartment/sold_apartments.html', context)
