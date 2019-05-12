@@ -10,34 +10,33 @@ class ApartmentBuyForm(forms.ModelForm):
         exclude = ['id', 'created', 'updated', 'sold']
         readonly_fields = ['address', 'number', 'zip', 'description', 'rooms', 'size', 'price', 'category',
                            'seller', 'owner_name', 'owner_ssn', 'owner_phone']
-        if request.user.is_staff or request.user.is_superuser:
-            widgets = {
-                'address': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'number': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'zip': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'description': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'rooms': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'size': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'price': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'category': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'seller': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'owner_name': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'owner_ssn': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'owner_phone': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True})
+        widgets = {
+            'address': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+            'number': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+            'zip': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+            'description': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+            'rooms': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+            'size': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+            'price': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+            'category': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+            'seller': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+            'owner_name': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+            'owner_ssn': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+            'owner_phone': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True})
 
         }
-        else:
-            widgets = {
-                'address': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'number': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'zip': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'description': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'rooms': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'size': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'price': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'category': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-                'seller': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
-            }
+        # else:
+        #     widgets = {
+        #         'address': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+        #         'number': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+        #         'zip': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+        #         'description': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+        #         'rooms': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+        #         'size': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+        #         'price': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+        #         'category': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+        #         'seller': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
+        #     }
 
 
 class ApartmentUpdateForm(ModelForm):
