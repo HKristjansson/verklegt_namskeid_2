@@ -5,14 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apartment/forms/apartment_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/forms/apartment_form.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apartment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/apartment/add_apartment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apartment/add_apartment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/apartment/sold_apartments.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apartment/sold_apartments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/apartment/update_apartment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apartment/update_apartment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/part/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/seller/seller_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/seller/seller_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/seller/single_seller.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/seller/single_seller.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +71,7 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="apartment_apartmentcategory: table" type="69fad909:PgImplModel$LocalTable" />
+        <item name="apartment_apartmentimage: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
     </expand>
     <select />
@@ -92,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apartment/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1386">
-              <caret line="102" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="609">
+              <caret line="69" column="84" selection-start-line="69" selection-start-column="84" selection-end-line="69" selection-end-column="84" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -101,16 +93,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apartment/forms/apartment_form.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="78" column="38" lean-forward="true" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="39" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://06a1edc9-d85f-4943-aa6d-2164e2e31677/database/CastleApartments/schema/public/table/apartment_apartmentimage">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="5967201f-3441-46a0-801f-928c6ef1d363">
+              <filtering>
+                <filter text="" />
+              </filtering>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apartment/forms/apartment_form.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/forms/profile_form.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/forms/registration_form.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/apartment/add_apartment.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -141,19 +164,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Index/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="246">
-              <caret line="161" column="18" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
+              <caret line="161" column="18" lean-forward="true" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -221,18 +235,18 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/static/js/apartments.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/templates/part/navbar.html" />
         <option value="$PROJECT_DIR$/templates/seller/single_seller.html" />
         <option value="$PROJECT_DIR$/templates/seller/seller_index.html" />
         <option value="$PROJECT_DIR$/templates/apartment/add_apartment.html" />
         <option value="$PROJECT_DIR$/templates/apartment/sold_apartments.html" />
         <option value="$PROJECT_DIR$/templates/part/search.html" />
-        <option value="$PROJECT_DIR$/apartment/views.py" />
         <option value="$PROJECT_DIR$/templates/Index/index.html" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/templates/apartment/update_apartment.html" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/apartment/forms/apartment_form.py" />
+        <option value="$PROJECT_DIR$/apartment/views.py" />
       </list>
     </option>
   </component>
@@ -318,6 +332,12 @@
               <item name="verklegt_namskeid_2" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="verklegt_namskeid_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="verklegt_namskeid_2" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="forms" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -396,7 +416,7 @@
       <workItem from="1557353844944" duration="338000" />
       <workItem from="1557354445455" duration="4822000" />
       <workItem from="1557359388756" duration="28659000" />
-      <workItem from="1557481910100" duration="44431000" />
+      <workItem from="1557481910100" duration="50607000" />
     </task>
     <task id="LOCAL-00001" summary="Work that was lost since yesterday restored">
       <created>1557334305758</created>
@@ -622,11 +642,32 @@
       <option name="project" value="LOCAL" />
       <updated>1557683583045</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="added some margin bottom here and there">
+      <created>1557687040520</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1557687040520</updated>
+    </task>
+    <task id="LOCAL-00034" summary="added some margin bottom here and there">
+      <created>1557688365032</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1557688365032</updated>
+    </task>
+    <task id="LOCAL-00035" summary="did something, apartment form views">
+      <created>1557692877225</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1557692877225</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97017000" />
+    <option name="totallyTimeSpent" value="103193000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -638,20 +679,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="0" width="1287" height="1440" extended-state="0" />
-    <editor active="true" />
+    <frame x="1440" y="0" width="1320" height="1440" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22168675" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21596244" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292517" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969072" visible="true" weight="0.3890511" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969072" weight="0.3890511" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292517" />
-      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32919708" />
+      <window_info anchor="bottom" id="Database Console" order="7" visible="true" weight="0.32919708" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32919708" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" weight="0.3292517" />
@@ -662,7 +702,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32857144" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.26134586" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21022727" />
@@ -754,31 +794,11 @@
     <MESSAGE value="fixed, key value pair in saerch" />
     <MESSAGE value="added search within a range" />
     <MESSAGE value="fixed bug in search" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug in search" />
+    <MESSAGE value="added some margin bottom here and there" />
+    <MESSAGE value="did something, apartment form views" />
+    <option name="LAST_COMMIT_MESSAGE" value="did something, apartment form views" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://5813083e-175b-451a-b805-af51b00424a1/role/3vikna" />
-    <entry file="das://06a1edc9-d85f-4943-aa6d-2164e2e31677/database/CastleApartments/schema/public/table/apartment_apartment">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="1d12639a-e419-4968-9f68-f0ecc053dae9">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://06a1edc9-d85f-4943-aa6d-2164e2e31677/database/CastleApartments/schema/public/table/apartment_apartmentimage">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="1d12639a-e419-4968-9f68-f0ecc053dae9">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/06a1edc9-d85f-4943-aa6d-2164e2e31677/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/index/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1018,16 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/seller/single_seller.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1056,20 +1066,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/templates/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="161" column="18" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
+        <state relative-caret-position="60">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apartment/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/apartment/add_apartment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1080,10 +1087,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apartment/forms/apartment_form.py">
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="78" column="38" lean-forward="true" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="39" />
+        <state relative-caret-position="246">
+          <caret line="161" column="18" lean-forward="true" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/forms/registration_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://06a1edc9-d85f-4943-aa6d-2164e2e31677/database/CastleApartments/schema/public/table/apartment_apartment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="5967201f-3441-46a0-801f-928c6ef1d363">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/forms/profile_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1097,17 +1139,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Index/index.html">
+    <entry file="file://$PROJECT_DIR$/apartment/forms/apartment_form.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        <state relative-caret-position="405">
+          <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/apartment/add_apartment.html">
+    <entry file="file://$PROJECT_DIR$/apartment/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        <state relative-caret-position="609">
+          <caret line="69" column="84" selection-start-line="69" selection-start-column="84" selection-end-line="69" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://06a1edc9-d85f-4943-aa6d-2164e2e31677/database/CastleApartments/schema/public/table/apartment_apartmentimage">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="5967201f-3441-46a0-801f-928c6ef1d363">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>

@@ -66,11 +66,9 @@ def update_apartment(request, id):
     instance = get_object_or_404(Apartment, pk=id)
     if request.method == 'POST':
         form = ApartmentUpdateForm(data=request.POST, instance=instance)
-        # apartment_image = ApartmentImage(image=request.POST['image'], apartment=instance)
         if form.is_valid():
-            edit = form.save(commit=False)
-            edit.save()
-            # apartment_image.save()
+            ApartmentImage.objects.filter(pk=id).update(image=request.POST['image'])
+            form.save()
             return redirect('apartment_details', id=id)
     else:
         form = ApartmentUpdateForm(instance=instance)
