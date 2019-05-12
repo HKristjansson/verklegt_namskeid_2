@@ -29,7 +29,7 @@ class Apartment(models.Model):
     category = models.ForeignKey(ApartmentCategory, on_delete=models.CASCADE, blank=True)
     seller = models.ForeignKey(Seller, on_delete=models.CASCADE, blank=True)
     owner_name = models.CharField(max_length=255)
-    owner_ssn = models.IntegerField()
+    owner_ssn = models.BigIntegerField()
     owner_phone = models.IntegerField()
     sold = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
