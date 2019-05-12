@@ -12,7 +12,7 @@ import operator
 def get_apartment_by_id(request, id):
     apartments = Apartment.objects.all()
     building_types = ApartmentCategory.objects.all()
-    zip_code = ZIP.objects.all()
+    zip_code = ZIP.objects.all().values("zip", "city")
     context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code,
                'apartment': get_object_or_404(Apartment, pk=id)}
     return render(
@@ -92,7 +92,6 @@ def index(request):
     apartments = Apartment.objects.all()
     building_types = ApartmentCategory.objects.all()
     zip_code = ZIP.objects.all().values("zip", "city")
-    print(zip_code.values("city"))
     context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
     return render(request, 'apartment/apartment_index.html', context)
 
@@ -117,7 +116,7 @@ def search_apartment(request):
         return JsonResponse({'data': apartments})
     apartments = Apartment.objects.all()
     building_types = ApartmentCategory.objects.all()
-    zip_code = ZIP.objects.all()
+    zip_code = ZIP.objects.all().values("zip", "city")
     context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
     return render(request, 'apartment/apartment_index.html', context)
 
