@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="row margin-bottom">
+            <div class="col-md-8">
+                <div class="apartment-index-main">
+                    <h2>Sold apartments:</h2>
+                    <div class="apartments-index">
+                        {% for apartment in apartments %}
+                            {% if apartment.sold == True %}
+                                <div>
+                                    {% include 'apartment/single_apartment.html' with apartment=apartment %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                {% include 'part/search.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
