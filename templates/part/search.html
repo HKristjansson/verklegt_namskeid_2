@@ -120,8 +120,8 @@
                                     name="zip__city">
                                 <option value="">Any</option>
                                 {% for key in zip %}
-                                    <option value="{{ key }}"
-                                    >{{ key }}</option>
+                                    <option value="{{ key.zip }}"
+                                    >{{ key.zip }} {{ key.city }}</option>
                                 {% endfor %}
                             </select>
                         </div>
