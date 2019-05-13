@@ -154,7 +154,7 @@ img {
 }
 
 .apartments-index {
-    width: 70%;
+    width: 100%;
     border-radius: 15px;
     float: left;
     object-fit: contain;
@@ -303,4 +303,33 @@ p.apartment-details-2 {
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.col-md-4 {
+    -ms-flex: 0 0 220px;
+    flex: 0 0 220px;
+    max-width: 220px;
+    padding-top: 35px;
+  }
+
+    .col-md-8 {
+    -ms-flex: 0 0 78%;
+    flex: 0 0 78%;
+    max-width: 78%;
+  }
+
+.card_index {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 240px;
+    max-height: 240px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
 }
