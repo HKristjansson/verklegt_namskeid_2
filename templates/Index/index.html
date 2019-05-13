@@ -7,7 +7,7 @@
                     <h2>Latest apartments:</h2>
                     <div class="apartments-index mb-2">
                         {% for apartment in apartments %}
-                            {% if apartment.sold == 0 %}
+                            {% if apartment.sold == False %}
                                 <div class="mb-2">
                                     {% include 'apartment/single_apartment.html' with apartment=apartment %}
                                 </div>
