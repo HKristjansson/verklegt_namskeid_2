@@ -50,6 +50,10 @@ class ApartmentUpdateForm(ModelForm):
 
 
 class ApartmentAddForm(ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(ApartmentAddForm, self).__init__(*args, **kwargs)
+        self.fields['number'].required = False
+
     image = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     class Meta:

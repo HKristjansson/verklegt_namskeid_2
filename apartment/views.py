@@ -10,6 +10,7 @@ import datetime
 import operator
 
 
+
 def get_apartment_by_id(request, id):
     apartments = Apartment.objects.all()
     building_types = ApartmentCategory.objects.all()
@@ -76,7 +77,6 @@ def update_apartment(request, id):
     if request.method == 'POST':
         form = ApartmentUpdateForm(data=request.POST, instance=instance)
         if form.is_valid():
-            ApartmentImage.objects.filter(pk=id).update(image=request.POST['image'])
             form.save()
             return redirect('apartment_details', id=id)
     else:
@@ -90,7 +90,6 @@ def update_apartment(request, id):
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
-        print(search_filter)
         apartments = [{
             'id': x.id,
             'address': x.address,
@@ -123,7 +122,6 @@ def search_apartment(request):
         else:
             price = {'price__gte': price_from, 'price__gt': price_to}
         q_list.append(Q(**{k: v for k, v in price.items() if v is not None}))
-        print(q_list)
         queryset = Apartment.objects.filter(reduce(operator.and_, q_list))
         apartments = [{
             'id': x.id,
