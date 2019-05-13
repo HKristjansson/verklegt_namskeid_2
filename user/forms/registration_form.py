@@ -44,7 +44,7 @@ class ProfileUpdateForm(forms.ModelForm):
 class Payment(ModelForm):
     user = forms.Select()
     apartment = forms.Select()
-    date = forms.DateTimeField(widget=forms.HiddenInput())
+    date = forms.DateTimeField(required=False, widget=forms.HiddenInput())
 
     class Meta:
         model = Sale
