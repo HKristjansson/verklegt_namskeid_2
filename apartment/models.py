@@ -1,6 +1,5 @@
 from django.db import models
 from seller.models import Seller
-from user.models import Profile, User
 
 
 class ZIP(models.Model):
@@ -19,6 +18,7 @@ class ApartmentCategory(models.Model):
 
 
 class Apartment(models.Model):
+    from user.models import User
     address = models.CharField(max_length=255)
     number = models.CharField(max_length=255)
     zip = models.ForeignKey(ZIP, on_delete=models.CASCADE, blank=True)

@@ -1,9 +1,10 @@
 from django import forms
-from django.forms import ModelForm, widgets, Textarea
+from django.forms import ModelForm, widgets
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .profile_form import Profile
-from user.models import CreditCard
+from user.models import Sale
+import datetime
 
 
 class UserRegisterForm(UserCreationForm):
@@ -42,16 +43,19 @@ class ProfileUpdateForm(forms.ModelForm):
 
 
 class Payment(ModelForm):
-    cardholder = forms.Select()
+    user = forms.Select()
+    apartment = forms.Select()
+    date = forms.DateTimeField()
 
     class Meta:
-        model = CreditCard
-        exclude = ['cardholder']
+        model = Sale
+        exclude = ['date']
         widgets = {
-            'card_num_1': widgets.NumberInput(attrs={'class': 'form-control-row'}),
-            'card_num_2': widgets.NumberInput(attrs={'class': 'form-control-row'}),
-            'card_num_3': widgets.NumberInput(attrs={'class': 'form-control-row'}),
-            'card_num_4': widgets.NumberInput(attrs={'class': 'form-control-row'}),
-            'cvc': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'card_num_1': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),
+            'card_num_2': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),
+            'card_num_3': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),
+            'card_num_4': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),
+            'cvc': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 3}),
+            'expire': widgets.DateInput(attrs={'class': 'form-control-row'})
         }
 
