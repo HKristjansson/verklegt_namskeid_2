@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Iceland'
+TIME_ZONE = 'Atlantic/Reykjavik'
 
 USE_I18N = True
 
@@ -131,5 +131,5 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-LOGIN_REDIRECT_URL = '/users/profile'
+LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'users/login'
