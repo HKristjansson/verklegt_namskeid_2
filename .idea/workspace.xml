@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a4eaa2e-4870-43e5-9c03-32c58be740de" name="Default Changelist" comment="search - zip">
-      <change afterPath="$PROJECT_DIR$/apartment/migrations/0002_auto_20190513_1406.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/migrations/0008_auto_20190513_1459.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/migrations/0009_sale_date.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/migrations/0010_auto_20190513_1546.py" afterDir="false" />
+    <list default="true" id="8a4eaa2e-4870-43e5-9c03-32c58be740de" name="Default Changelist" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apartment/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apartment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/forms/registration_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms/registration_form.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,62 +26,52 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TV-PC" type="feb32156:DbDataSourceImpl" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TV-PC" type="feb32156:DbDataSourceImpl" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TV-PC" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="CastleApartments: database" type="162271b6:PgImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TV-PC" type="feb32156:DbDataSourceImpl" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="CastleApartments: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TV-PC" type="feb32156:DbDataSourceImpl" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="CastleApartments: database" type="162271b6:PgImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TV-PC" type="feb32156:DbDataSourceImpl" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="CastleApartments: database" type="162271b6:PgImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TV-PC" type="feb32156:DbDataSourceImpl" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="CastleApartments: database" type="162271b6:PgImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="apartment_apartmentcategory: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TV-PC" type="feb32156:DbDataSourceImpl" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="CastleApartments: database" type="162271b6:PgImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="apartment_apartmentzip: table" type="69fad909:PgImplModel$LocalTable" />
+        <item name="apartment_apartment: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
     </expand>
     <select />
@@ -95,14 +79,59 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="verklegt_namskeid_2" />
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apartment/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-906">
+              <caret line="63" column="72" lean-forward="true" selection-start-line="63" selection-start-column="72" selection-end-line="63" selection-end-column="72" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/user/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>font</find>
+      <find>logo.jpg</find>
+      <find>navbar navbar-expand-lg navbar-dark bg-info sticky-top</find>
       <find>homepage</find>
       <find>container</find>
       <find>form-horizontal</find>
@@ -110,29 +139,9 @@
       <find>py-3 bg-info text-white text-center</find>
       <find>fixed-bottom</find>
       <find>apartment-detail</find>
-      <find>.well</find>
-      <find>search-btn</find>
       <find>apartments</find>
-      <find>index</find>
-      <find>indexapartment_index</find>
-      <find>zip</find>
-      <find>zip_id</find>
-      <find>building_types</find>
-      <find>index()</find>
-      <find>console.log</find>
-      <find>print</find>
-      <find>.nav-link</find>
-      <find>.nav</find>
-      <find>.nav-item</find>
-      <find>category</find>
-      <find>creditcards</find>
-      <find>EmailField</find>
-      <find>.form-control</find>
-      <find>max-width</find>
-      <find>@media (min-width: 768px)</find>
-      <find>.col-md-4</find>
-      <find>.col-md-8</find>
-      <find>.btn-block</find>
+      <find>footer</find>
+      <find>buyer</find>
     </findStrings>
     <dirStrings>
       <dir>C:\GitHub\CastleApartments\verklegt_namskeid_2</dir>
@@ -145,58 +154,55 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/part/header.html" />
-        <option value="$PROJECT_DIR$/templates/part/footer.html" />
-        <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/static/js/apartments.js" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/CastleApartments/urls.py" />
-        <option value="$PROJECT_DIR$/templates/seller/seller_details.html" />
-        <option value="$PROJECT_DIR$/templates/Index/index.html" />
-        <option value="$PROJECT_DIR$/seller/models.py" />
-        <option value="$PROJECT_DIR$/models.py" />
-        <option value="$PROJECT_DIR$/apartment/migrations/0001_initial.py" />
-        <option value="$PROJECT_DIR$/apartment/migrations/0002_auto_20190511_1128.py" />
-        <option value="$PROJECT_DIR$/apartment/migrations/0003_auto_20190511_1131.py" />
-        <option value="$PROJECT_DIR$/seller/migrations/0001_initial.py" />
-        <option value="$PROJECT_DIR$/CastleApartments/settings.py" />
-        <option value="$PROJECT_DIR$/templates/part/search_no_base.html" />
-        <option value="$PROJECT_DIR$/templates/apartment/apartment_index.html" />
-        <option value="$PROJECT_DIR$/index/views.py" />
-        <option value="$PROJECT_DIR$/index/urls.py" />
-        <option value="$PROJECT_DIR$/apartment/migrations/0004_auto_20190511_1516.py" />
-        <option value="$PROJECT_DIR$/templates/apartment/apartment_sold_apartments.html" />
-        <option value="$PROJECT_DIR$/apartment/urls.py" />
-        <option value="$PROJECT_DIR$/templates/seller/seller_index.html" />
         <option value="$PROJECT_DIR$/templates/part/navbar.html" />
-        <option value="$PROJECT_DIR$/templates/apartment/apartment_details.html" />
-        <option value="$PROJECT_DIR$/static/js/search_apartment.js" />
-        <option value="$PROJECT_DIR$/templates/part/search.html" />
-        <option value="$PROJECT_DIR$/user/Backup_models.py" />
         <option value="$PROJECT_DIR$/user/forms/profile_form.py" />
+        <option value="$PROJECT_DIR$/templates/part/header.html" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/templates/apartment/search_apartment.html" />
+        <option value="$PROJECT_DIR$/static/js/apartments.js" />
+        <option value="$PROJECT_DIR$/templates/seller/seller_index.html" />
+        <option value="$PROJECT_DIR$/static/js/search_apartment.js" />
+        <option value="$PROJECT_DIR$/CastleApartments/settings.py" />
+        <option value="$PROJECT_DIR$/templates/user/register.html" />
+        <option value="$PROJECT_DIR$/templates/part/footer.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/index/views.py" />
+        <option value="$PROJECT_DIR$/templates/part/search_no_base.html" />
+        <option value="$PROJECT_DIR$/templates/Index/index.html" />
+        <option value="$PROJECT_DIR$/templates/apartment/apartment_index.html" />
+        <option value="$PROJECT_DIR$/templates/apartment/single_apartment.html" />
+        <option value="$PROJECT_DIR$/templates/apartment/apartment_details.html" />
+        <option value="$PROJECT_DIR$/templates/Index/about.html" />
+        <option value="$PROJECT_DIR$/templates/seller/single_seller.html" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/seller/seller_details.html" />
+        <option value="$PROJECT_DIR$/templates/apartment/add_apartment.html" />
         <option value="$PROJECT_DIR$/templates/apartment/buy_apartment_step_one.html" />
         <option value="$PROJECT_DIR$/user/views.py" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/apartment/single_apartment.html" />
+        <option value="$PROJECT_DIR$/user/urls.py" />
+        <option value="$PROJECT_DIR$/user/Backup_models.py" />
+        <option value="$PROJECT_DIR$/templates/part/search.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/apartment/models.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/idea.properties" />
         <option value="$PROJECT_DIR$/apartment/forms/apartment_form.py" />
-        <option value="$PROJECT_DIR$/user/migrations/0009_sale_date.py" />
-        <option value="$PROJECT_DIR$/user/forms/registration_form.py" />
-        <option value="$PROJECT_DIR$/user/models.py" />
         <option value="$PROJECT_DIR$/apartment/views.py" />
+        <option value="$PROJECT_DIR$/user/models.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="40" />
-    <option name="width" value="1100" />
-    <option name="height" value="845" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,46 +224,30 @@
             <path>
               <item name="verklegt_namskeid_2" type="b2602c69:ProjectViewProjectNode" />
               <item name="verklegt_namskeid_2" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="verklegt_namskeid_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="verklegt_namskeid_2" type="462c0819:PsiDirectoryNode" />
-              <item name="seller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="verklegt_namskeid_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="verklegt_namskeid_2" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="verklegt_namskeid_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="verklegt_namskeid_2" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/apartment" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\GitHub\CastleApartments\verklegt_namskeid_2\templates\apartment" />
-      <recent name="C:\GitHub\CastleApartments\verklegt_namskeid_2\templates\part" />
       <recent name="C:\GitHub\CastleApartments\verklegt_namskeid_2\user" />
+      <recent name="C:\GitHub\CastleApartments\verklegt_namskeid_2\templates\part" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -272,6 +262,56 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Django server.verklegt_namskeid_2">
+    <configuration name="castle" type="Python.DjangoServer" factoryName="Django server">
+      <module name="verklegt_namskeid_2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="CastleApartments.settings" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="verklegt_namskeid_2" type="Python.DjangoServer" factoryName="Django server">
+      <module name="verklegt_namskeid_2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="CastleApartments.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -283,21 +323,13 @@
       <option name="presentableId" value="Default" />
       <updated>1557257108167</updated>
       <workItem from="1557257111962" duration="14443000" />
-      <workItem from="1557351200636" duration="922000" />
-      <workItem from="1557353059273" duration="5736000" />
-      <workItem from="1557358861838" duration="146000" />
-      <workItem from="1557359030398" duration="85000" />
-      <workItem from="1557359127675" duration="1472000" />
-      <workItem from="1557360663118" duration="242000" />
-      <workItem from="1557421204308" duration="18753000" />
-      <workItem from="1557441253658" duration="1791000" />
-      <workItem from="1557506211233" duration="5800000" />
-      <workItem from="1557512098503" duration="4970000" />
-      <workItem from="1557572649719" duration="14201000" />
-      <workItem from="1557592444605" duration="7757000" />
-      <workItem from="1557656994110" duration="31855000" />
-      <workItem from="1557695417571" duration="11906000" />
-      <workItem from="1557755171717" duration="6605000" />
+      <workItem from="1557353468893" duration="356000" />
+      <workItem from="1557353844944" duration="338000" />
+      <workItem from="1557354445455" duration="4822000" />
+      <workItem from="1557359388756" duration="28659000" />
+      <workItem from="1557481910100" duration="25963000" />
+      <workItem from="1557673330312" duration="5452000" />
+      <workItem from="1557698720077" duration="8061000" />
     </task>
     <task id="LOCAL-00001" summary="Work that was lost since yesterday restored">
       <created>1557334305758</created>
@@ -313,228 +345,186 @@
       <option name="project" value="LOCAL" />
       <updated>1557334717862</updated>
     </task>
-    <task id="LOCAL-00003" summary="Work that was lost since yesterday restored">
-      <created>1557337255614</created>
+    <task id="LOCAL-00003" summary="something very interesting">
+      <created>1557360647004</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1557337255614</updated>
+      <updated>1557360647004</updated>
     </task>
-    <task id="LOCAL-00004" summary="Work that was lost since yesterday restored">
-      <created>1557337321549</created>
+    <task id="LOCAL-00004" summary="fixed search apartment">
+      <created>1557363385791</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1557337321549</updated>
+      <updated>1557363385791</updated>
     </task>
-    <task id="LOCAL-00005" summary="Fix search layout">
-      <created>1557337946571</created>
+    <task id="LOCAL-00005" summary="working demo, fixed apartment search styling">
+      <created>1557364265135</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1557337946571</updated>
+      <updated>1557364265135</updated>
     </task>
-    <task id="LOCAL-00006" summary="Missing files restored">
-      <created>1557345826201</created>
+    <task id="LOCAL-00006" summary="Added margin bottom to avoid overlapping footer">
+      <created>1557366723222</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1557345826201</updated>
+      <updated>1557366723222</updated>
     </task>
-    <task id="LOCAL-00007" summary="Button hide for non_superuser">
-      <created>1557349941809</created>
+    <task id="LOCAL-00007" summary="fixed search, made aside. col did not work properly">
+      <created>1557367688864</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1557349941809</updated>
+      <updated>1557367688864</updated>
     </task>
-    <task id="LOCAL-00008" summary="Button hide for non_superuser">
-      <created>1557351841019</created>
+    <task id="LOCAL-00008" summary="fixed search, made aside. col did not work properly">
+      <created>1557394324614</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1557351841019</updated>
+      <updated>1557394324614</updated>
     </task>
-    <task id="LOCAL-00009" summary="Button hide for non_superuser">
-      <created>1557360793867</created>
+    <task id="LOCAL-00009" summary="something">
+      <created>1557424742275</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1557360793867</updated>
+      <updated>1557424742275</updated>
     </task>
-    <task id="LOCAL-00010" summary="style.css fix">
-      <created>1557421611361</created>
+    <task id="LOCAL-00010" summary="something">
+      <created>1557424787064</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1557421611361</updated>
+      <updated>1557424787064</updated>
     </task>
-    <task id="LOCAL-00011" summary="style.css .well">
-      <created>1557425332863</created>
+    <task id="LOCAL-00011" summary="something interesting">
+      <created>1557425011409</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1557425332863</updated>
+      <updated>1557425011409</updated>
     </task>
-    <task id="LOCAL-00012" summary="push">
-      <created>1557427563305</created>
+    <task id="LOCAL-00012" summary="hannes suggested">
+      <created>1557431498736</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1557427563305</updated>
+      <updated>1557431498736</updated>
     </task>
-    <task id="LOCAL-00013" summary="Database change">
-      <created>1557442434687</created>
+    <task id="LOCAL-00013" summary="hannes suggested this one too">
+      <created>1557431830117</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1557442434687</updated>
+      <updated>1557431830117</updated>
     </task>
-    <task id="LOCAL-00014" summary="Button hide for non_superuser">
-      <created>1557516931789</created>
+    <task id="LOCAL-00014" summary="added homepage latest entries, changed apartment model">
+      <created>1557438417316</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1557516931789</updated>
+      <updated>1557438417316</updated>
     </task>
-    <task id="LOCAL-00015" summary="Button hide for non_superuser">
-      <created>1557516993754</created>
+    <task id="LOCAL-00015" summary="added profile picture.">
+      <created>1557440862706</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1557516993754</updated>
+      <updated>1557440862706</updated>
     </task>
-    <task id="LOCAL-00016" summary="ZIP update">
-      <created>1557576445156</created>
+    <task id="LOCAL-00016" summary="added material design bootstrap">
+      <created>1557486636937</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1557576445156</updated>
+      <updated>1557486636937</updated>
     </task>
-    <task id="LOCAL-00017" summary="ZIP to search">
-      <created>1557578205353</created>
+    <task id="LOCAL-00017" summary="added style.css">
+      <created>1557490424678</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1557578205353</updated>
+      <updated>1557490424678</updated>
     </task>
-    <task id="LOCAL-00018" summary="Button hide for non_superuser">
-      <created>1557585417576</created>
+    <task id="LOCAL-00018" summary="added style.css new">
+      <created>1557500630475</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1557585417576</updated>
+      <updated>1557500630475</updated>
     </task>
-    <task id="LOCAL-00019" summary="Search engine fix">
-      <created>1557585937093</created>
+    <task id="LOCAL-00019" summary="fixed">
+      <created>1557502222169</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1557585937093</updated>
+      <updated>1557502222169</updated>
     </task>
-    <task id="LOCAL-00020" summary="buy -&gt; sold = true">
-      <created>1557614555340</created>
+    <task id="LOCAL-00020" summary="fixed">
+      <created>1557506474349</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1557614555340</updated>
+      <updated>1557506474349</updated>
     </task>
-    <task id="LOCAL-00021" summary="buy -&gt; no sold checkbox">
-      <created>1557614645717</created>
+    <task id="LOCAL-00021" summary="fixed">
+      <created>1557506584996</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1557614645717</updated>
+      <updated>1557506584996</updated>
     </task>
-    <task id="LOCAL-00022" summary="buy -&gt; no sold checkbox">
-      <created>1557620861614</created>
+    <task id="LOCAL-00022" summary="fixed">
+      <created>1557513053745</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1557620861614</updated>
+      <updated>1557513053745</updated>
     </task>
-    <task id="LOCAL-00023" summary="buy -&gt; no sold checkbox">
-      <created>1557659388690</created>
+    <task id="LOCAL-00023" summary="latest styling">
+      <created>1557521305428</created>
       <option name="number" value="00023" />
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1557659388690</updated>
+      <updated>1557521305428</updated>
     </task>
-    <task id="LOCAL-00024" summary="buy -&gt; no sold checkbox">
-      <created>1557659497260</created>
+    <task id="LOCAL-00024" summary="latest styling">
+      <created>1557606647360</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1557659497260</updated>
+      <updated>1557606647360</updated>
     </task>
-    <task id="LOCAL-00025" summary="buy -&gt; no sold checkbox">
-      <created>1557659622355</created>
+    <task id="LOCAL-00025" summary=".">
+      <created>1557665589801</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1557659622355</updated>
+      <updated>1557665589801</updated>
     </task>
-    <task id="LOCAL-00026" summary="buy -&gt; no sold checkbox">
-      <created>1557661012693</created>
+    <task id="LOCAL-00026" summary=".">
+      <created>1557698063308</created>
       <option name="number" value="00026" />
       <option name="presentableId" value="LOCAL-00026" />
       <option name="project" value="LOCAL" />
-      <updated>1557661012693</updated>
+      <updated>1557698063309</updated>
     </task>
-    <task id="LOCAL-00027" summary="search - zip">
-      <created>1557665482284</created>
+    <task id="LOCAL-00027" summary=".">
+      <created>1557736580121</created>
       <option name="number" value="00027" />
       <option name="presentableId" value="LOCAL-00027" />
       <option name="project" value="LOCAL" />
-      <updated>1557665482284</updated>
+      <updated>1557736580122</updated>
     </task>
-    <task id="LOCAL-00028" summary="search - zip fix">
-      <created>1557669106465</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1557669106465</updated>
-    </task>
-    <task id="LOCAL-00029" summary="user profile">
-      <created>1557672318806</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1557672318806</updated>
-    </task>
-    <task id="LOCAL-00030" summary="search - zip">
-      <created>1557679380388</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1557679380389</updated>
-    </task>
-    <task id="LOCAL-00031" summary="credit card removal">
-      <created>1557679884495</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1557679884495</updated>
-    </task>
-    <task id="LOCAL-00032" summary="search - zip">
-      <created>1557704987083</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1557704987083</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Styling">
-      <created>1557707942819</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1557707942819</updated>
-    </task>
-    <option name="localTasksCounter" value="34" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139223000" />
+    <option name="totallyTimeSpent" value="92062000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -546,32 +536,57 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49882352" visible="true" weight="0.3378016" />
-      <window_info id="Structure" order="1" sideWeight="0.5011765" side_tool="true" weight="0.22453083" />
-      <window_info id="Favorites" order="2" sideWeight="0.5011765" side_tool="true" weight="0.22453083" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15511727" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932975" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292517" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49756494" weight="0.38894907" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.18387553" />
-      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32956153" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3292517" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32827735" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32956153" />
-      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.38048092" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32956153" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50067025" side_tool="true" weight="0.32956153" />
-      <window_info active="true" anchor="bottom" id="manage.py@verklegt_namskeid_2" order="14" visible="true" weight="0.38189533" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.108342364" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" weight="0.3292517" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30877572" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32827735" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5024351" side_tool="true" weight="0.3890511" />
+      <window_info anchor="bottom" id="manage.py@verklegt_namskeid_2" order="14" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3297587" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32889125" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21022727" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292517" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49802372" visible="true" weight="0.3890511" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3292517" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.3292517" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3292517" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" weight="0.3292517" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32919708" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32919708" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5019763" side_tool="true" weight="0.3292517" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32899022" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -618,250 +633,311 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Work that was lost since yesterday restored" />
-    <MESSAGE value="Fix search layout" />
-    <MESSAGE value="Missing files restored" />
-    <MESSAGE value="style.css fix" />
-    <MESSAGE value="style.css .well" />
-    <MESSAGE value="push" />
-    <MESSAGE value="Database change" />
-    <MESSAGE value="ZIP update" />
-    <MESSAGE value="ZIP to search" />
-    <MESSAGE value="Button hide for non_superuser" />
-    <MESSAGE value="Search engine fix" />
-    <MESSAGE value="buy -&gt; sold = true" />
-    <MESSAGE value="buy -&gt; no sold checkbox" />
-    <MESSAGE value="search - zip fix" />
-    <MESSAGE value="user profile" />
-    <MESSAGE value="credit card removal" />
-    <MESSAGE value="search - zip" />
-    <MESSAGE value="Styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Styling" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/static/js/search_apartment.js</url>
-          <line>18</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="something very interesting" />
+    <MESSAGE value="fixed search apartment" />
+    <MESSAGE value="working demo, fixed apartment search styling" />
+    <MESSAGE value="Added margin bottom to avoid overlapping footer" />
+    <MESSAGE value="fixed search, made aside. col did not work properly" />
+    <MESSAGE value="something" />
+    <MESSAGE value="something interesting" />
+    <MESSAGE value="hannes suggested" />
+    <MESSAGE value="hannes suggested this one too" />
+    <MESSAGE value="added homepage latest entries, changed apartment model" />
+    <MESSAGE value="added profile picture." />
+    <MESSAGE value="added material design bootstrap" />
+    <MESSAGE value="added style.css" />
+    <MESSAGE value="added style.css new" />
+    <MESSAGE value="fixed" />
+    <MESSAGE value="latest styling" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f0531c3e-feda-434b-94b5-a24706b9248b/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apartment/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apartment/migrations/0002_auto_20190510_1910.py" />
-    <entry file="file://$PROJECT_DIR$/models.py">
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apartment/migrations/0003_auto_20190511_1125.py" />
-    <entry file="file://$PROJECT_DIR$/user/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seller/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apartment/migrations/0002_auto_20190511_1128.py" />
-    <entry file="file://$PROJECT_DIR$/apartment/migrations/0003_auto_20190511_1131.py" />
-    <entry file="file://$PROJECT_DIR$/apartment/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seller/migrations/0002_seller_sellerimage.py" />
-    <entry file="file://$PROJECT_DIR$/CastleApartments/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="81" column="33" lean-forward="true" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-1107">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5813083e-175b-451a-b805-af51b00424a1/console.sql" />
+    <entry file="das://5813083e-175b-451a-b805-af51b00424a1/role/3vikna" />
+    <entry file="das://06a1edc9-d85f-4943-aa6d-2164e2e31677/database/CastleApartments/schema/public/table/apartment_apartment" />
+    <entry file="das://06a1edc9-d85f-4943-aa6d-2164e2e31677/database/CastleApartments/schema/public/table/apartment_apartmentimage" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/06a1edc9-d85f-4943-aa6d-2164e2e31677/console.sql" />
+    <entry file="file://$PROJECT_DIR$/index/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/user/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/apartments.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="58" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="58" />
+        <state relative-caret-position="150">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/apartment/add_apartment.html">
+    <entry file="file://$PROJECT_DIR$/static/js/search_apartment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="13" selection-end-column="38" />
+        <state relative-caret-position="60">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/mdb.js">
+    <entry file="file://$PROJECT_DIR$/sqlQueries.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-667">
-          <caret line="15543" column="87" selection-start-line="15543" selection-start-column="87" selection-end-line="15543" selection-end-column="87" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#li#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="188">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/part/search_no_base.html" />
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="842">
+          <caret line="390" column="1" selection-start-line="390" selection-start-column="1" selection-end-line="390" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seller/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CastleApartments/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2025">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/apartment/single_apartment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/part/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="58" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/part/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/part/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/seller/single_seller.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/seller/seller_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/seller/seller_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Index/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="842">
+          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="239" column="12" selection-start-line="239" selection-start-column="12" selection-end-line="239" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apartment/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CastleApartments/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state>
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/part/old_search.html" />
-    <entry file="file://$PROJECT_DIR$/apartment/migrations/0003_apartment_buyer.py" />
-    <entry file="file://$PROJECT_DIR$/apartment/migrations/0004_auto_20190511_1516.py" />
     <entry file="file://$PROJECT_DIR$/index/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="62" />
+        <state relative-caret-position="135">
+          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/apartment/sold_apartments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/user/user-index.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/user/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CastleApartments/urls.py">
+    <entry file="file://$PROJECT_DIR$/user/Backup_models.py" />
+    <entry file="file://$PROJECT_DIR$/templates/apartment/apartment_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding>
-            <element signature="e#640#672#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/seller/seller_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/part/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="56" column="83" selection-start-line="56" selection-start-column="83" selection-end-line="56" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8795">
-          <caret line="4219" selection-start-line="4219" selection-end-line="4219" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/search_apartment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/part/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="119" column="50" selection-start-line="119" selection-start-column="50" selection-end-line="119" selection-end-column="50" />
+        <state relative-caret-position="34">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/apartment/apartment_details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/old_Backup_models.py" />
-    <entry file="file://$PROJECT_DIR$/templates/apartment/update_apartment.html">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/user/profile.html">
+    <entry file="file://$PROJECT_DIR$/templates/apartment/add_apartment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="33" />
+        <state relative-caret-position="357">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/forms/profile_form.py">
+    <entry file="file://$PROJECT_DIR$/templates/apartment/update_apartment.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/part/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="807">
+          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://45f0c405-df8c-4e9f-9caa-acda81709fea/database/CastleApartments/schema/public/table/apartment_apartment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://45f0c405-df8c-4e9f-9caa-acda81709fea/database/CastleApartments/schema/public/table/apartment_apartmentimage">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_one.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="75" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seller/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apartment/forms/apartment_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="67" column="71" lean-forward="true" selection-start-line="67" selection-start-column="71" selection-end-line="67" selection-end-column="71" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apartment/urls.py">
+    <entry file="file://$PROJECT_DIR$/apartment/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="107">
+          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -870,83 +946,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="80" column="29" lean-forward="true" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+        <state relative-caret-position="-17">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_one.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/apartment/single_apartment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/apartment/apartment_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="316" column="18" selection-start-line="316" selection-start-column="18" selection-end-line="316" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seller/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/migrations/0009_sale_date.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-          <folding>
-            <element signature="e#49#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apartment/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apartment/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="-906">
+          <caret line="63" column="72" lean-forward="true" selection-start-line="63" selection-start-column="72" selection-end-line="63" selection-end-column="72" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -955,30 +966,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+        <state relative-caret-position="522">
+          <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/forms/registration_form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apartment/forms/apartment_form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="34" column="40" lean-forward="true" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
