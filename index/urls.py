@@ -1,10 +1,10 @@
 from django.urls import path
-from .views import PostListView
+from .views import CardListView
 
 from . import views
 
 urlpatterns = [
-    path('', PostListView.as_view(), name="index"),
+    path('', CardListView.as_view(), name="index"),
     # path('', views.index, name="index"),
     path('about/', views.about, name="about"),
 ]

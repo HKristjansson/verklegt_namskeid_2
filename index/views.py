@@ -6,12 +6,12 @@ from django.views.generic import ListView
 # Create your views here.
 
 
-class PostListView(ListView):
+class CardListView(ListView):
     model = Apartment
     template_name = 'index/index.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'apartments'
     ordering = ['-created']
-    paginate_by = 4
+    paginate_by = 8
 
 
 def index(request):
