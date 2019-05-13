@@ -49,7 +49,7 @@ class Payment(ModelForm):
 
     class Meta:
         model = Sale
-        exclude = ['date']
+        exclude = []
         widgets = {
             'card_num_1': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),
             'card_num_2': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),

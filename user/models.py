@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.conf import settings
-import datetime
+from apartment.models import Apartment
 
 
 class Profile(models.Model):
@@ -42,9 +42,3 @@ class Sale(models.Model):
     card_num_4 = models.DecimalField(max_digits=4, decimal_places=0)
     cvc = models.DecimalField(max_digits=3, decimal_places=0)
     expire = models.DateField()
-
-#class user_card_info(models.Model):
-    #userid
-    #apartmentid
-    #cardid
-

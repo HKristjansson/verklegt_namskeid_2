@@ -55,8 +55,8 @@ def buy_apartment_step_one(request, id):
         if apartment_form.is_valid() and credit_card_form.is_valid():
             instance.sold = True
             apartment_form.save()
-            #credit_card_form.date = datetime.date.today() # gúgglum hvernig við fáum NOW í þessu
-
+            credit_card_form.instance.cardholder = request.user
+            credit_card_form.instance.date = datetime.datetime.now()
             credit_card_form.save()
             return redirect('apartment_details', id=id)
     else:
