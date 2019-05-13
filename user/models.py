@@ -42,3 +42,9 @@ class Sale(models.Model):
     card_num_4 = models.DecimalField(max_digits=4, decimal_places=0)
     cvc = models.DecimalField(max_digits=3, decimal_places=0)
     expire = models.DateField()
+
+#class user_card_info(models.Model):
+    #userid
+    #apartmentid
+    #cardid
+
