@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.conf import settings
-import datetime
+from django.utils import timezone
 
 
 class Profile(models.Model):
@@ -34,7 +34,7 @@ def save_user_profile(sender, instance, **kwargs):
 
 
 class Sale(models.Model):
-    date = models.DateTimeField(blank=True, default=datetime.datetime.now())
+    date = models.DateTimeField(blank=True)
     cardholder = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True)
     apartment = models.ForeignKey('apartment.Apartment', on_delete=models.CASCADE, blank=True)
     card_num_1 = models.DecimalField(max_digits=4, decimal_places=0)

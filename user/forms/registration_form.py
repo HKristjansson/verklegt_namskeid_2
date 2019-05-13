@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .profile_form import Profile
 from user.models import Sale
-import datetime
 
 
 class UserRegisterForm(UserCreationForm):
@@ -45,15 +44,15 @@ class ProfileUpdateForm(forms.ModelForm):
 class Payment(ModelForm):
     user = forms.Select()
     apartment = forms.Select()
-    date = forms.DateTimeField()
+    date = forms.DateTimeField(widget=forms.HiddenInput())
 
     class Meta:
         model = Sale
         exclude = ['id']
         widgets = {
-            'date': widgets.HiddenInput(),
-            'apartment': widgets.HiddenInput(),
-            'cardholder': widgets.HiddenInput(),
+            'date': widgets.HiddenInput,
+            'apartment': widgets.HiddenInput,
+            'cardholder': widgets.HiddenInput,
             'card_num_1': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),
             'card_num_2': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),
             'card_num_3': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),
