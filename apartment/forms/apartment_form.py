@@ -1,3 +1,5 @@
+from typing import List
+
 from django.forms import ModelForm, widgets, forms
 from django import forms
 from apartment.models import Apartment
@@ -52,7 +54,8 @@ class ApartmentAddForm(ModelForm):
 
     class Meta:
         model = Apartment
-        exclude = ['id', 'created', 'updated', 'sold', 'buyer_id']
+        exclude = ['id', 'created', 'updated', 'sold']
+        optional = ['number']
         widgets = {
             'address': widgets.TextInput(attrs={'class': 'form-control'}),
             'number': widgets.NumberInput(attrs={'class': 'form-control'}),
@@ -65,5 +68,7 @@ class ApartmentAddForm(ModelForm):
             'seller': widgets.Select(attrs={'class': 'form-control'}),
             'owner_name': widgets.TextInput(attrs={'class': 'form-control'}),
             'owner_ssn': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'owner_phone': widgets.NumberInput(attrs={'class': 'form-control'})
+            'owner_phone': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'buyer_id': widgets.NumberInput( attrs = {'class': 'form-control'})
+
         }
