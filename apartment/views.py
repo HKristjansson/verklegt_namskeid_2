@@ -54,7 +54,8 @@ def buy_apartment_step_one(request, id):
         apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
         credit_card_form = Payment(data=request.POST)
         if apartment_form.is_valid() and credit_card_form.is_valid():
-            instance.sold = True
+            apartment_form.instance.sold = True
+            apartment_form.instance.buyer = request.user
             apartment_form.save()
             credit_card_form.instance.cardholder = request.user
             credit_card_form.instance.date = datetime.datetime.now()
