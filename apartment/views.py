@@ -9,8 +9,6 @@ from user.forms.registration_form import Payment
 from django.utils import timezone
 import operator
 
-
-
 def get_apartment_by_id(request, id):
     apartments = Apartment.objects.all()
     building_types = ApartmentCategory.objects.all()
@@ -20,7 +18,6 @@ def get_apartment_by_id(request, id):
     return render(
         request, 'apartment/apartment_details.html', context
     )
-
 
 @login_required
 def add_apartment(request):
