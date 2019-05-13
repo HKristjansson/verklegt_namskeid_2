@@ -4,7 +4,6 @@ from django.forms import ModelForm, widgets, forms
 from django import forms
 from apartment.models import Apartment
 
-
 class ApartmentBuyForm(ModelForm):
     class Meta:
         model = Apartment

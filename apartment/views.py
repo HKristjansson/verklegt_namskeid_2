@@ -6,10 +6,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentBuyForm
 from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory
 from user.forms.registration_form import Payment
-import datetime
+from django.utils import timezone
 import operator
-
-
 
 def get_apartment_by_id(request, id):
     apartments = Apartment.objects.all()
@@ -20,7 +18,6 @@ def get_apartment_by_id(request, id):
     return render(
         request, 'apartment/apartment_details.html', context
     )
-
 
 @login_required
 def add_apartment(request):
@@ -57,7 +54,7 @@ def buy_apartment_step_one(request, id):
             apartment_form.save()
             credit_card_form.instance.apartment = instance
             credit_card_form.instance.cardholder = request.user
-            credit_card_form.instance.date = datetime.datetime.now()
+            credit_card_form.instance.date = timezone.now()
             credit_card_form.save()
             return redirect('apartment_details', id=id)
     else:
