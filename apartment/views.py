@@ -48,15 +48,14 @@ def remove_apartment(request, id):
 
 def buy_apartment_step_one(request, id):
     instance = get_object_or_404(Apartment, pk=id)
-    current_user = request.user
     if request.method == 'POST':
-        print(current_user.id)
         apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
         credit_card_form = Payment(data=request.POST)
         if apartment_form.is_valid() and credit_card_form.is_valid():
             apartment_form.instance.sold = True
             apartment_form.instance.buyer = request.user
             apartment_form.save()
+            credit_card_form.instance.apartment = instance
             credit_card_form.instance.cardholder = request.user
             credit_card_form.instance.date = datetime.datetime.now()
             credit_card_form.save()
