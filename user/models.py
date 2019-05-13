@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.conf import settings
+import datetime
 
 
 class Profile(models.Model):
@@ -32,7 +33,8 @@ def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 
 
-class CreditCard(models.Model):
+class Sale(models.Model):
+    date = models.DateTimeField(blank=True)
     cardholder = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     card_num_1 = models.DecimalField(max_digits=4, decimal_places=0)
     card_num_2 = models.DecimalField(max_digits=4, decimal_places=0)
