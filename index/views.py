@@ -15,7 +15,12 @@ class CardListView(ListView):
     limit = 30
 
     def get_queryset(self):
-        return Apartment.objects.all()[:self.limit]
+        apartments = Apartment.objects.all().order_by('-created')[:self.limit]
+        building_types = ApartmentCategory.objects.all()
+        zip_code = ZIP.objects.all()
+        context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
+
+        return Apartment.objects.all()[:self.limit]  # Vantar að returna context!
 
 
 # def index(request):

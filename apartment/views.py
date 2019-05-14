@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentBuyForm
-from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory, ApartmentSearch
+from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory
 from user.forms.registration_form import Payment
 from django.utils import timezone
 import operator
