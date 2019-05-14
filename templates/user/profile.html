@@ -1,26 +1,12 @@
-{#{% extends 'base.html' %}#}
-{#{% load crispy_forms_tags %}#}
-{#{% crispy form form.helper %}#}
-{#{% block content %}#}
-{#    <!--#}
-{#    TODO: Need to show image and personal information of logged in user.#}
-{#     -->#}
-{#    <form class="form form-horizontal" method="post">#}
-{#    {% csrf_token %}#}
-{#    {{ form | crispy}}#}
-{#    <input type="submit" class="btn btn-primary" value="update" />#}
-{#    </form>#}
-{#{% endblock content %}#}
-
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="card-group">
+    <div class="card-group container margin-bottom">
       <div class="media">
-        <img class="account-img" src="{{ user.profile.image.url }}" style="height: 125px;width: 125px">
+        <img class="account-img mb-3" src="{{ user.profile.image.url }}" style="height: 125px;width: 125px">
         <div class="media-body">
-          <h2 class="account-heading">{{ user.username }}</h2>
-          <p class="text-secondary">{{ user.email }}</p>
+          <h2 class="ml-3">{{ user.username }}</h2>
+          <p class="text-secondary ml-3">{{ user.email }}</p>
         </div>
       </div>
       <form method="POST" enctype="multipart/form-data">

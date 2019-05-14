@@ -3,10 +3,10 @@ from django.shortcuts import render, redirect
 from user.forms.registration_form import UserRegisterForm, UserUpdateForm, ProfileUpdateForm, Payment
 from django.contrib import messages, auth
 from django.http import HttpResponseForbidden
+from django.contrib import messages
 
 
 def index(request):
-    # return render(request, 'user/user-index.html')
     return HttpResponseForbidden()
 
 
@@ -42,7 +42,7 @@ def profile(request):
 
     context = {
         'u_form': u_form,
-        'p_form': p_form
+        'p_form': p_form,
     }
     if request.user.is_authenticated:
         return render(request, 'user/profile.html', context)
@@ -59,10 +59,10 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            messages.success(request, 'You are now logged in')
+            messages.success(request, f'You are now logged in')
             return redirect('index')
         else:
-            messages.error(request, 'Invalid credentials')
+            messages.error(request, f'Invalid credentials')
             return redirect('login')
     else:
         return render(request, 'login.html')
@@ -71,7 +71,7 @@ def login(request):
 def logout(request):
     if request.method == 'POST':
         auth.logout(request)
-        messages.success(request, 'You are now logged out')
+        messages.success(request, f'You are now logged out')
         return redirect('index')
 
 
