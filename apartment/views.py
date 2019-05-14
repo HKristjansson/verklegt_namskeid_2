@@ -77,6 +77,7 @@ def buy_apartment_step_two(request, id):
 
     if request.method == 'POST':
         credit_card_form = Payment( data = request.POST )
+        #apartment_form = Apartment.objects.all().get(pk=id)
 
         context = {
             'apartment': get_object_or_404(Apartment, pk=id),

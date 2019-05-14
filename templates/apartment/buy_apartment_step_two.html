@@ -10,7 +10,18 @@
                     </div>
                     <div class="card-body">
                         {% if purchaseinfo %}
+
+
                             <h1>purchase info sent and all OK we need to publish what is in purchase info</h1>
+{#                            {% for i in apartment %}#}
+{#                                <h3>{{ i }}</h3>#}
+{##}
+{#                            {% endfor %}#}
+
+                            {% for i in purchaseinfo %}
+                                <h3>{{ i }}</h3>
+
+                            {% endfor %}
 
 
                         {% endif %}

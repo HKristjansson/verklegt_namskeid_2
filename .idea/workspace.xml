@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8a4eaa2e-4870-43e5-9c03-32c58be740de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apartment/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apartment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/apartment/buy_apartment_step_one.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apartment/buy_apartment_step_one.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/apartment/buy_apartment_step_three.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apartment/buy_apartment_step_three.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/apartment/buy_apartment_step_two.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apartment/buy_apartment_step_two.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,45 +80,14 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.43836734">
+    <splitter split-orientation="horizontal" split-proportion="0.49262294">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/user/forms/registration_form.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="28" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_two.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_three.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/user/forms/registration_form.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="597">
-                  <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+                <state relative-caret-position="138">
+                  <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
                   <folding>
                     <element signature="e#0#24#0" expanded="true" />
                   </folding>
@@ -130,10 +96,32 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_two.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="374">
+                  <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_three.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="289">
+                  <caret line="17" column="81" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/apartment/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+                <state relative-caret-position="323">
+                  <caret line="79" column="60" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -221,15 +209,16 @@
         <option value="$PROJECT_DIR$/apartment/forms/apartment_form.py" />
         <option value="$PROJECT_DIR$/templates/apartment/buy_apartment_step_one.html" />
         <option value="$PROJECT_DIR$/apartment/urls.py" />
+        <option value="$PROJECT_DIR$/user/forms/registration_form.py" />
         <option value="$PROJECT_DIR$/templates/apartment/buy_apartment_step_three.html" />
         <option value="$PROJECT_DIR$/apartment/views.py" />
         <option value="$PROJECT_DIR$/templates/apartment/buy_apartment_step_two.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
-    <option name="width" value="1460" />
+    <option name="width" value="1554" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -372,7 +361,7 @@
       <workItem from="1557481910100" duration="25963000" />
       <workItem from="1557673330312" duration="5452000" />
       <workItem from="1557698720077" duration="26335000" />
-      <workItem from="1557842077465" duration="23036000" />
+      <workItem from="1557842077465" duration="26359000" />
     </task>
     <task id="LOCAL-00001" summary="Work that was lost since yesterday restored">
       <created>1557334305758</created>
@@ -619,11 +608,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557849904700</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="buying process.. now all form run (not perfect though, but they run)">
+      <created>1557867443078</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1557867443078</updated>
+    </task>
+    <task id="LOCAL-00037" summary="buying process...">
+      <created>1557869380965</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1557869380965</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133372000" />
+    <option name="totallyTimeSpent" value="136695000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -635,10 +638,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1460" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985207" visible="true" weight="0.125" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985207" visible="true" weight="0.14605543" />
       <window_info id="Structure" order="1" sideWeight="0.50147927" side_tool="true" weight="0.17854519" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -652,7 +655,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.22318527" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" weight="0.3292517" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2603939" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.25785482" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32827735" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5024351" side_tool="true" weight="0.3890511" />
       <window_info anchor="bottom" id="manage.py@verklegt_namskeid_2" order="14" weight="0.32936078" />
@@ -754,7 +757,9 @@
     <MESSAGE value="Now possible to navigate from apartment details to seller profile (button added)" />
     <MESSAGE value="cosmetic changes to &quot;buy apartment&quot;, now showing type of apartment and name of seller." />
     <MESSAGE value="buying process, step 2 and 3 (confirmation step, and &quot;congratulation step&quot;)&#10;Not completed, but... getting there." />
-    <option name="LAST_COMMIT_MESSAGE" value="buying process, step 2 and 3 (confirmation step, and &quot;congratulation step&quot;)&#10;Not completed, but... getting there." />
+    <MESSAGE value="buying process.. now all form run (not perfect though, but they run)" />
+    <MESSAGE value="buying process..." />
+    <option name="LAST_COMMIT_MESSAGE" value="buying process..." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/user/apps.py">
@@ -1077,13 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/forms/registration_form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_one.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1091,17 +1089,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/user/forms/registration_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_three.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="289">
+          <caret line="17" column="81" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apartment/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="323">
+          <caret line="79" column="60" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -1110,8 +1118,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_two.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
