@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="container">
-        <h1>{{ seller.name }}</h1>
+        <h1><strong>Realtor name:</strong> {{ seller.name }}</h1>
 
-        <h4>Started: {{ seller.year_of_start }}</h4>
+        <h4><strong>Started:</strong> {{ seller.year_of_start }}</h4>
         <img src="{{ seller.image }}" class="seller-img">
         <p></p>
-        <p class="h3-responsive"><strong>Seller Description:</strong></p>
-        <h4>{{ seller.description }}</h4>
+        <h4><strong>Seller Description:</strong> {{ seller.description }}</h4>
         {% if request.user.is_superuser %}
             <a href="{% url 'remove_seller' seller.id %}" class="block btn btn-primary">Remove realtor</a>
             <a href="{% url 'update_seller' seller.id %}" class="block btn btn-primary">Update realtor</a>

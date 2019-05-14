@@ -2,7 +2,7 @@
 {% block content %}
     <div class="container-fluid">
     <div class="col-md-8">
-        <section class="apartment-details-container">
+        <section class="apartment-details-container margin-bottom">
             <div class="apartment-details-1">
                 {% for apartment_image in apartment.apartmentimage_set.all %}
                     <img src="{{ apartment_image.image }}" class="apartment-img-large"/>
@@ -18,10 +18,9 @@
             </div>
 
             <div class="h3-responsive apartment-details-2">
-                <h2><strong>Details:</strong></h2>
                 <p><strong>Price: </strong>{{ apartment.price }}.kr</p>
-                <p><strong>ZIP: </strong>{{ apartment.zip }}</p>
-                <p><strong>Town: </strong></p>
+                <p><strong>ZIP: </strong>{{ apartment.zip.zip }}</p>
+                <p><strong>Town: </strong>{{ apartment.zip.city }}</p>
                 <p><strong>Rooms: </strong>{{ apartment.rooms }}</p>
                 <p><strong>Size: </strong>{{ apartment.size }}</p>
                 <p><strong>Category: </strong>{{ apartment.category }}</p>
