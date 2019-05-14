@@ -6,14 +6,14 @@
                 <div class="card margin-bottom">
                     <div class="card-header bg-info text-white">
                         <h4>
-                            <i class="fas fa-user-plus"></i> Buy Apartment </h4>
+                            <i class="fas fa-user-plus"></i> Congratulations on your purchase</h4>
                     </div>
                     <div class="card-body">
-                        <form class="form form-horizontal" action="{% url "buy_apartment_step_two" id %}" method="post">
+                        <form class="form form-horizontal" action="{% url "buy_apartment_step_three" id %}" method="post">
                             {% csrf_token %}
                             {{ form }}
                             {{ credit_card }}
-                            <input type="submit" value="Continue" class="btn btn-primary pull-right"
+                            <input type="submit" value="Go back to main page" class="btn btn-primary pull-right"
                                    style="clear:both; margin: 10px 0"/>
                         </form>
                     </div>
