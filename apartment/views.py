@@ -46,6 +46,10 @@ def remove_apartment(request, id):
 @login_required
 def buy_apartment_step_one(request, id):
     instance = get_object_or_404(Apartment, pk=id)
+    #instance = get_object_or_404(user.forms.registration_form.Apartment, pk=id)
+    instance = get_object_or_404( Apartment, pk = id )
+
+
     if request.method == 'POST':
         apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
         credit_card_form = Payment(data=request.POST)
@@ -62,6 +66,7 @@ def buy_apartment_step_one(request, id):
     else:
         apartment_form = ApartmentBuyForm(instance=instance)
         credit_card_form = Payment(data=request.POST, instance=instance)
+    #return render(request, 'apartment/buy_apartment_step_one.html', {
     return render(request, 'apartment/buy_apartment_step_one.html', {
         'form': apartment_form,
         'id': id,

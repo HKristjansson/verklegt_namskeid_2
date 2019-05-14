@@ -9,7 +9,26 @@
                             <i class="fas fa-user-plus"></i> Confirm purchase </h4>
                     </div>
                     <div class="card-body">
-                        <form class="form form-horizontal" action="{% url "buy_apartment_step_three" id %}" method="post">
+                        {% if purchaseinfo %}
+
+
+                            <h1>purchase info sent and all OK we need to publish what is in purchase info</h1>
+{#                            {% for i in apartment %}#}
+{#                                <h3>{{ i }}</h3>#}
+{##}
+{#                            {% endfor %}#}
+
+                            {% for i in purchaseinfo %}
+                                <h3>{{ i }}</h3>
+
+                            {% endfor %}
+
+
+                        {% endif %}
+
+
+                        <form class="form form-horizontal" action="{% url "buy_apartment_step_three"  %}" method="post">
+
                             {% csrf_token %}
                             {{ form }}
                             {{ credit_card }}

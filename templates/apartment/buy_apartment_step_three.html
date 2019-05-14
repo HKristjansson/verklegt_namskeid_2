@@ -7,13 +7,15 @@
                     <div class="card-header bg-info text-white">
                         <h4>
                             <i class="fas fa-user-plus"></i> Congratulations on your purchase</h4>
+
                     </div>
                     <div class="card-body">
-                        <form class="form form-horizontal" action="{% url "buy_apartment_step_three" id %}" method="post">
+                        <h6>Your purchase process is now complete!</h6>
+                        <form class="form form-horizontal" action="{% url "apartment_index"  %}" method="post">
                             {% csrf_token %}
                             {{ form }}
                             {{ credit_card }}
-                            <input type="submit" value="Go back to main page" class="btn btn-primary pull-right"
+                            <input type="submit" value="Go back to apartment list" class="btn btn-primary pull-right"
                                    style="clear:both; margin: 10px 0"/>
                         </form>
                     </div>

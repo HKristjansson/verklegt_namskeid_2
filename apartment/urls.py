@@ -11,6 +11,6 @@ urlpatterns = [
     path('search_apartment/', views.search_apartment, name="search_apartment"),
     path('buy_apartment_step_one/<int:id>', views.buy_apartment_step_one, name='buy_apartment_step_one'),
     path('buy_apartment_step_two/<int:id>', views.buy_apartment_step_two, name='buy_apartment_step_two'),
-    path('buy_apartment_step_three/<int:id>', views.buy_apartment_step_three, name='buy_apartment_step_three'),
+    path('buy_apartment_step_three/', views.buy_apartment_step_three, name='buy_apartment_step_three'),
     path('sold_apartments/', views.sold_apartments, name="sold_apartments"),
 ]
