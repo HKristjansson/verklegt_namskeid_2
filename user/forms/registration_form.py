@@ -48,16 +48,16 @@ class Payment(ModelForm):
 
     class Meta:
         model = Sale
-        exclude = ['id']
+        exclude = ['id', 'cardholder']
         widgets = {
             'date': widgets.HiddenInput,
             'apartment': widgets.HiddenInput,
             'cardholder': widgets.HiddenInput,
-            'card_num_1': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),
-            'card_num_2': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),
-            'card_num_3': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),
-            'card_num_4': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 4}),
-            'cvc': widgets.NumberInput(attrs={'class': 'form-control-row', 'max_length': 3}),
-            'expire': widgets.DateInput(attrs={'class': 'form-control-row'})
+            'card_num_1': widgets.NumberInput(attrs={'class': 'form-control', 'max_length': 4}),
+            'card_num_2': widgets.NumberInput(attrs={'class': 'form-control', 'max_length': 4}),
+            'card_num_3': widgets.NumberInput(attrs={'class': 'form-control', 'max_length': 4}),
+            'card_num_4': widgets.NumberInput(attrs={'class': 'form-control', 'max_length': 4}),
+            'cvc': widgets.NumberInput(attrs={'class': 'form-control', 'max_length': 3}),
+            'expire': widgets.DateInput(attrs={'class': 'form-control'})
         }
 

@@ -287,9 +287,9 @@ p.apartment-details-2 {
 
 
 .form-control-row {
-    display: -ms-flexbox;
+    /*display: -ms-flexbox;*/
     display: flex;
-    -ms-flex-wrap: wrap;
+    /*-ms-flex-wrap: wrap;*/
     flex-wrap: wrap;
     margin: 0 -16px;
     height: calc(1.5em + 0.75rem + 2px);
