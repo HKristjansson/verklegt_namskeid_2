@@ -12,10 +12,18 @@ class CardListView(ListView):
     context_object_name = 'apartments'
     ordering = ['-created']
     paginate_by = 8
-    limit = 30
+    limit = 10
 
-    def get_queryset(self):
-        return Apartment.objects.all()[:self.limit]
+    # def get_queryset(self):
+    #     return Apartment.objects.all()[:self.limit]
+
+    def get_context_data(self, **kwargs):
+        paginate_by = 6
+        apartments = Apartment.objects.all()[:self.limit]
+        building_types = ApartmentCategory.objects.all()
+        zip_code = ZIP.objects.all()
+        context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
+        return context
 
 
 # def index(request):
