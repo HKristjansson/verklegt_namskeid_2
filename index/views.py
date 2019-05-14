@@ -12,6 +12,10 @@ class CardListView(ListView):
     context_object_name = 'apartments'
     ordering = ['-created']
     paginate_by = 8
+    limit = 30
+
+    def get_queryset(self):
+        return Apartment.objects.all()[:self.limit]
 
 
 # def index(request):
