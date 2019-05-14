@@ -4,10 +4,11 @@ from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentBuyForm
-from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory
+from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory, ApartmentSearch
 from user.forms.registration_form import Payment
 from django.utils import timezone
 import operator
+
 
 def get_apartment_by_id(request, id):
     apartments = Apartment.objects.all()
@@ -42,9 +43,9 @@ def remove_apartment(request, id):
     apartment.save()
     return redirect('apartment_index')
 
+@login_required
 def buy_apartment_step_one(request, id):
     instance = get_object_or_404(Apartment, pk=id)
-
     if request.method == 'POST':
         apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
         credit_card_form = Payment(data=request.POST)
@@ -61,7 +62,6 @@ def buy_apartment_step_one(request, id):
     else:
         apartment_form = ApartmentBuyForm(instance=instance)
         credit_card_form = Payment(data=request.POST, instance=instance)
-    #return render(request, 'apartment/buy_apartment_step_one.html', {
     return render(request, 'apartment/buy_apartment_step_one.html', {
         'form': apartment_form,
         'id': id,
@@ -157,7 +157,11 @@ def search_apartment(request):
     if 'search_filter' in request.GET:
         search_params = request.GET.dict()
         search_params.pop('search_filter')
-
+        print(search_params)
+        instance = ApartmentSearch()
+        instance.user = request.user
+        instance.date = timezone.now()
+        instance.save()
         price_from = search_params.pop('price_from', None)
         price_to = search_params.pop('price_to', None)
         q_list = [
