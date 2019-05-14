@@ -157,13 +157,12 @@ def search_apartment(request):
     if 'search_filter' in request.GET:
         search_params = request.GET.dict()
         search_params.pop('search_filter')
-        print(search_params)
-        instance = ApartmentSearch()
-        instance.user = request.user
-        instance.date = timezone.now()
-        instance.save()
         price_from = search_params.pop('price_from', None)
         price_to = search_params.pop('price_to', None)
+        size_from = search_params.pop('size_from', None)
+        size_to = search_params.pop('size_to', None)
+        rooms_from = int(search_params.pop('rooms_from', None))
+        rooms_to = int(search_params.pop('rooms_to', None))
         q_list = [
             Q(('{}__icontains'.format(k), v))
             for k, v in search_params.items()
@@ -173,7 +172,17 @@ def search_apartment(request):
             price = {'price__gte': price_from, 'price__lte': price_to}
         else:
             price = {'price__gte': price_from, 'price__gt': price_to}
+        if int(size_to) > 0:
+            size = {'size__gte': size_from, 'size__lte': size_to}
+        else:
+            size = {'size__gte': size_from, 'size__gt': size_to}
+        if int(rooms_to) > 0:
+            rooms = {'rooms__gte': rooms_from, 'rooms__lte': rooms_to}
+        else:
+            rooms = {'rooms__gte': rooms_from, 'rooms__gt': rooms_to}
         q_list.append(Q(**{k: v for k, v in price.items() if v is not None}))
+        q_list.append(Q(**{k: v for k, v in size.items() if v is not None}))
+        q_list.append(Q(**{k: v for k, v in rooms.items() if v is not None}))
         queryset = Apartment.objects.filter(reduce(operator.and_, q_list))
         apartments = [{
             'id': x.id,

@@ -49,17 +49,19 @@ class ApartmentImage(models.Model):
 
 
 class ApartmentSearch(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
-    date = models.DateTimeField(blank=True)
-    address = models.CharField(max_length=255, blank=True)
-    number = models.IntegerField(blank=True)
-    property = models.CharField(max_length=255, blank=True)
-    size_from = models.IntegerField(blank=True)
-    size_to = models.IntegerField(blank=True)
-    price_from = models.IntegerField(blank=True)
-    price_to = models.IntegerField(blank=True)
-    rooms_from = models.IntegerField(blank=True)
-    rooms_to = models.IntegerField(blank=True)
-    zip = models.CharField(max_length=255, blank=True)
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    category = models.ForeignKey(ApartmentCategory, on_delete=models.CASCADE, null=True, blank=True)
+    apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE, null=True, blank=True)
+    date = models.DateTimeField(null=True, blank=True)
+    address = models.CharField(max_length=255, null=True, blank=True)
+    number = models.IntegerField(null=True, blank=True)
+    size_from = models.IntegerField(null=True, blank=True)
+    size_to = models.IntegerField(null=True, blank=True)
+    price_from = models.IntegerField(null=True, blank=True)
+    price_to = models.IntegerField(null=True, blank=True)
+    rooms_from = models.IntegerField(null=True, blank=True)
+    rooms_to = models.IntegerField(null=True, blank=True)
+    zip = models.CharField(max_length=255, null=True, blank=True)
 
 
