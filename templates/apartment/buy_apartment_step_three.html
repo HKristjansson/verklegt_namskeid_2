@@ -9,7 +9,7 @@
                             <i class="fas fa-user-plus"></i> Congratulations on your purchase</h4>
                     </div>
                     <div class="card-body">
-                        <form class="form form-horizontal" action="{% url "buy_apartment_step_three" id %}" method="post">
+                        <form class="form form-horizontal" action="{% url "buy_apartment_step_three"  %}" method="post">
                             {% csrf_token %}
                             {{ form }}
                             {{ credit_card }}

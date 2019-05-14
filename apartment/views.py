@@ -43,7 +43,9 @@ def remove_apartment(request, id):
     return redirect('apartment_index')
 
 def buy_apartment_step_one(request, id):
-    instance = get_object_or_404(Apartment, pk=id)
+    #instance = get_object_or_404(user.forms.registration_form.Apartment, pk=id)
+    instance = get_object_or_404( Apartment, pk = id )
+
 
     if request.method == 'POST':
         apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
@@ -56,12 +58,13 @@ def buy_apartment_step_one(request, id):
             credit_card_form.instance.date = timezone.now()
             credit_card_form.save()
             #return redirect('apartment_details', id=id)
-            crid = credit_card_form.auto_id
-            return redirect('buy_apartment_step_one', id=id), crid
+            # here we are trying to apply variable to second parameter.
+            crid = credit_card_form.id
+
+            return redirect('buy_apartment_step_two', id= crid.id)
     else:
         apartment_form = ApartmentBuyForm(instance=instance)
         credit_card_form = Payment(data=request.POST, instance=instance)
-    #return render(request, 'apartment/buy_apartment_step_one.html', {
     return render(request, 'apartment/buy_apartment_step_one.html', {
         'form': apartment_form,
         'id': id,
@@ -69,55 +72,34 @@ def buy_apartment_step_one(request, id):
         'credit_card': credit_card_form
     })
 
-def buy_apartment_step_two(request, id, crid):
-    instance = get_object_or_404(Apartment, pk=id)
-    instance_credit = get_object_or_404(Payment, pk=crid)
+def buy_apartment_step_two(request, id):
+    #credit_card_form.instance.id = id
+    #credit_card_form = get_object_or_404( Payment, pk = id )
+
+    apartments = Apartment.objects.all()
+    building_types = ApartmentCategory.objects.all()
+    zip_code = ZIP.objects.all().values("zip", "city")
+
     if request.method == 'POST':
-        apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
+        credit_card_form = Payment( data = request.POST )
 
-        #credit_card_form = Payment(data=request.POST)
-        credit_card_form = Payment(data=request.Post,instance=instance_credit)
-
-        if apartment_form.is_valid() and credit_card_form.is_valid():
-            apartment_form.instance.sold = True  # taka úr skrefi eitt,höfum í tvö...
-
-            apartment_form.save()
-
-            #credit_card_form.instance.cardholder = request.user
-            credit_card_form.instance.date = timezone.now()
-            #credit_card_form.save()
-            #return redirect('apartment_details', id=id)
-            return redirect('buy_apartment_step_two', id = id)
-    else:
-        print('setjum delete hér')
-        #credit_card_form.pass  # hér finnum við delete skipun og setjum inn
-
-    return redirect( 'apartment_details', id = id )
+        context = {
+            'apartment': get_object_or_404(Apartment, pk=id),
+            'purchaseinfo' : credit_card_form
+        }
+        return render(request,'apartment/buy_apartment_step_two.html', context)
 
 
-def buy_apartment_step_three(request, id):  ################### TO BE REVIEWED
-    instance = get_object_or_404(Apartment, pk=id)
-    if request.method == 'POST':
-        apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
-        credit_card_form = Payment(data=request.POST)
-        if apartment_form.is_valid() and credit_card_form.is_valid():
-            apartment_form.instance.sold = True
-            apartment_form.instance.buyer = request.user
-            apartment_form.save()
-            credit_card_form.instance.apartment = instance
-            credit_card_form.instance.cardholder = request.user
-            credit_card_form.instance.date = timezone.now()
-            credit_card_form.save()
-            return redirect('buy_apartment-step_three', id=id)
-    else:
-        apartment_form = ApartmentBuyForm(instance=instance)
-        credit_card_form = Payment(data=request.POST, instance=instance)
-    return render(request, 'apartment/buy_apartment_step_three.html', {    ### FIX this line (and other lines)
-        'form': apartment_form,
-        'id': id,
-        'cardholder': request.user,
-        'credit_card': credit_card_form
-    })
+
+    return render(
+        request, 'apartment/buy_apartment_step_two.html', {
+
+        })
+
+def buy_apartment_step_three(request):
+    print('Congrats - your purchase is complete')
+
+    return render(request, 'apartment/apartment_index.html')
 
 @login_required
 def update_apartment(request, id):
