@@ -57,8 +57,6 @@ def buy_apartment_step_one(request, id):
             credit_card_form.instance.cardholder = request.user
             credit_card_form.instance.date = timezone.now()
             credit_card_form.save()
-            #return redirect('apartment_details', id=id)
-            # here we are trying to apply variable to second parameter.
             crid = credit_card_form.id
 
             return redirect('buy_apartment_step_two', id= crid.id)
@@ -73,23 +71,18 @@ def buy_apartment_step_one(request, id):
     })
 
 def buy_apartment_step_two(request, id):
-    #credit_card_form.instance.id = id
-    #credit_card_form = get_object_or_404( Payment, pk = id )
-
-    apartments = Apartment.objects.all()
-    building_types = ApartmentCategory.objects.all()
-    zip_code = ZIP.objects.all().values("zip", "city")
+    # apartments = Apartment.objects.all()
+    # building_types = ApartmentCategory.objects.all()
+    # zip_code = ZIP.objects.all().values("zip", "city")
 
     if request.method == 'POST':
         credit_card_form = Payment( data = request.POST )
 
         context = {
             'apartment': get_object_or_404(Apartment, pk=id),
-            'purchaseinfo' : credit_card_form
+            'purchaseinfo': credit_card_form
         }
         return render(request,'apartment/buy_apartment_step_two.html', context)
-
-
 
     return render(
         request, 'apartment/buy_apartment_step_two.html', {
@@ -98,6 +91,7 @@ def buy_apartment_step_two(request, id):
 
 def buy_apartment_step_three(request):
     print('Congrats - your purchase is complete')
+    return render(request,'apartment/buy_apartment_step_three.html')
 
     return render(request, 'apartment/apartment_index.html')
 

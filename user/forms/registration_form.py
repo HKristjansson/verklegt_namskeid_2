@@ -5,7 +5,6 @@ from django.contrib.auth.forms import UserCreationForm
 from .profile_form import Profile
 from user.models import Sale
 
-
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
 
@@ -18,7 +17,6 @@ class UserRegisterForm(UserCreationForm):
                   'password1',
                   'password2']
 
-
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
 
@@ -29,8 +27,6 @@ class UserUpdateForm(forms.ModelForm):
                   'username',
                   'email'
                 ]
-
-
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
@@ -39,7 +35,6 @@ class ProfileUpdateForm(forms.ModelForm):
                   'phone',
                   'image'
                   ]
-
 
 class Payment(ModelForm):
     user = forms.Select()
@@ -60,4 +55,3 @@ class Payment(ModelForm):
             'cvc': widgets.NumberInput(attrs={'class': 'form-control', 'max_length': 3}),
             'expire': widgets.DateInput(attrs={'class': 'form-control'})
         }
-
