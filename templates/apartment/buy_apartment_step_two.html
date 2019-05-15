@@ -9,11 +9,16 @@
                             <i class="fas fa-home"></i> Confirm purchase </h4>
                     </div>
                     <div class="card-body">
+                    #{% if apartment %}
+                    #    <p>apartment is returning values</p>
+                        #{% for i in apartment %}#}
+                        #    <h3>{{ i }}</h3>#}
+                        #{% endfor %}
+
+
+                    #{% endif %}
                         {% if purchaseinfo %}
                             <h1>Purchase info sent and all OK we need to publish what is in purchase info</h1>
-                            {% for i in apartment %}
-                                <h3>{{ i }}</h3>
-                            {% endfor %}
 
                             {% for i in purchaseinfo %}
                                 <p>{{ i }}</p>
