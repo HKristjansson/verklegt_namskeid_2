@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a4eaa2e-4870-43e5-9c03-32c58be740de" name="Default Changelist" comment="buying process...">
+    <list default="true" id="8a4eaa2e-4870-43e5-9c03-32c58be740de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apartment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/views.py" afterDir="false" />
     </list>
@@ -94,11 +94,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apartment/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
+            <state relative-caret-position="9">
+              <caret line="183" column="24" selection-start-line="183" selection-start-column="24" selection-end-line="183" selection-end-column="24" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -106,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/part/search.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_two.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="90" column="22" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
+            <state relative-caret-position="9">
+              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -147,6 +147,7 @@
       <find>one</find>
       <find>id</find>
       <find>buy_apartment_step_three</find>
+      <find>xl-auto</find>
     </findStrings>
     <dirStrings>
       <dir>C:\GitHub\CastleApartments\verklegt_namskeid_2</dir>
@@ -174,11 +175,6 @@
         <option value="$PROJECT_DIR$/index/views.py" />
         <option value="$PROJECT_DIR$/templates/part/search_no_base.html" />
         <option value="$PROJECT_DIR$/templates/apartment/apartment_index.html" />
-        <option value="$PROJECT_DIR$/templates/apartment/single_apartment.html" />
-        <option value="$PROJECT_DIR$/templates/Index/about.html" />
-        <option value="$PROJECT_DIR$/templates/seller/single_seller.html" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/seller/seller_details.html" />
         <option value="$PROJECT_DIR$/templates/apartment/add_apartment.html" />
         <option value="$PROJECT_DIR$/user/views.py" />
         <option value="$PROJECT_DIR$/user/urls.py" />
@@ -188,22 +184,28 @@
         <option value="$PROJECT_DIR$/user/models.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/templates/Index/index.html" />
-        <option value="$PROJECT_DIR$/templates/apartment/apartment_details.html" />
         <option value="$PROJECT_DIR$/apartment/forms/apartment_form.py" />
         <option value="$PROJECT_DIR$/templates/apartment/buy_apartment_step_one.html" />
         <option value="$PROJECT_DIR$/apartment/urls.py" />
-        <option value="$PROJECT_DIR$/user/forms/registration_form.py" />
         <option value="$PROJECT_DIR$/templates/apartment/buy_apartment_step_three.html" />
         <option value="$PROJECT_DIR$/templates/apartment/buy_apartment_step_two.html" />
         <option value="$PROJECT_DIR$/templates/part/search.html" />
+        <option value="$PROJECT_DIR$/user/forms/registration_form.py" />
+        <option value="$PROJECT_DIR$/templates/apartment/apartment_details.html" />
+        <option value="$PROJECT_DIR$/templates/Index/about.html" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/templates/apartment/single_apartment.html" />
+        <option value="$PROJECT_DIR$/templates/seller/seller_details.html" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/seller/single_seller.html" />
         <option value="$PROJECT_DIR$/apartment/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="284" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="904" />
     <option name="y" value="23" />
-    <option name="width" value="1156" />
+    <option name="width" value="536" />
     <option name="height" value="831" />
   </component>
   <component name="ProjectView">
@@ -243,6 +245,19 @@
               <item name="verklegt_namskeid_2" type="b2602c69:ProjectViewProjectNode" />
               <item name="verklegt_namskeid_2" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="verklegt_namskeid_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="verklegt_namskeid_2" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="verklegt_namskeid_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="verklegt_namskeid_2" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap.css" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="verklegt_namskeid_2" type="b2602c69:ProjectViewProjectNode" />
@@ -667,11 +682,39 @@
       <option name="project" value="LOCAL" />
       <updated>1557869380965</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fixed search engine completely, please keep repos update">
+      <created>1557881890230</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1557881890230</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fixed search engine completely, please keep repos update">
+      <created>1557882213713</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1557882213713</updated>
+    </task>
+    <task id="LOCAL-00040" summary="styling apartment">
+      <created>1557882329777</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1557882329777</updated>
+    </task>
+    <task id="LOCAL-00041" summary="styling apartment">
+      <created>1557887840723</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1557887840723</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138367000" />
+    <option name="totallyTimeSpent" value="144697000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -683,15 +726,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="284" y="23" width="1156" height="831" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="831" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985207" visible="true" weight="0.15170556" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985207" weight="0.26413256" />
       <window_info id="Structure" order="1" sideWeight="0.50147927" side_tool="true" weight="0.17854519" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292517" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49756494" visible="true" weight="0.23545332" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49707603" visible="true" weight="0.23545332" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -702,13 +745,13 @@
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" weight="0.3292517" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.25785482" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32827735" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5024351" side_tool="true" weight="0.3890511" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50292397" side_tool="true" weight="0.23545332" />
       <window_info anchor="bottom" id="manage.py@verklegt_namskeid_2" order="14" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.6509847" />
+      <window_info anchor="right" id="Database" order="4" weight="0.6500975" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985207" visible="true" weight="0.17854519" />
@@ -780,7 +823,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Work that was lost since yesterday restored" />
     <MESSAGE value="something very interesting" />
     <MESSAGE value="fixed search apartment" />
     <MESSAGE value="working demo, fixed apartment search styling" />
@@ -804,21 +846,11 @@
     <MESSAGE value="buying process, step 2 and 3 (confirmation step, and &quot;congratulation step&quot;)&#10;Not completed, but... getting there." />
     <MESSAGE value="buying process.. now all form run (not perfect though, but they run)" />
     <MESSAGE value="buying process..." />
-    <option name="LAST_COMMIT_MESSAGE" value="buying process..." />
+    <MESSAGE value="fixed search engine completely, please keep repos update" />
+    <MESSAGE value="styling apartment" />
+    <option name="LAST_COMMIT_MESSAGE" value="styling apartment" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/user/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -906,27 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/seller/seller_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Index/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="842">
-          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="239" column="12" selection-start-line="239" selection-start-column="12" selection-end-line="239" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CastleApartments/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -939,16 +950,6 @@
         <state>
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1002,16 +1003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apartment/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1038,20 +1029,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/seller/single_seller.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/apartment/apartment_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/apartment/add_apartment.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1065,29 +1042,12 @@
     <entry file="file://$PROJECT_DIR$/templates/apartment/update_apartment.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/apartment/single_apartment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apartment/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="76" lean-forward="true" selection-start-line="14" selection-start-column="76" selection-end-line="14" selection-end-column="76" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/forms/registration_form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1099,17 +1059,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_two.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_one.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="9" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/part/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-887">
+          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/forms/registration_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="51" column="3" lean-forward="true" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87586">
+          <caret line="570" column="409" selection-start-line="570" selection-start-column="409" selection-end-line="570" selection-end-column="409" />
+          <folding>
+            <element signature="e#36130#36364#2" expanded="true" />
+            <element signature="e#37267#37420#1" expanded="true" />
+            <element signature="e#37461#37695#1" expanded="true" />
+            <element signature="e#41100#41376#2" expanded="true" />
+            <element signature="e#42307#42460#1" expanded="true" />
+            <element signature="e#42501#42777#1" expanded="true" />
+            <element signature="e#77852#78039#2" expanded="true" />
+            <element signature="e#78298#78434#2" expanded="true" />
+            <element signature="e#78889#79022#2" expanded="true" />
+            <element signature="e#80754#80907#1" expanded="true" />
+            <element signature="e#96253#96483#2" expanded="true" />
+            <element signature="e#97500#97736#2" expanded="true" />
+            <element signature="e#134952#135129#2" expanded="true" />
+            <element signature="e#135185#135362#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/apartment/single_apartment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="248" column="14" selection-start-line="248" selection-start-column="14" selection-end-line="248" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/apartment/apartment_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/seller/seller_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Index/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="30" column="96" selection-start-line="30" selection-start-column="96" selection-end-line="30" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/seller/single_seller.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://06a1edc9-d85f-4943-aa6d-2164e2e31677/database/CastleApartments/schema/public/table/apartment_zip">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="5967201f-3441-46a0-801f-928c6ef1d363">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
@@ -1120,20 +1167,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apartment/views.py">
+    <entry file="file://$PROJECT_DIR$/apartment/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
+        <state relative-caret-position="-37">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/part/search.html">
+    <entry file="file://$PROJECT_DIR$/index/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="90" column="22" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
+        <state relative-caret-position="90">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/apartment/buy_apartment_step_two.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apartment/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="183" column="24" selection-start-line="183" selection-start-column="24" selection-end-line="183" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

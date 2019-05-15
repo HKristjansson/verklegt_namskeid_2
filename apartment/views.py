@@ -20,6 +20,7 @@ def get_apartment_by_id(request, id):
         request, 'apartment/apartment_details.html', context
     )
 
+
 @login_required
 def add_apartment(request):
     if request.method == 'POST':
@@ -43,12 +44,12 @@ def remove_apartment(request, id):
     apartment.save()
     return redirect('apartment_index')
 
+
 @login_required
 def buy_apartment_step_one(request, id):
     instance = get_object_or_404(Apartment, pk=id)
-    #instance = get_object_or_404(user.forms.registration_form.Apartment, pk=id)
-    instance = get_object_or_404( Apartment, pk = id )
-
+    # instance = get_object_or_404(user.forms.registration_form.Apartment, pk=id)
+    instance = get_object_or_404(Apartment, pk=id)
 
     if request.method == 'POST':
         apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
@@ -72,29 +73,29 @@ def buy_apartment_step_one(request, id):
         'credit_card': credit_card_form
     })
 
+
 def buy_apartment_step_two(request, id, crid):
     instance = get_object_or_404(Apartment, pk=id)
     instance_credit = get_object_or_404(Payment, pk=crid)
     if request.method == 'POST':
         apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
 
-        credit_card_form = Payment(data=request.Post,instance=instance_credit)
+        credit_card_form = Payment(data=request.Post, instance=instance_credit)
 
         if apartment_form.is_valid() and credit_card_form.is_valid():
             apartment_form.instance.sold = True  # taka úr skrefi eitt,höfum í tvö...
 
             apartment_form.save()
 
-
             credit_card_form.instance.date = timezone.now()
-            #credit_card_form.save()
-            #return redirect('apartment_details', id=id)
-            return redirect('buy_apartment_step_two', id = id)
+            # credit_card_form.save()
+            # return redirect('apartment_details', id=id)
+            return redirect('buy_apartment_step_two', id=id)
     else:
         print('setjum delete hér')
-        #credit_card_form.pass  # hér finnum við delete skipun og setjum inn
+        # credit_card_form.pass  # hér finnum við delete skipun og setjum inn
 
-    return redirect( 'apartment_details', id = id )
+    return redirect('apartment_details', id=id)
 
 
 def buy_apartment_step_three(request, id):  ################### TO BE REVIEWED
@@ -114,12 +115,13 @@ def buy_apartment_step_three(request, id):  ################### TO BE REVIEWED
     else:
         apartment_form = ApartmentBuyForm(instance=instance)
         credit_card_form = Payment(data=request.POST, instance=instance)
-    return render(request, 'apartment/buy_apartment_step_three.html', {    ### FIX this line (and other lines)
+    return render(request, 'apartment/buy_apartment_step_three.html', {  ### FIX this line (and other lines)
         'form': apartment_form,
         'id': id,
         'cardholder': request.user,
         'credit_card': credit_card_form
     })
+
 
 @login_required
 def update_apartment(request, id):
@@ -171,15 +173,15 @@ def search_apartment(request):
             for k, v in search_params.items()
             if v is not None
         ]
-        if price_to > 0:
+        if int(price_to) > 0:
             price = {'price__gte': price_from, 'price__lte': price_to}
         else:
             price = {'price__gte': price_from, 'price__gt': price_to}
-        if size_to > 0:
+        if int(size_to) > 0:
             size = {'size__gte': size_from, 'size__lte': size_to}
         else:
             size = {'size__gte': size_from, 'size__gt': size_to}
-        if rooms_to > 0:
+        if int(rooms_to) > 0:
             rooms = {'rooms__gte': rooms_from, 'rooms__lte': rooms_to}
         else:
             rooms = {'rooms__gte': rooms_from, 'rooms__gt': rooms_to}
