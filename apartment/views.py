@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, ApartmentBuyForm
-from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory
+from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory, ApartmentSearch
 from user.forms.registration_form import Payment
 from django.utils import timezone
 import operator
@@ -162,10 +162,11 @@ def search_apartment(request):
     if 'search_filter' in request.GET:
         search_params = request.GET.dict()
         search_params.pop('search_filter')
-        price_from = search_params.pop('price_from', None)
-        price_to = search_params.pop('price_to', None)
-        size_from = search_params.pop('size_from', None)
-        size_to = search_params.pop('size_to', None)
+        search_save = dict(search_params)
+        price_from = int(search_params.pop('price_from', None))
+        price_to = int(search_params.pop('price_to', None))
+        size_from = int(search_params.pop('size_from', None))
+        size_to = int(search_params.pop('size_to', None))
         rooms_from = int(search_params.pop('rooms_from', None))
         rooms_to = int(search_params.pop('rooms_to', None))
         q_list = [
@@ -173,15 +174,15 @@ def search_apartment(request):
             for k, v in search_params.items()
             if v is not None
         ]
-        if int(price_to) > 0:
+        if price_to > 0:
             price = {'price__gte': price_from, 'price__lte': price_to}
         else:
             price = {'price__gte': price_from, 'price__gt': price_to}
-        if int(size_to) > 0:
+        if size_to > 0:
             size = {'size__gte': size_from, 'size__lte': size_to}
         else:
             size = {'size__gte': size_from, 'size__gt': size_to}
-        if int(rooms_to) > 0:
+        if rooms_to > 0:
             rooms = {'rooms__gte': rooms_from, 'rooms__lte': rooms_to}
         else:
             rooms = {'rooms__gte': rooms_from, 'rooms__gt': rooms_to}
@@ -199,6 +200,13 @@ def search_apartment(request):
             'firstImage': x.apartmentimage_set.first().image
         } for x in queryset
         ]
+
+        search_save.pop('category__name', None)
+        search_save.pop('zip__zip', None)
+        instance = ApartmentSearch(**search_save)
+        instance.user = request.user
+        instance.date = timezone.now()
+        instance.save()
         return JsonResponse({'data': apartments})
     apartments = Apartment.objects.all()
     building_types = ApartmentCategory.objects.all()
