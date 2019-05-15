@@ -60,13 +60,11 @@ def buy_apartment_step_one(request, id):
             credit_card_form.instance.cardholder = request.user
             credit_card_form.instance.date = timezone.now()
             credit_card_form.save()
-            #return redirect('apartment_details', id=id)
             crid = credit_card_form.auto_id
             return redirect('buy_apartment_step_one', id=id), crid
     else:
         apartment_form = ApartmentBuyForm(instance=instance)
         credit_card_form = Payment(data=request.POST, instance=instance)
-    #return render(request, 'apartment/buy_apartment_step_one.html', {
     return render(request, 'apartment/buy_apartment_step_one.html', {
         'form': apartment_form,
         'id': id,
@@ -80,7 +78,6 @@ def buy_apartment_step_two(request, id, crid):
     if request.method == 'POST':
         apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
 
-        #credit_card_form = Payment(data=request.POST)
         credit_card_form = Payment(data=request.Post,instance=instance_credit)
 
         if apartment_form.is_valid() and credit_card_form.is_valid():
@@ -88,7 +85,7 @@ def buy_apartment_step_two(request, id, crid):
 
             apartment_form.save()
 
-            #credit_card_form.instance.cardholder = request.user
+
             credit_card_form.instance.date = timezone.now()
             #credit_card_form.save()
             #return redirect('apartment_details', id=id)
