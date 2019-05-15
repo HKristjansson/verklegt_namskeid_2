@@ -12,7 +12,7 @@ class CardListView(ListView):
     template_name = 'index/index.html'
     context_object_name = 'apartments'
     ordering = ['created']
-    paginate_by = 8
+    paginate_by = 10
     limit = 10
 
     # def get_queryset(self):
