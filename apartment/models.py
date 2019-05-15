@@ -1,6 +1,6 @@
 from django.db import models
 from seller.models import Seller
-#from user.models import User
+from user.models import User
 
 
 class ZIP(models.Model):
@@ -46,4 +46,22 @@ class ApartmentImage(models.Model):
 
     def __str__(self):
         return self.apartment
+
+
+class ApartmentSearch(models.Model):
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    category = models.ForeignKey(ApartmentCategory, on_delete=models.CASCADE, null=True, blank=True)
+    apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE, null=True, blank=True)
+    date = models.DateTimeField(null=True, blank=True)
+    address = models.CharField(max_length=255, null=True, blank=True)
+    number = models.IntegerField(null=True, blank=True)
+    size_from = models.IntegerField(null=True, blank=True)
+    size_to = models.IntegerField(null=True, blank=True)
+    price_from = models.IntegerField(null=True, blank=True)
+    price_to = models.IntegerField(null=True, blank=True)
+    rooms_from = models.IntegerField(null=True, blank=True)
+    rooms_to = models.IntegerField(null=True, blank=True)
+    zip = models.CharField(max_length=255, null=True, blank=True)
+
 
