@@ -11,7 +11,7 @@ class CardListView(ListView):
     model = Apartment
     template_name = 'index/index.html'
     context_object_name = 'apartments'
-    ordering = ['-created']
+    ordering = ['created']
     paginate_by = 8
     limit = 10
 
@@ -40,8 +40,6 @@ class CardListView(ListView):
         context['zip_code'] = zip_code
         context['building_types'] = building_types
         context['page_range'] = page_range
-
-        print(context)
         return context
 
 

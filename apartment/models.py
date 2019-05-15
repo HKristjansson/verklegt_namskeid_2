@@ -34,7 +34,7 @@ class Apartment(models.Model):
     sold = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    #buyer = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
+    # buyer = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
 
     def __str__(self):
         return self.address

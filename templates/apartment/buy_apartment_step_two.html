@@ -11,24 +11,29 @@
                     </div>
                     <div class="card-body">
                         {% if purchaseinfo %}
-                            <h1>Purchase info sent and all OK we need to publish what is in purchase info</h1>
+                            <h3>Please read your purchase details carefully and click "Confirm" to continue or "Cancel"
+                                to return back at HomePage</h3>
                             {% for i in apartment %}
                                 <p>{{ i.label }}</p>
                                 <h3>{{ i }}</h3>
                             {% endfor %}
 
                             {% for i in purchaseinfo %}
-                                <p>{{ i.label }}</p>
-                                 <input type="text" value="{{ i.value }}" disabled />
+                                {% if i != purchaseinfo.date or i != purchaseinfo.cardholder or i != purchaseinfo.apartment %}
+                                    <p>{{ i.label }}</p>
+                                    <input type="text" value="{{ i.value }}" disabled/>
+                                {% endif %}
                             {% endfor %}
                         {% endif %}
-                        <form class="form form-horizontal" action="{% url "buy_apartment_step_three" id %}" method="post">
+                        <form class="form form-horizontal" action="{% url "buy_apartment_step_three" id %}"
+                              method="post">
                             {% csrf_token %}
                             {{ form }}
                             {{ credit_card }}
                             <input type="submit" value="Confirm purchase" class="btn btn-primary pull-right"
                                    style="clear:both; margin: 10px 0"/>
-                            <a type="button" target="_self" href="{% url 'index' %}" class="btn btn-outline-danger">Cancel Payment!</a>
+                            <a type="button" target="_self" href="{% url 'index' %}" class="btn btn-outline-danger">Cancel
+                                Payment!</a>
                         </form>
                     </div>
                 </div>
