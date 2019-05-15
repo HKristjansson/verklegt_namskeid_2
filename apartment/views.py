@@ -200,12 +200,13 @@ def search_apartment(request):
         } for x in queryset
         ]
 
-        search_save.pop('category__name', None)
-        search_save.pop('zip__zip', None)
-        instance = ApartmentSearch(**search_save)
-        instance.user = request.user
-        instance.date = timezone.now()
-        instance.save()
+        if request.user.is_authenticated:
+            search_save.pop('category__name', None)
+            search_save.pop('zip__zip', None)
+            instance = ApartmentSearch(**search_save)
+            instance.user = request.user
+            instance.date = timezone.now()
+            instance.save()
         return JsonResponse({'data': apartments})
     apartments = Apartment.objects.all()
     building_types = ApartmentCategory.objects.all()
