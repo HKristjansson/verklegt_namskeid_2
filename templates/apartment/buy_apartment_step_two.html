@@ -6,25 +6,23 @@
                 <div class="card margin-bottom">
                     <div class="card-header bg-danger text-white">
                         <h4>
-                            <i class="fas fa-home"></i> Confirm purchase </h4>
+                            <i class="fas fa-home"></i> Confirm purchase
+                        </h4>
                     </div>
                     <div class="card-body">
-                    #{% if apartment %}
-                    #    <p>apartment is returning values</p>
-                        #{% for i in apartment %}#}
-                        #    <h3>{{ i }}</h3>#}
-                        #{% endfor %}
-
-
-                    #{% endif %}
                         {% if purchaseinfo %}
                             <h1>Purchase info sent and all OK we need to publish what is in purchase info</h1>
+                            {% for i in apartment %}
+                                <p>{{ i.label }}</p>
+                                <h3>{{ i }}</h3>
+                            {% endfor %}
 
                             {% for i in purchaseinfo %}
-                                <p>{{ i }}</p>
+                                <p>{{ i.label }}</p>
+                                 <input type="text" value="{{ i.value }}" disabled />
                             {% endfor %}
                         {% endif %}
-                        <form class="form form-horizontal" action="{% url "buy_apartment_step_three" %}" method="post">
+                        <form class="form form-horizontal" action="{% url "buy_apartment_step_three" id %}" method="post">
                             {% csrf_token %}
                             {{ form }}
                             {{ credit_card }}
