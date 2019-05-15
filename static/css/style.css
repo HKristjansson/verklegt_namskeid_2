@@ -306,15 +306,15 @@ p.apartment-details-2 {
 }
 
 .col-md-4 {
-    -ms-flex: 0 0 220px;
-    flex: 0 0 220px;
-    max-width: 220px;
+    flex: 0 0 26%;
+    min-width: 22%;
+    max-width: 26%;
     padding-top: 35px;
   }
 
     .col-md-8 {
-    -ms-flex: 0 0 78%;
-    flex: 0 0 78%;
+    -ms-flex: 0 0 74%;
+    flex: 0 0 74%;
     max-width: 78%;
   }
 
@@ -333,3 +333,9 @@ p.apartment-details-2 {
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
 }
+
+.about-img {
+    height: 220px;
+    width: 220px;
+}
+
