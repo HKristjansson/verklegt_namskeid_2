@@ -28,9 +28,7 @@
                             {{ credit_card }}
                             <input type="submit" value="Confirm purchase" class="btn btn-primary pull-right"
                                    style="clear:both; margin: 10px 0"/>
-                            <input type="submit" value="Cancel button, to be completed"
-                                   class="btn btn-outline-danger pull-right"
-                                   style="clear:both; margin: 10px 0"/>
+                            <a type="button" target="_self" href="{% url 'index' %}" class="btn btn-outline-danger">Cancel Payment!</a>
                         </form>
                     </div>
                 </div>
