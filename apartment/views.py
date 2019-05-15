@@ -48,9 +48,6 @@ def remove_apartment(request, id):
 @login_required
 def buy_apartment_step_one(request, id):
     instance = get_object_or_404(Apartment, pk=id)
-    # instance = get_object_or_404(user.forms.registration_form.Apartment, pk=id)
-    instance = get_object_or_404(Apartment, pk=id)
-
     if request.method == 'POST':
         apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
         credit_card_form = Payment(data=request.POST)
@@ -61,8 +58,9 @@ def buy_apartment_step_one(request, id):
             credit_card_form.instance.cardholder = request.user
             credit_card_form.instance.date = timezone.now()
             credit_card_form.save()
-            crid = credit_card_form.auto_id
-            return redirect('buy_apartment_step_one', id=id), crid
+            crid = credit_card_form.id
+
+            return redirect('buy_apartment_step_two', id=crid.id)
     else:
         apartment_form = ApartmentBuyForm(instance=instance)
         credit_card_form = Payment(data=request.POST, instance=instance)
@@ -74,53 +72,28 @@ def buy_apartment_step_one(request, id):
     })
 
 
-def buy_apartment_step_two(request, id, crid):
-    instance = get_object_or_404(Apartment, pk=id)
-    instance_credit = get_object_or_404(Payment, pk=crid)
-    if request.method == 'POST':
-        apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
-
-        credit_card_form = Payment(data=request.Post, instance=instance_credit)
-
-        if apartment_form.is_valid() and credit_card_form.is_valid():
-            apartment_form.instance.sold = True  # taka úr skrefi eitt,höfum í tvö...
-
-            apartment_form.save()
-
-            credit_card_form.instance.date = timezone.now()
-            # credit_card_form.save()
-            # return redirect('apartment_details', id=id)
-            return redirect('buy_apartment_step_two', id=id)
-    else:
-        print('setjum delete hér')
-        # credit_card_form.pass  # hér finnum við delete skipun og setjum inn
-
-    return redirect('apartment_details', id=id)
-
-
-def buy_apartment_step_three(request, id):  ################### TO BE REVIEWED
+def buy_apartment_step_two(request, id):
     instance = get_object_or_404(Apartment, pk=id)
     if request.method == 'POST':
-        apartment_form = ApartmentBuyForm(data=request.POST, instance=instance)
         credit_card_form = Payment(data=request.POST)
-        if apartment_form.is_valid() and credit_card_form.is_valid():
-            apartment_form.instance.sold = True
-            apartment_form.instance.buyer = request.user
-            apartment_form.save()
-            credit_card_form.instance.apartment = instance
-            credit_card_form.instance.cardholder = request.user
-            credit_card_form.instance.date = timezone.now()
-            credit_card_form.save()
-            return redirect('buy_apartment-step_three', id=id)
-    else:
-        apartment_form = ApartmentBuyForm(instance=instance)
-        credit_card_form = Payment(data=request.POST, instance=instance)
-    return render(request, 'apartment/buy_apartment_step_three.html', {  ### FIX this line (and other lines)
-        'form': apartment_form,
-        'id': id,
-        'cardholder': request.user,
-        'credit_card': credit_card_form
-    })
+        apartment_form = ApartmentBuyForm(data=request.POST)
+        context = {
+            'id': id,
+            'apartment': apartment_form,
+            'purchaseinfo': credit_card_form
+        }
+        return render(request, 'apartment/buy_apartment_step_two.html', context)
+
+    return render(
+        request, 'apartment/buy_apartment_step_two.html', {
+
+        })
+
+
+def buy_apartment_step_three(request, id):
+
+    Apartment.objects.filter(pk=id).update(sold=True)
+    return render(request, 'apartment/buy_apartment_step_three.html')
 
 
 @login_required
