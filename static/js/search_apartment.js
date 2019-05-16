@@ -28,7 +28,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $('#search-history-form').on('submit', function(e) {
+    $('#search-history-form').on('change', function(e) {
         e.preventDefault();
         var searchText = $('[name=search_history]').val();
         $.ajax({
