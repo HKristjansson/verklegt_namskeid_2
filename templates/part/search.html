@@ -158,6 +158,7 @@
                         <div class="wide">
                             <select class="cs-select cs-skin-border input-half"
                                     name="search_history">
+                                    <option value="">Recent searches</option>
                                 {% for history in search_history %}
                                     <option value="{{ history.id }}"
                                     >{{ history }}</option>
@@ -166,14 +167,12 @@
                         </div>
                     </section>
                 </div>
-                <div class="text-center">
-                    <input type="hidden" name="search_history" value="true">
-                    <input type="submit" class="btn btn-info" id="search-hist" value="Search">
-                </div>
             </form>
+            {% else %}
+            <h5>Please log in for search history</h5>
         {% endif %}
 
-        </div>
 
+        </div>
     </div>
 {% endblock content %}
