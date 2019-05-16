@@ -74,13 +74,3 @@ def logout(request):
         messages.success(request, f'You are now logged out')
         return redirect('index')
 
-
-# def payment(request):
-#     if request.method == 'POST':
-#         form = Payment(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('index')
-#     else:
-#         form = Payment()
-#     return render(request, 'apartment/buy_apartment_step_one.html', {'form': form})

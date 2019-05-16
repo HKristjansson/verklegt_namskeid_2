@@ -8,7 +8,7 @@ class CardListView(ListView):
     model = Apartment
     template_name = 'index/index.html'
     context_object_name = 'apartments'
-    ordering = ['-created']
+    ordering = ['price']
     paginate_by = 8
     limit = 30
 

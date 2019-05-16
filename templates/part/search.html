@@ -133,7 +133,7 @@
                 <div>
                     <section>
                         <label for="class">Area (Zip):</label>
-                       <div class="wide">
+                        <div class="wide">
                             <select class="cs-select cs-skin-border input-half"
                                     name="zip__zip">
                                 <option value="">Any</option>
@@ -145,32 +145,41 @@
                         </div>
                     </section>
                 </div>
+                <div>
+                    <span><Strong>Order By</Strong></span>
+                    <select name="order_by">
+                        <option value="price">Price Low-High</option>
+                        <option value="-price">Price High-Low</option>
+                        <option value="address">A - Z</option>
+                        <option value="-address">Z - A</option>
+                    </select>
+                </div>
                 <div class="text-center">
                     <input type="hidden" name="search_filter" value="true">
                     <input type="submit" class="btn btn-info" id="search-apa" value="Search">
                 </div>
             </form>
-        {% if request.user.is_authenticated %}
-            <form class="text-lg-left" id="search-history-form" style="color: #757575;">
-                <div>
-                    <section>
-                        <label for="class">Recent searches:</label>
-                        <div class="wide">
-                            <select class="cs-select cs-skin-border input-half"
-                                    name="search_history">
+            {% if request.user.is_authenticated %}
+                <form class="text-lg-left" id="search-history-form" style="color: #757575;">
+                    <div>
+                        <section>
+                            <label for="class">Recent searches:</label>
+                            <div class="wide">
+                                <select class="cs-select cs-skin-border input-half"
+                                        name="search_history">
                                     <option value="">Recent searches</option>
-                                {% for history in search_history %}
-                                    <option value="{{ history.id }}"
-                                    >{{ history }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                    </section>
-                </div>
-            </form>
+                                    {% for history in search_history %}
+                                        <option value="{{ history.id }}"
+                                        >{{ history }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </section>
+                    </div>
+                </form>
             {% else %}
-            <h5>Please log in for search history</h5>
-        {% endif %}
+                <h5>Please log in for search history</h5>
+            {% endif %}
 
 
         </div>
