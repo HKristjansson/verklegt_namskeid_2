@@ -9,6 +9,8 @@ class Seller(models.Model):
     year_of_start = models.DateTimeField()
     disabled = models.BooleanField(default=False)
     description = models.CharField(max_length=1024)
+    email = models.CharField(max_length=255)
+    phone = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name

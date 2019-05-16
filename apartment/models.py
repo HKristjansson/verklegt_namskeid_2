@@ -61,6 +61,7 @@ class ApartmentSearch(models.Model):
     rooms_from = models.IntegerField(null=True, blank=True)
     rooms_to = models.IntegerField(null=True, blank=True)
     zip = models.CharField(max_length=255, null=True, blank=True)
+    order_by = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return str(self.address) + ' ' + str(self.number) + ' ' + str(self.zip) + ' ' + str(self.category)
