@@ -148,7 +148,7 @@ def search_apartment(request):
         size_to = search_params.size_to
         rooms_from = search_params.size_from
         rooms_to = search_params.rooms_to
-
+        order_by = str(search_params.pop('order_by', None))
         q_list = [
             Q(('{}__icontains'.format(k), v))
             for k, v in new_search_params.items()
@@ -169,7 +169,7 @@ def search_apartment(request):
         q_list.append(Q(**{k: v for k, v in price.items() if v is not None}))
         q_list.append(Q(**{k: v for k, v in size.items() if v is not None}))
         q_list.append(Q(**{k: v for k, v in rooms.items() if v is not None}))
-        queryset = Apartment.objects.filter(reduce(operator.and_, q_list))
+        queryset = Apartment.objects.filter(reduce(operator.and_, q_list)).order_by(order_by)
         apartments = [{
             'id': x.id,
             'address': x.address,
