@@ -1,0 +1,6 @@
+Jinja2==2.10.1
+MarkupSafe==1.1.1
+Paginator==0.5.1
+PyYAML==5.1
+render==1.0.0
+six==1.12.0
