@@ -146,13 +146,17 @@
                     </section>
                 </div>
                 <div>
-                    <span><Strong>Order By</Strong></span>
-                    <select name="order_by">
-                        <option value="price">Price Low-High</option>
-                        <option value="-price">Price High-Low</option>
-                        <option value="address">A - Z</option>
-                        <option value="-address">Z - A</option>
-                    </select>
+                    <section>
+                        <label for="class">Order By:</label>
+                        <div class="wide">
+                            <select name="order_by">
+                                <option value="price">Price Low-High</option>
+                                <option value="-price">Price High-Low</option>
+                                <option value="address">A - Z</option>
+                                <option value="-address">Z - A</option>
+                            </select>
+                        </div>
+                    </section>
                 </div>
                 <div class="text-center">
                     <input type="hidden" name="search_filter" value="true">
