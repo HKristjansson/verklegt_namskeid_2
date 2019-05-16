@@ -26,3 +26,13 @@ $(document).ready(function() {
 
     });
 });
+
+$('.flip').mouseenter(function()
+{
+      $(this).find('.card2').addClass('flipped').mouseleave(function()
+      {
+         $(this).removeClass('flipped');
+      });
+
+  return false;
+});

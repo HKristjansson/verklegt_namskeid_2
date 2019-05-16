@@ -246,8 +246,8 @@ p.apartment-details-2 {
 
 /*sets the size of the thumbnail images in seller*/
 .seller-img {
-    height: 10%;
-    width: 10%;
+    height: 20%;
+    width: 20%;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -337,5 +337,109 @@ p.apartment-details-2 {
 .about-img {
     height: 220px;
     width: 220px;
+}
+
+/* new */
+.flip {
+  -webkit-perspective: 800px;
+   width: 600px;
+   height: 300px;
+    position: relative;
+    margin: 5% auto;
+}
+.flip .card2.flipped {
+  -webkit-transform: rotatex(-180deg);
+}
+.flip .card2 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 1.5s;
+}
+.flip .card2 .face {
+  border-radius:20px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+    font-family: Verdana;
+    font-size: 18px;
+    text-align: center;
+}
+.flip .card2 .front {
+  position: absolute;
+    background: #373837;
+    color: white;
+}
+.flip .card2 .back {
+  -webkit-transform: rotatex(-180deg);
+    background: #373837;
+    color: white;
+}
+
+.details{
+  width:70%;
+ margin: 20px 0px 0px 20px;
+ float:left;
+  text-align:left;
+}
+
+.role{
+ padding-bottom:5px;
+}
+
+.contact{
+ padding-top:10px;
+ padding-bottom:10px;
+}
+
+.avatar{
+ float:right;
+ margin-top: 60px;
+ margin-right:40px;
+}
+
+.avatar img {
+  border-radius :15px;
+}
+
+.social {
+  margin-top:40px;
+  margin-left:5%;
+  width: 90%;
+}
+
+.social table{
+  width:100%;
+  height:220px;
+  border-collapse:collapse;
+}
+
+.social table td{
+  width:50%;
+  opacity:0.5;
+}
+
+.social table td:hover{
+  opacity:1;
+}
+
+.socialico{
+  height:32px;
+  width:32px;
+  float:left;
+  margin-left:30px;
+  margin-right:0px;
+  margin-top:10px;
+}
+
+.sociallink{
+ float:left;
+ margin:20px;
+}
+
+.sociallink a{
+ text-decoration:none;
+ color:white;
 }
 

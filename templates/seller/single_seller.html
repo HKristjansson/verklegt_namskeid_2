@@ -1,9 +1,55 @@
-<div class="well seller">
-    <a href="/sellers/{{ seller.id }}">
-        <img class="seller-img" src="{{ seller.sellerimage_set.first.image }}" alt="image of a realtor"/>
-        <h4>{{ seller.name }}</h4>
-        <p>Started:  {{ seller.year_of_start }}</p>
-        <h6 class="font-weight-bold indigo-text py-2">{{ apartment.description }}</h6>
-    </a>
-</div>
+<div class="card-all">
+    <div class="flip">
+        <div class="card2">
+            <div class="face front">
+                <div class="details">
+                    <div>
+                        {{ seller.name }}
+                    </div>
+                    <div class="role">
+                        Started: {{ seller.year_of_start }}
+                    </div>
 
+                    <div class="contact">
+                        Description: {{ seller.description }}
+                    </div>
+
+                    <div class="contact">
+                        P: 012-345-6789
+                    </div>
+
+                </div>
+                <div class="avatar seller-img">
+                    <a href="/sellers/{{ seller.id }}">
+                    <img src="{{ seller.sellerimage_set.first.image }}"/>
+                        </a>
+                </div>
+            </div>
+            <div class="face back">
+                <div class="social">
+                    <table>
+                        <td>
+                            <img src="http://cdn4.iconfinder.com/data/icons/socialmediaicons_v120/48/facebook.png"
+                                 class="socialico"/>
+                            <div class="sociallink"><a href="https://www.facebook.com">Facebook</a></div>
+                        </td>
+                        <td>
+                            <img src="http://cdn1.iconfinder.com/data/icons/flat-social-icons-by-lokas-software/48/linkedin.png"
+                                 class="socialico"/>
+                            <div class="sociallink"><a href="https://www.linkedin.com">Linkedin</a></div>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://cdn2.iconfinder.com/data/icons/capsocial-square-flat-3/500/twitter-256.png"
+                                     class="socialico"/>
+                                <div class="sociallink"><a href="https://www.twitter.com">Twitter</a></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

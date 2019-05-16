@@ -148,7 +148,7 @@ def search_apartment(request):
         size_to = search_params.size_to
         rooms_from = search_params.size_from
         rooms_to = search_params.rooms_to
-        print(new_search_params)
+
         q_list = [
             Q(('{}__icontains'.format(k), v))
             for k, v in new_search_params.items()
@@ -261,7 +261,7 @@ class ApartmentListView(ListView):
         return context
 
     def get_queryset(self):
-        return super().get_queryset()[:self.limit]
+        return super().get_queryset().filter(sold=False)[:self.limit]
 
 
 def sold_apartments(request):
