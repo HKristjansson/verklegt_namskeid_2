@@ -8,6 +8,7 @@ from apartment.models import Apartment, ApartmentImage, ZIP, ApartmentCategory, 
 from user.forms.registration_form import Payment
 from django.utils import timezone
 import operator
+from django.views.generic import ListView
 
 
 def get_apartment_by_id(request, id):
@@ -238,6 +239,26 @@ def search_apartment(request):
     zip_code = ZIP.objects.all().values("zip", "city")
     context = {'apartments': apartments, 'building_types': building_types, 'zip': zip_code}
     return render(request, 'apartment/apartment_index.html', context)
+
+
+class ApartmentListView(ListView):
+    model = Apartment
+    template_name = 'apartment/apartment_index.html'
+    context_object_name = 'apartments'
+    ordering = ['-created']
+    paginate_by = 8
+    limit = 30
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data()
+        building_types = ApartmentCategory.objects.all()
+        zip_code = ZIP.objects.all()
+        context['zip_code'] = zip_code
+        context['building_types'] = building_types
+        return context
+
+    def get_queryset(self):
+        return super().get_queryset()[:self.limit]
 
 
 def sold_apartments(request):
