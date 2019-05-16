@@ -251,9 +251,12 @@ class ApartmentListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
+        userid = self.request.user.id
+        search_history = ApartmentSearch.objects.all().order_by('-date').filter(user=userid)[:5]
         building_types = ApartmentCategory.objects.all()
         zip_code = ZIP.objects.all()
         context['zip_code'] = zip_code
+        context['search_history'] = search_history
         context['building_types'] = building_types
         return context
 

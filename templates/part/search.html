@@ -150,6 +150,7 @@
                     <input type="submit" class="btn btn-info" id="search-apa" value="Search">
                 </div>
             </form>
+        {% if request.user.is_authenticated %}
             <form class="text-lg-left" id="search-history-form" style="color: #757575;">
                 <div>
                     <section>
@@ -170,6 +171,7 @@
                     <input type="submit" class="btn btn-info" id="search-hist" value="Search">
                 </div>
             </form>
+        {% endif %}
 
         </div>
 
