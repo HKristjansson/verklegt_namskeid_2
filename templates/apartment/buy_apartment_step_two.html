@@ -19,7 +19,7 @@
                             {% endfor %}
 
                             {% for i in purchaseinfo %}
-                                {% if i != purchaseinfo.date or i != purchaseinfo.cardholder or i != purchaseinfo.apartment %}
+                                {% if not i == purchaseinfo.cardholder and not i == purchaseinfo.date and not i == purchaseinfo.apartment  %}
                                     <p>{{ i.label }}</p>
                                     <input type="text" value="{{ i.value }}" disabled/>
                                 {% endif %}
