@@ -6,13 +6,10 @@
             <strong>Search Apartment</strong>
         </h5>
 
-        <!--Card content-->
         <div class="card-body px-lg-3 pt-0">
 
-            <!-- Form -->
             <form class="text-lg-left" id="search-form" style="color: #757575;">
 
-                <!-- Name -->
 
                 <div class="md-form mt-4">
                     <label for="from">Address:</label>
@@ -20,7 +17,6 @@
                            name="address"/>
                 </div>
 
-                <!-- E-mail -->
                 <div class="md-form">
                     <label for="from">Home Number:</label>
                     <input type="number" class="form-control" id="from-place" placeholder="Any"
@@ -154,8 +150,28 @@
                     <input type="submit" class="btn btn-info" id="search-apa" value="Search">
                 </div>
             </form>
+            <form class="text-lg-left" id="search-history-form" style="color: #757575;">
+                <div>
+                    <section>
+                        <label for="class">Recent searches:</label>
+                        <div class="wide">
+                            <select class="cs-select cs-skin-border input-half"
+                                    name="search_history">
+                                {% for history in search_history %}
+                                    <option value="{{ history.id }}"
+                                    >{{ history }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </section>
+                </div>
+                <div class="text-center">
+                    <input type="hidden" name="search_history" value="true">
+                    <input type="submit" class="btn btn-info" id="search-hist" value="Search">
+                </div>
+            </form>
+
         </div>
 
     </div>
 {% endblock content %}
-<!-- Material form contact -->

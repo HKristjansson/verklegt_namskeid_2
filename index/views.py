@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from apartment.models import Apartment, ApartmentCategory, ZIP
+from apartment.models import Apartment, ApartmentCategory, ZIP, ApartmentSearch
 from django.core.paginator import Paginator
 from django.views.generic import ListView
 
@@ -32,6 +32,8 @@ class CardListView(ListView):
         if end_index >= max_index:
             end_index = max_index
 
+        userid = self.request.user.id
+        search_history = ApartmentSearch.objects.all().order_by('-date').filter(user=userid)[:5]
         page_range = paginator.page_range[start_index:end_index]
         apartments = Apartment.objects.all()[:self.limit]
         building_types = ApartmentCategory.objects.all()
@@ -40,6 +42,7 @@ class CardListView(ListView):
         context['zip_code'] = zip_code
         context['building_types'] = building_types
         context['page_range'] = page_range
+        context['search_history'] = search_history
         return context
 
 

@@ -1,0 +1,36 @@
+<!-- Material form contact -->
+{% block content %}
+    <div class="card margin-bottom">
+
+        <h5 class="card-header info-color fas fa-building white-text text-center py-4">
+            <strong>Recent searches</strong>
+        </h5>
+
+        <div class="card-body px-lg-3 pt-0">
+
+            <form class="text-lg-left" id="search-form" style="color: #757575;">
+                <div>
+                    <section>
+                        <label for="class">Recent searches:</label>
+                        <div class="wide">
+                            <select class="cs-select cs-skin-border input-half"
+                                    name="category__name">
+                                <option value="">Any</option>
+                                {% for history in search_history %}
+                                    <option value="{{ history }}"
+                                    >{{ history }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </section>
+                </div>
+                <div class="text-center">
+                    <input type="hidden" name="search_filter" value="true">
+                    <input type="submit" class="btn btn-info" id="search-apa" value="Search">
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+{% endblock content %}

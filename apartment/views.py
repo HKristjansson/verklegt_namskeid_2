@@ -131,7 +131,57 @@ def index(request):
 
 
 def search_apartment(request):
-    if 'search_filter' in request.GET:
+    if 'search_history' in request.GET:
+        new_search_params = {}
+        search_hist = request.GET.dict()
+        id = int(search_hist.get('search_history'))
+        search_params = get_object_or_404(ApartmentSearch, pk=id)
+        price_from = search_params.price_from
+        new_search_params['address'] = search_params.address
+        new_search_params['zip__zip'] = search_params.zip
+        new_search_params['number'] = search_params.number
+        new_search_params['category__name'] = search_params.category
+        price_from = search_params.price_from
+        price_to = search_params.price_to
+        size_from = search_params.size_from
+        size_to = search_params.size_to
+        rooms_from = search_params.size_from
+        rooms_to = search_params.rooms_to
+        print(new_search_params)
+        q_list = [
+            Q(('{}__icontains'.format(k), v))
+            for k, v in new_search_params.items()
+            if v is not None
+        ]
+        if int(price_to) > 0:
+            price = {'price__gte': price_from, 'price__lte': price_to}
+        else:
+            price = {'price__gte': price_from, 'price__gt': price_to}
+        if int(size_to) > 0:
+            size = {'size__gte': size_from, 'size__lte': size_to}
+        else:
+            size = {'size__gte': size_from, 'size__gt': size_to}
+        if int(rooms_to) > 0:
+            rooms = {'rooms__gte': rooms_from, 'rooms__lte': rooms_to}
+        else:
+            rooms = {'rooms__gte': rooms_from, 'rooms__gt': rooms_to}
+        q_list.append(Q(**{k: v for k, v in price.items() if v is not None}))
+        q_list.append(Q(**{k: v for k, v in size.items() if v is not None}))
+        q_list.append(Q(**{k: v for k, v in rooms.items() if v is not None}))
+        queryset = Apartment.objects.filter(reduce(operator.and_, q_list))
+        apartments = [{
+            'id': x.id,
+            'address': x.address,
+            'zip': str(x.zip),
+            'description': x.description,
+            'price': x.price,
+            'category': str(x.category),
+            'firstImage': x.apartmentimage_set.first().image
+        } for x in queryset
+        ]
+        return JsonResponse({'data': apartments})
+
+    elif 'search_filter' in request.GET:
         search_params = request.GET.dict()
         search_params.pop('search_filter')
         search_save = dict(search_params)
