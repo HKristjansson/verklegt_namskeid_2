@@ -2,6 +2,7 @@ from django.forms import ModelForm, widgets
 from django import forms
 from seller.models import Seller
 
+
 class SellerUpdateForm(ModelForm):
     class Meta:
         model = Seller

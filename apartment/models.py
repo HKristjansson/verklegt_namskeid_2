@@ -64,4 +64,6 @@ class ApartmentSearch(models.Model):
     order_by = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
-        return str(self.address) + ' ' + str(self.number) + ' ' + str(self.zip) + ' ' + str(self.category)
+        return str(self.address) + ' ' + str(self.number) + ' ' + str(self.zip) + ' ' + str(self.category) + ' '\
+               + str((self.price_from / 1000000)) + '-' + str((self.price_to / 1000000)) + 'm.kr ' + str(self.size_from)\
+               + '-' + str(self.size_to) + 'm2'
