@@ -193,7 +193,6 @@ def search_apartment(request):
         rooms_from = int(search_params.pop('rooms_from', None))
         rooms_to = int(search_params.pop('rooms_to', None))
         order_by = str(search_params.pop('order_by', None))
-        print(order_by)
         q_list = [
             Q(('{}__icontains'.format(k), v))
             for k, v in search_params.items()

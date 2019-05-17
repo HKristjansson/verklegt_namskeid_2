@@ -6,9 +6,10 @@ from apartment.models import Apartment
 
 
 class ApartmentBuyForm(ModelForm):
+
     class Meta:
         model = Apartment
-        exclude = ['id', 'created', 'updated', 'sold', 'owner_name', 'owner_ssn', 'owner_phone', 'buyer']
+        exclude = ['id', 'created', 'updated', 'sold', 'owner_name', 'owner_ssn', 'owner_phone']
         readonly_fields = ['address', 'number', 'zip', 'description', 'rooms', 'size', 'price', 'category',
                            'seller']
         widgets = {
@@ -21,6 +22,7 @@ class ApartmentBuyForm(ModelForm):
             'price': widgets.TextInput(attrs={'class': 'form-control', 'readonly': True}),
             'category': widgets.Select(attrs={'class': 'form-control', 'disabled': True}),
             'seller': widgets.Select(attrs={'class': 'form-control', 'disabled': True}),
+            'buyer': forms.HiddenInput()
         }
 
 
@@ -45,7 +47,7 @@ class ApartmentUpdateForm(ModelForm):
             'owner_ssn': widgets.NumberInput(attrs={'class': 'form-control'}),
             'owner_phone': widgets.NumberInput(attrs={'class': 'form-control'}),
             'sold': widgets.CheckboxInput(attrs={'class': 'checkbox'}),
-            'buyer_id': widgets.NumberInput(attrs={'class': 'form-control'})
+            'buyer': forms.HiddenInput()
         }
 
 

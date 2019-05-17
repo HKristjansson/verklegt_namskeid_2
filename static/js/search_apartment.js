@@ -12,7 +12,8 @@ $(document).ready(function() {
                         <a href="/apartments/${d.id}">
                         <img class="apartment-img" alt="building" src="${d.firstImage}" />
                         <h4>${d.address}</h4>
-                        <p>${d.description}</p>
+                        <h4>${d.zip}</h4>
+                        <h4>Price: ${d.price}</h4>
                     </a>
                     </div>`
                 });

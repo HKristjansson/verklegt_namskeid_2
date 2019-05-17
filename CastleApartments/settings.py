@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'CastleApartments.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'CastleApartments',
+        'NAME': 'castle_apartments_Test',
         'USER': '3vikna',
         'PASSWORD': 'FokkingGamanSaman!',
         'HOST': '157.157.71.146',
