@@ -26,36 +26,26 @@ python manage.py runserver
 When manage.py is up and running, go to your web    
 browser and visit                                   
 the site that shows the application:                
-3) http://localhost:8000
-
-End with an example of getting some data out of the system or using it for a little demo
-
-### And coding style tests
-
-Explain what these tests test and why
-
 ```
-Give an example
+http://localhost:8000
 ```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+At this point the project is set up at DEBUG=False so the server should be run with the command
+```
+python manage.py runserver --insecure
+```
+or you can set DEBUG=True and then proceed by running in terminal
+```
+python manage.py runserver
+```
 
 ## Built With
 
 * [Django](https://www.djangoproject.com/) - The web framework used
 * [MDBootstrap](https://mdbootstrap.com/) - CSS Styling
-* [PyCharm](https://mdbootstrap.com/) - CSS Styling
-
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [PyCharm](https://mdbootstrap.com/) - CSS Styling 
 
 ## Authors
 

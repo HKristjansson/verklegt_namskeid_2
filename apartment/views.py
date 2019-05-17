@@ -92,7 +92,6 @@ def buy_apartment_step_two(request, id):
 
 
 def buy_apartment_step_three(request, id):
-
     Apartment.objects.filter(pk=id).update(sold=True)
     return render(request, 'apartment/buy_apartment_step_three.html')
 
