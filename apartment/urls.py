@@ -15,3 +15,4 @@ urlpatterns = [
     path('buy_apartment_step_three/<int:id>', views.buy_apartment_step_three, name='buy_apartment_step_three'),
     path('sold_apartments/', views.sold_apartments, name="sold_apartments"),
 ]
+

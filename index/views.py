@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from apartment.models import Apartment, ApartmentCategory, ZIP, ApartmentSearch
 from django.views.generic import ListView
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 
 
 # Create your views here.
@@ -29,3 +31,15 @@ class CardListView(ListView):
 
 def about(request):
     return render(request, 'index/about.html')
+
+
+def handler404(request, *args, **argv):
+    response = render_to_response('errors/404.html')
+    response.status_code = 404
+    return response
+
+
+def handler500(request, *args, **argv):
+    response = render_to_response('errors/500.html')
+    response.status_code = 500
+    return response
