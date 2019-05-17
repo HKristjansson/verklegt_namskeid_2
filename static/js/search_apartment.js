@@ -39,10 +39,11 @@ $(document).ready(function() {
                     success: function(resp) {
                     var newHtml = resp.data.map(d => {
                         return `<div class="well apartment">
-                            <a href="/apartments/${d.id}">
-                            <img class="apartment-img" alt="building" src="${d.firstImage}" />
-                            <h4>${d.address}</h4>
-                            <p>${d.description}</p>
+                        <a href="/apartments/${d.id}">
+                        <img class="apartment-img" alt="building" src="${d.firstImage}" />
+                        <h4>${d.address}</h4>
+                        <h4>${d.zip}</h4>
+                        <h4>Price: ${d.price}</h4>
                         </a>
                         </div>`
                     });

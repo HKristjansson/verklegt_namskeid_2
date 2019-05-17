@@ -47,7 +47,6 @@ class ApartmentUpdateForm(ModelForm):
             'owner_ssn': widgets.NumberInput(attrs={'class': 'form-control'}),
             'owner_phone': widgets.NumberInput(attrs={'class': 'form-control'}),
             'sold': widgets.CheckboxInput(attrs={'class': 'checkbox'}),
-            'buyer': forms.HiddenInput()
         }
 
 
