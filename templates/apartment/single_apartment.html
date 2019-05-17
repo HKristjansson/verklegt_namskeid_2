@@ -12,12 +12,16 @@
     <div class="card-body card-body-cascade">
 
         <!-- Title -->
-
-        <h4 class="text-left">{{ apartment.address }}</h4>
-        <h4 class="text-left"><strong>{{ apartment.price }}</strong></h4>
-        <!-- Subtitle -->
-        <h6 class="font-weight-bold indigo-text">{{ apartment.description }}</h6>
-        <!-- Text -->
+        <div class="row">
+            <div class="col-sm ml-2 h4-responsive">
+                <div class="text-left">{{ apartment.address }} {{ apartment.number }}</div>
+                <div>{{ apartment.zip }}</div>
+                <div>{{ apartment.rooms }} Bedrooms</div>
+                <div class="text-left"><strong>Price: {{ apartment.price }}</strong></div>
+            </div>
+            <div class="col-sm">
+                <div class="font-weight-bold indigo-text">Description: {{ apartment.description }}</div>
+            </div>
+        </div>
     </div>
 </div>
-

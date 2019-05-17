@@ -14,11 +14,3 @@ class Seller(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class SellerImage(models.Model):
-    image = models.CharField(max_length=2999)
-    seller = models.ForeignKey(Seller, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.image

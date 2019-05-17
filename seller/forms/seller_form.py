@@ -8,7 +8,7 @@ class SellerUpdateForm(ModelForm):
         exclude = ['id']
         widgets = {
             'name': widgets.TextInput(attrs={'class': 'form-control'}),
-            'image': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'image': widgets.TextInput(attrs={'class': 'form-control'}),
             'year_of_start': widgets.TextInput(attrs={'class': 'form-control'}),
             'description': widgets.TextInput(attrs={'class': 'form-control'})
         }
@@ -22,9 +22,7 @@ class SellerAddForm(ModelForm):
         exclude = ['id', 'disabled']
         widgets = {
             'name': widgets.TextInput(attrs={'class': 'form-control'}),
-            'image': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'image': widgets.TextInput(attrs={'class': 'form-control'}),
             'year_of_start': widgets.TextInput(attrs={'class': 'form-control'}),
             'description':widgets.TextInput(attrs={'class': 'form-control'}),
-
-
         }
