@@ -9,52 +9,26 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+Need to have acces to our local database.
 
 ### Installing
-
-1)                                                  
+```                                                  
 pip install -r requirements.txt                     
-                                                    
+```                                                    
 
 When the above install is complete, run the program 
 by entering the following in terminal (cmd line):   
-2)                                                  
+                                                
+```
 python manage.py runserver                          
-                                                    
+```                                                    
 
 When manage.py is up and running, go to your web    
 browser and visit                                   
 the site that shows the application:                
 3) http://localhost:8000
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
 End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ### And coding style tests
 
@@ -71,7 +45,8 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [Django](https://www.djangoproject.com/) - The web framework used
-* [MDBootstrap](https://mdbootstrap.com/) - CSS Styling 
+* [MDBootstrap](https://mdbootstrap.com/) - CSS Styling
+* [PyCharm](https://mdbootstrap.com/) - CSS Styling
 
 
 ## Contributing
