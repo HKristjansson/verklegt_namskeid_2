@@ -7,6 +7,8 @@
         <img src="{{ seller.image }}" class="seller-img">
         <p></p>
         <h4><strong>Seller Description:</strong> {{ seller.description }}</h4>
+        <h4><strong>Email:</strong> {{ seller.email }}</h4>
+        <h4><strong>Phone:</strong> {{ seller.phone }}</h4>
         {% if request.user.is_superuser %}
             <a href="{% url 'remove_seller' seller.id %}" class="block btn btn-primary">Remove realtor</a>
             <a href="{% url 'update_seller' seller.id %}" class="block btn btn-primary">Update realtor</a>

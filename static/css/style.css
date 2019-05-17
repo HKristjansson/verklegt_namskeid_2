@@ -158,9 +158,10 @@ img {
     border-radius: 15px;
     float: left;
     object-fit: contain;
-    text-align: center;
+    text-align: left;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(auto-fill, 330px);
+    min-width: 30%;
 }
 
 .apartment-details-container {
@@ -240,8 +241,10 @@ p.apartment-details-2 {
 }
 
 .img-const {
-    height: 13em;
-    width: 100%;
+    min-width: 90%;
+    min-height: 12em;
+    max-height: 13em;
+    max-width: 100%;
 }
 
 /*sets the size of the thumbnail images in seller*/
@@ -324,9 +327,10 @@ p.apartment-details-2 {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 0;
+    min-width: 240px;
+    max-width: 340px;
     min-height: 240px;
-    max-height: 240px;
+    max-height: 340px;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
@@ -443,3 +447,6 @@ p.apartment-details-2 {
  color:white;
 }
 
+.text-left {
+    text-align: left !important;
+}

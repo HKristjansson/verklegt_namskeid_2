@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from seller.models import Seller, SellerImage
+from seller.models import Seller  # , SellerImage
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
@@ -18,20 +18,22 @@ def get_seller_by_id(request, id):
         'seller': get_object_or_404(Seller, pk=id)
     })
 
+
 @login_required
 def add_seller(request):
     if request.method == 'POST':
         form = SellerAddForm(data=request.POST)
         if form.is_valid():
             seller = form.save()
-            seller_image = SellerImage(image=request.POST['image'], seller=seller)
-            seller_image.save()
+            # seller_image = Seller(image=request.POST['image'])
+            # seller_image.save()
             return redirect('seller_index')
     else:
         form = SellerAddForm()
     return render(request, 'seller/add_seller.html', {
         'form': form
     })
+
 
 @login_required
 def update_seller(request, id):
@@ -48,13 +50,10 @@ def update_seller(request, id):
         'id': id
     })
 
+
 @login_required
 def remove_seller(request, id):
-    seller = get_object_or_404(Seller,pk=id)
+    seller = get_object_or_404(Seller, pk=id)
     seller.disabled = True
-
-
     seller.save()
     return redirect('seller_index')
-
-
