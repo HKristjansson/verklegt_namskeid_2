@@ -1,37 +1,3 @@
-# verklegt_namskeid_2                               
-Verklegt Namskeid 2,                                
-Castle Apartments, Real Estate App                  
-Ermir Pellumbi                                      
-Hannes Kristjánsson                                 
-Valgeir Árnason                                     
-                                                    
-                                                    
-written in django.                                  
-                                                    
-To run this application, you must first install     
-required packages.                                  
-You do that by running this command in the terminal 
-(command line):                                     
-
-1)                                                  
-pip install -r requirements.txt                     
-                                                    
-
-When the above install is complete, run the program 
-by entering the following in terminal (cmd line):   
-2)                                                  
-python manage.py runserver                          
-                                                    
-
-When manage.py is up and running, go to your web    
-browser and visit                                   
-the site that shows the application:                
-3) http://localhost:8000                            
-                                                    
-                                                    
-                                                    
-
-© Castle Apartments 2019
 # Verklegt Namskeid 2
 ## Castle Apartments, Real Estate App
 
@@ -104,9 +70,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Django](https://www.djangoproject.com/) - The web framework used
+* [MDBootstrap](https://mdbootstrap.com/) - CSS Styling 
+
 
 ## Contributing
 
@@ -118,9 +84,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Ermir Pellumbi**                                      
+* **Hannes Kristjánsson**                                 
+* **Valgeir Árnason**
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/ermir18/verklegt_namskeid_2/graphs/contributors) who participated in this project.
 
 ## License
 
@@ -128,6 +96,4 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 ## Acknowledgments
 
-* Ermir Pellumbi                                      
-* Hannes Kristjánsson                                 
-* Valgeir Árnason
+* Jon Stefann Kristjansson
