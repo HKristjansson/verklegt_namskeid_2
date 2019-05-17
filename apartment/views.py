@@ -136,7 +136,7 @@ def search_apartment(request):
         search_hist = request.GET.dict()
         id = int(search_hist.get('search_history'))
         search_params = get_object_or_404(ApartmentSearch, pk=id)
-        price_from = search_params.price_from
+        # duplicate? price_from = search_params.price_from
         new_search_params['address'] = search_params.address
         new_search_params['zip__zip'] = search_params.zip
         new_search_params['number'] = search_params.number
@@ -192,7 +192,6 @@ def search_apartment(request):
         rooms_from = int(search_params.pop('rooms_from', None))
         rooms_to = int(search_params.pop('rooms_to', None))
         order_by = str(search_params.pop('order_by', None))
-        print(order_by)
         q_list = [
             Q(('{}__icontains'.format(k), v))
             for k, v in search_params.items()
